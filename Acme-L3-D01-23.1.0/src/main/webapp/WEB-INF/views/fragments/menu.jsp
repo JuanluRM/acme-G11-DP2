@@ -22,6 +22,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.fernandoalonso.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.maria" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.mariaruvaz.com/"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
