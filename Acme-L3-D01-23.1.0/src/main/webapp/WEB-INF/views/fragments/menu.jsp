@@ -26,6 +26,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.mariaruvaz.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.juaruamur" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://ev.us.es/webapps/login/"/>
+		</acme:menu-option>
+				
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
