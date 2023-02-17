@@ -32,6 +32,10 @@
 				
 		<acme:menu-option code="master.menu.sanzultor" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.github.com/"/>
+		</acme:menu-option>	
+		
+		<acme:menu-option code="master.menu.fraprapra1" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://as.com"/>
 		</acme:menu-option>		
 				
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
