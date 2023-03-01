@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
+<diagram program="umlet" version="15.0.0">
+  <help_text>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green</help_text>
   <zoom_level>7</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>518</x>
-      <y>329</y>
+      <x>252</x>
+      <y>119</y>
       <w>84</w>
       <h>98</h>
     </coordinates>
@@ -15,8 +24,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>329</y>
+      <x>182</x>
+      <y>119</y>
       <w>91</w>
       <h>98</h>
     </coordinates>
@@ -26,8 +35,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>651</x>
-      <y>301</y>
+      <x>385</x>
+      <y>91</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -39,8 +48,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>651</x>
-      <y>245</y>
+      <x>385</x>
+      <y>35</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -52,8 +61,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>651</x>
-      <y>350</y>
+      <x>385</x>
+      <y>140</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -65,8 +74,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
-      <y>266</y>
+      <x>308</x>
+      <y>56</y>
       <w>91</w>
       <h>63</h>
     </coordinates>
@@ -76,8 +85,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
-      <y>308</y>
+      <x>308</x>
+      <y>98</y>
       <w>91</w>
       <h>21</h>
     </coordinates>
@@ -87,8 +96,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
-      <y>308</y>
+      <x>308</x>
+      <y>98</y>
       <w>91</w>
       <h>63</h>
     </coordinates>
@@ -98,8 +107,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>413</y>
+      <x>259</x>
+      <y>203</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -114,8 +123,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>413</y>
+      <x>70</x>
+      <y>203</y>
       <w>147</w>
       <h>56</h>
     </coordinates>
@@ -130,8 +139,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>476</x>
-      <y>294</y>
+      <x>210</x>
+      <y>84</y>
       <w>105</w>
       <h>42</h>
     </coordinates>
@@ -143,8 +152,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
-      <y>210</y>
+      <x>0</x>
+      <y>0</y>
       <w>154</w>
       <h>84</h>
     </coordinates>
@@ -162,8 +171,8 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
-      <y>322</y>
+      <x>0</x>
+      <y>112</y>
       <w>154</w>
       <h>49</h>
     </coordinates>
@@ -177,12 +186,52 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>343</x>
-      <y>287</y>
+      <x>77</x>
+      <y>77</y>
       <w>21</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>350</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Peep
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ title: String {NotBlank, Lenght = 75}
++ nick: String {NotBlank, Lenght = 75}
++ message: String {NotBlank, Lenght = 75}
++ email: String {Email}
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>350</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
