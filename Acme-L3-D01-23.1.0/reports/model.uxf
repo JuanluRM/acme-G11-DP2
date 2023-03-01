@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
+  <help_text>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green</help_text>
   <zoom_level>7</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>378</x>
-      <y>203</y>
+      <x>252</x>
+      <y>119</y>
       <w>84</w>
       <h>98</h>
     </coordinates>
@@ -15,8 +24,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>308</x>
-      <y>203</y>
+      <x>182</x>
+      <y>119</y>
       <w>91</w>
       <h>98</h>
     </coordinates>
@@ -26,8 +35,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>511</x>
-      <y>175</y>
+      <x>385</x>
+      <y>91</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -39,8 +48,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>511</x>
-      <y>119</y>
+      <x>385</x>
+      <y>35</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -52,8 +61,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>511</x>
-      <y>224</y>
+      <x>385</x>
+      <y>140</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -65,8 +74,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>140</y>
+      <x>308</x>
+      <y>56</y>
       <w>91</w>
       <h>63</h>
     </coordinates>
@@ -76,8 +85,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>182</y>
+      <x>308</x>
+      <y>98</y>
       <w>91</w>
       <h>21</h>
     </coordinates>
@@ -87,8 +96,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>182</y>
+      <x>308</x>
+      <y>98</y>
       <w>91</w>
       <h>63</h>
     </coordinates>
@@ -98,8 +107,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>385</x>
-      <y>287</y>
+      <x>259</x>
+      <y>203</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -114,8 +123,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>287</y>
+      <x>70</x>
+      <y>203</y>
       <w>147</w>
       <h>56</h>
     </coordinates>
@@ -130,8 +139,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>168</y>
+      <x>210</x>
+      <y>84</y>
       <w>105</w>
       <h>42</h>
     </coordinates>
@@ -143,8 +152,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>84</y>
+      <x>0</x>
+      <y>0</y>
       <w>154</w>
       <h>84</h>
     </coordinates>
@@ -162,8 +171,8 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>196</y>
+      <x>0</x>
+      <y>112</y>
       <w>154</w>
       <h>49</h>
     </coordinates>
@@ -177,8 +186,8 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>161</y>
+      <x>77</x>
+      <y>77</y>
       <w>21</w>
       <h>49</h>
     </coordinates>
@@ -188,8 +197,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
-      <y>434</y>
+      <x>49</x>
+      <y>350</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -203,6 +212,26 @@ Peep
 + email: String {Email}
 + link: String {URL}
 bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>350</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
