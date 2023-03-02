@@ -14,7 +14,7 @@ bg=green</help_text>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>413</y>
+      <y>294</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -34,7 +34,7 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>406</x>
-      <y>413</y>
+      <y>294</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -54,7 +54,7 @@ bg=green
     <id>UMLClass</id>
     <coordinates>
       <x>406</x>
-      <y>280</y>
+      <y>161</y>
       <w>315</w>
       <h>112</h>
     </coordinates>
@@ -69,6 +69,25 @@ Note
 + link: String {URL}
 bg=green
 </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>161</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Bulletin
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ title: String {NotBlank, Lenght = 75}
++ message: String {NotBlank, Lenght = 100}
++ flag: Boolean (NotNull)
++ link: String {URL}
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
