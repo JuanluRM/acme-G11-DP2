@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>102</x>
+      <y>246</y>
+      <w>270</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Sesion
+--
++ title: String {NotBlank, Lenght = 76}
++ abstract: String {NotBlank, Lenght = 101}
++ sessionType: Enum 
++ timePeriod: LocalDateTime {Lenght = 5}
++ moreInfo: String {URL}
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>102</x>
+      <y>126</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Tutorial
+--
++ code: String {NotBlank, unique, pattern [A-Z]{1,3}[0-9][0-9]{3}}
++ title: String {NotBlank, Lenght = 76}
++ abstract: String {NotBlank, Lenght = 101}
++ goals: String {NotBlank, Lenght = 101}
++ estimatedTime: LocalDateTime 
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>246</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+DashBoard
+--
++ supervisor: String {NotBlank, Lenght = 76}
++ expertiseFields: String {NotBlank, Lenght = 101}
++ resume: String {NotBlank, Lenght = 101}
++ infoLink: String {URL}
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>132</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Assistant
+--
++ supervisor: String {NotBlank, Lenght = 76}
++ expertiseFields: String {NotBlank, Lenght = 101}
++ resume: String {NotBlank, Lenght = 101}
++ infoLink: String {URL}
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>6</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+sessionType
+--
++ theory
++ hands_on
++ other
+
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
