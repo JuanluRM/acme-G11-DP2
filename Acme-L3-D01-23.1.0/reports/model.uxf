@@ -13,9 +13,9 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>49</x>
+      <x>63</x>
       <y>301</y>
-      <w>329</w>
+      <w>315</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;

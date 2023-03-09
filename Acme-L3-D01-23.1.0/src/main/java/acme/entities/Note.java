@@ -58,4 +58,8 @@ public class Note extends AbstractEntity {
 	@URL
 	protected String			link;
 
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
 }
