@@ -2,10 +2,7 @@
 package acme.forms;
 
 import java.io.Serializable;
-import java.util.Map;
 
-import acme.entities.Course;
-import acme.entities.Lecture;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,16 +16,16 @@ public class LecturerDashboard implements Serializable {
 	Integer						totalNTheoryLectures;
 	Integer						totalNHandsOnLectures;
 
-	Map<Lecture, Double>		averageLearningTimeByLectures;
-	Map<Course, Double>			averageLearningTimeByCourses;
+	Double						averageLearningTimeByLectures;
+	Double						averageLearningTimeByCourses;
 
-	Map<Lecture, Double>		deviationLearningTimeByLectures;
-	Map<Course, Double>			deviationLearningTimeByCourses;
+	Double						deviationLearningTimeByLectures;
+	Double						deviationLearningTimeByCourses;
 
-	Map<Lecture, Double>		minimumLearningTimeByLectures;
-	Map<Course, Double>			minimumLearningTimeByCourses;
+	Double						minimumLearningTimeByLectures;
+	Double						minimumLearningTimeByCourses;
 
-	Map<Lecture, Double>		maximumLearningTimeByLectures;
-	Map<Course, Double>			maximumLearningTimeByCourses;
+	Double						maximumLearningTimeByLectures;
+	Double						maximumLearningTimeByCourses;
 
 }
