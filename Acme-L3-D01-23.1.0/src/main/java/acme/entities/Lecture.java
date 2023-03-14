@@ -6,15 +6,16 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
-import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,7 +23,6 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-
 public class Lecture extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
@@ -32,22 +32,21 @@ public class Lecture extends AbstractEntity {
 	// Attributes --------------------------------------------------------------
 
 	@NotBlank
-	@Max(75)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Max(100)
+	@Length(max = 100)
 	protected String			lectureAbstract;
 
-	@NotBlank
 	@Min(0)
 	protected Double			estimatedLearningTime;
 
 	@NotBlank
-	@Max(100)
+	@Length(max = 100)
 	protected String			body;
 
-	@NotBlank
+	@NotNull
 	protected LectureType		type;
 
 	@URL
@@ -57,7 +56,8 @@ public class Lecture extends AbstractEntity {
 
 	@NotNull
 	@Valid
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@ManyToOne(optional = true)
-	protected Lecturer			lecturer;
+	protected Course			course;
 
 }

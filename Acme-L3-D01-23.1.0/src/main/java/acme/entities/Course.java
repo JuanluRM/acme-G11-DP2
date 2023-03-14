@@ -7,18 +7,22 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
+import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -41,19 +45,14 @@ public class Course extends AbstractEntity {
 	protected String			code;
 
 	@NotBlank
-	@Max(75)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Max(100)
+	@Length(max = 100)
 	protected String			courseAbstract;
 
-	@NotNull
-	@Min(0)
-	protected Double			retailPrice;
-
-	@NotNull
-	protected List<Lecture>		lectures;
+	protected Money				retailPrice;
 
 	@URL
 	protected String			link;
@@ -86,14 +85,17 @@ public class Course extends AbstractEntity {
 		return courseType;
 	}
 
-	// Relationships ----------------------------------------------------------
 
+	// Relationships ----------------------------------------------------------
+	@Valid
+	@OneToMany(mappedBy = "course")
+	protected List<Lecture>	lectures;
 
 	@NotNull
 	@Valid
-	@OneToMany
-	protected Lecture lecture;
-
-	//duda como hacer que el sistema descarte los cursos puramente teoricos --> formulario, aqui no
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@ManyToOne(optional = true)
+	protected Lecturer		lecturer;
+	//como hacer que el sistema descarte los cursos puramente teoricos --> formulario, aqui no
 
 }
