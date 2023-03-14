@@ -13,8 +13,8 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>301</y>
+      <x>35</x>
+      <y>133</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -33,8 +33,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
-      <y>168</y>
+      <x>378</x>
+      <y>0</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -53,8 +53,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>168</y>
+      <x>35</x>
+      <y>0</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -68,6 +68,34 @@ Note
 + email: String {Email}
 + link: String {URL}
 bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>308</y>
+      <w>385</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;From&gt;&gt;
+DashBoard
+--
++ numberPerPrincipal: Map&lt;Object,Integer&gt;
++ ratioOfCompletePeeps: Double
++ ratioOfCriticalBulletin: Double
++ ratioOfNonCriticalBulletin: Double
++ averageBudgetPerCurrency: Map&lt;String, Double&gt;
++ minimumBudgetPerCurrency: Map&lt;String,Double&gt;
++ maximumBudgetPerCurrency: Map&lt;String,Double&gt;
++ standardDeviationBudgetPerCurrency: Map&lt;String,Double&gt;
++ averageNotesLast10Weeks: Double
++ minimumNotesLast10Weeks: Double
++ maximumNotesLast10Weeks: Double
++ standardDeviationNotesLast10Weeks: Double
+
+bg=cyan
 </panel_attributes>
     <additional_attributes/>
   </element>
