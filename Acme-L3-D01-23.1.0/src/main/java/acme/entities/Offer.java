@@ -45,6 +45,7 @@ public class Offer extends AbstractEntity {
 	@Length(min = 1, max = 100)
 	protected String			summary;
 
+	@NotBlank
 	protected Period			availabilityPeriod;
 
 	@Min(0)

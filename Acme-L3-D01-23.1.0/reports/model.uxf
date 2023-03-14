@@ -13,8 +13,8 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>294</y>
+      <x>63</x>
+      <y>336</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -33,8 +33,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
-      <y>294</y>
+      <x>469</x>
+      <y>336</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -53,8 +53,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
-      <y>161</y>
+      <x>469</x>
+      <y>203</y>
       <w>315</w>
       <h>112</h>
     </coordinates>
@@ -74,8 +74,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>161</y>
+      <x>63</x>
+      <y>203</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -88,6 +88,27 @@ Bulletin
 + flag: Boolean (NotNull)
 + link: String {URL}
 bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>469</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ heading: String {NotBlank, Length = 75}
++ sumary: String {NotBlank, Length = 100}
++ availabilityPeriod: Period {NotBlank}
++ price: Double {NotNull, Min = 0}
++ link: String {URL}
+bg=green
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
