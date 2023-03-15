@@ -8,6 +8,14 @@ Banner
 + picture: String {NotBlank, URL}
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
+bg=green&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
 bg=green</help_text>
   <zoom_level>7</zoom_level>
   <element>

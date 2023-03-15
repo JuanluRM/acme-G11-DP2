@@ -1,0 +1,3 @@
+key,firm,professionalId,certificationsList,link,key:userAccount
+auditor-01,novamun,NUMAOV,{ISO,SGE},https:\\novamun.es,user-account-auditor-01
+auditor-02,tricode,EDOCIRT,{ISO,SGE},https:\\tricode.es,user-account-auditor-02
