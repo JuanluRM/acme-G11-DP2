@@ -50,7 +50,8 @@ bg=green</panel_attributes>
 Banner
 --
 + instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
-+ displayPeriod: Period {NotBlank}
++ start: Date {Temporal(TIMESTAMP),Past,NotNull}
++ end: Date {Temporal(TIMESTAMP),Past,NotNull}
 + picture: String {NotBlank, URL}
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
