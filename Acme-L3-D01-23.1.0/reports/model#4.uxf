@@ -9,14 +9,14 @@ Banner
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
 bg=green</help_text>
-  <zoom_level>7</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>301</y>
-      <w>343</w>
-      <h>105</h>
+      <x>66</x>
+      <y>572</y>
+      <w>539</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Session
@@ -32,10 +32,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>21</x>
-      <y>84</y>
-      <w>343</w>
-      <h>105</h>
+      <x>77</x>
+      <y>286</y>
+      <w>539</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Practicum
@@ -49,17 +49,49 @@ bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>0</y>
+      <w>539</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Company
+--
++ name: String {Length(1, 75)}
++ vatNumber: String {NotBlank, Lenght(1,75)}
++ summary: String {NotBlank, Lenght(1,100)}
++ link: String {URL}
+bg=green
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
-      <x>175</x>
-      <y>182</y>
-      <w>70</w>
-      <h>126</h>
+      <x>330</x>
+      <y>154</y>
+      <w>132</w>
+      <h>154</h>
     </coordinates>
-    <panel_attributes>lt=-
-m1=1..n
-m2=1
-contains &gt;</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..n
+registeredBy &gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>440</y>
+      <w>55</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
 </diagram>
