@@ -22,7 +22,7 @@ import lombok.Setter;
 @Setter
 //@CustomLog
 
-public class Session extends AbstractEntity {
+public class PracticumSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
