@@ -9,3 +9,5 @@ user-account-company-01,true,"UserIdentity{name: 'Ferrari', surname: 'Martinez',
 user-account-company-02,true,"UserIdentity{name: 'Fernando', surname: 'Padre', email: 'fernandito@acme.com'}",company2,company2
 user-account-student-01,true,"UserIdentity{name: 'Paco', surname: 'Perez', email: 'pacoperez@acme.com'}",student1,student1
 user-account-student-02,true,"UserIdentity{name: 'Jose', surname: 'Martinez', email: 'josemartinez@acme.com'}",student2,student2
+user-account-assistant-01,true,"UserIdentity{name: 'Gabriel', surname: 'Tixer', email: 'izanagi@acme.com'}",assistant1,assistant1
+user-account-assistant-02,true,"UserIdentity{name: 'Natalia', surname: 'Tuttor', email: 'izanami@acme.com'}",assistant2,assistant2
