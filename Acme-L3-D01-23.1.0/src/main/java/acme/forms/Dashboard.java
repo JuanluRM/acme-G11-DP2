@@ -17,7 +17,7 @@ public class Dashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<Object, Integer>		numberPerPrincipal;
+	Map<String, Integer>		numberPerPrincipal;
 	Double						ratioOfCompletePeeps;
 	Double						ratioOfCriticalBulletin;
 	Map<String, Double>			averageBudgetPerCurrency;

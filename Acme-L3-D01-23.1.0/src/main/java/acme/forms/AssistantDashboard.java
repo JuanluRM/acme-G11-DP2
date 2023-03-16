@@ -3,7 +3,7 @@ package acme.forms;
 
 import java.util.Map;
 
-import acme.entities.tutorial.SessionType;
+import acme.entities.SessionType;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;

@@ -13,8 +13,8 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>35</x>
-      <y>133</y>
+      <x>77</x>
+      <y>196</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -33,8 +33,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
-      <y>0</y>
+      <x>420</x>
+      <y>63</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -53,8 +53,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>35</x>
-      <y>0</y>
+      <x>77</x>
+      <y>63</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -74,15 +74,15 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>21</x>
-      <y>308</y>
+      <x>63</x>
+      <y>371</y>
       <w>385</w>
       <h>175</h>
     </coordinates>
     <panel_attributes>&lt;&lt;From&gt;&gt;
 DashBoard
 --
-+ numberPerPrincipal: Map&lt;Object,Integer&gt;
++ numberPerPrincipal: Map&lt;String,Integer&gt;
 + ratioOfCompletePeeps: Double
 + ratioOfCriticalBulletin: Double
 + ratioOfNonCriticalBulletin: Double

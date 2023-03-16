@@ -1,5 +1,5 @@
 
-package acme.entities.tutorial;
+package acme.entities;
 
 import java.util.Date;
 import java.util.List;
@@ -68,4 +68,11 @@ public class Tutorial extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = true)
 	protected Assistant			assistant;
+	/*
+	 * @Valid
+	 * 
+	 * @ManyToOne
+	 * protected Course course;
+	 */
+
 }
