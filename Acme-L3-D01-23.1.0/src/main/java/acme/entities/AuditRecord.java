@@ -4,8 +4,10 @@ package acme.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -20,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class AuditRecord extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -28,34 +30,36 @@ public class Banner extends AbstractEntity {
 
 	// Attributes --------------------------------------------------------------
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
-	@NotNull
-	protected Date				instantiationMoment;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
-	@NotNull
-	protected Date				start;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
-	@NotNull
-	protected Date				end;
-
-	@NotBlank
-	@URL
-	protected String			picture;
-
 	@NotBlank
 	@Length(min = 1, max = 75)
-	protected String			slogan;
+	protected String			subject;
 
 	@NotBlank
+	@Length(min = 1, max = 100)
+	protected String			assessment;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@PastOrPresent
+	@NotNull
+	protected Date				startAudition;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@PastOrPresent
+	@NotNull
+	protected Date				endAudition;
+
+	@NotNull
+	protected MarkType			mark;
+
 	@URL
 	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 
-	// Relationships ----------------------------------------------------------
+	// Relationships -------------------------------------------------------
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Audit				audit;
+
 }

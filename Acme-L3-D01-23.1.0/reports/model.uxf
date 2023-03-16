@@ -8,6 +8,14 @@ Tutorial
 + picture: String {NotBlank, URL}
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
+bg=green&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
 bg=green</help_text>
   <zoom_level>7</zoom_level>
   <element>
@@ -42,7 +50,8 @@ bg=green</panel_attributes>
 Banner
 --
 + instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
-+ displayPeriod: Period {NotBlank}
++ start: Date {Temporal(TIMESTAMP),Past,NotNull}
++ end: Date {Temporal(TIMESTAMP),Past,NotNull}
 + picture: String {NotBlank, URL}
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
@@ -53,13 +62,12 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>77</x>
-      <y>63</y>
+      <x>469</x>
+      <y>168</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Note
 --
 + instantiationMoment: LocalDate {Temporal(TIMESTAMP), Past, NotNull}
 + title: String {NotBlank, Lenght = 76}
@@ -75,6 +83,39 @@ bg=green
     <id>UMLClass</id>
     <coordinates>
       <x>63</x>
+      <y>168</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Bulletin
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ title: String {NotBlank, Lenght = 75}
++ message: String {NotBlank, Lenght = 100}
++ flag: Boolean (NotNull)
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>469</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ heading: String {NotBlank, Length = 75}
++ sumary: String {NotBlank, Length = 100}
++ availabilityPeriod: Period {NotBlank}
++ price: Double {NotNull, Min = 0}
++ link: String {URL}
+bg=green
       <y>371</y>
       <w>385</w>
       <h>175</h>

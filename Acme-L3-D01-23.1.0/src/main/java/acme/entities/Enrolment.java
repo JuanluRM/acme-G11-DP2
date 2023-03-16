@@ -1,24 +1,18 @@
 
 package acme.entities;
 
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
-import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
-
-import org.hibernate.validator.constraints.URL;
+import javax.validation.constraints.Pattern;
 
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
@@ -28,38 +22,35 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-//@CustomLog
-
-public class Session extends AbstractEntity {
+public class Enrolment extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes --------------------------------------------------------------
+	// Attributes -------------------------------------------------------------
+	@NotBlank
+	@Column(unique = true)
+	@Pattern(regexp = "[A-Z]{1,3} [0-9][0-9]{3}")
+	protected String			code;
 
 	@NotBlank
-	@Length(min = 1, max = 75)
-	protected String			title;
+	@Max(75)
+	protected String			motivation;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
-	protected String			summary;
-
-	@NotNull
-	@Range(min = 0)
-	protected Double			timePeriod;
-
-	@URL
-	protected String			link;
-
+	@Max(100)
+	protected String			goals;
 
 	// Derived attributes -----------------------------------------------------
+
+	protected Double			workTime;
 
 	// Relationships ----------------------------------------------------------
 
 	@NotNull
-	@ManyToOne
-	protected Practicum			practicum;
+	@Valid
+	@OneToMany
+	protected List<Activity>	workbook;
 
-
+}
