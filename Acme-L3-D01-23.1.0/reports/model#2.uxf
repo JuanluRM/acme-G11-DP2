@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>&lt;&lt;Entity&gt;&gt;
+Banner
+--
+
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+
+      <x>322</x>
+      <y>357</y>
+      <w>385</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Enrolment
+--
++ code: String {Past, NotNull, Pattern = “[A-Z]{1,3}[0-9][0-9]{3}”}
++ motivation: String {NotBlank, Lenght = 75}
++ goals: String {NotBlank, Lenght = 100}
++ workTime: Double
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>350</y>
+      <w>273</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Rol&gt;&gt;
+Student
+--
++ statement: String {NotBlank, Lenght = 75}
++ strongFeatures: String {NotBlank, Lenght = 100}
++ weakFeatures: String {NotBlank, Lenght = 100}
++ link: String {URL}
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>154</y>
+
+      <w>385</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Activity
+--
++ title: String {NotBlank, Lenght = 75}
++ activityAbstract: String {NotBlank, Lenght = 100}
++ activityType: ActivityType
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>273</y>
+
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+
+      <x>70</x>
+      <y>196</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ActivityType
+--
+THEORY
+HANDSON
+
+bg=orange
+
+
+</panel_attributes>
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>84</y>
+      <w>287</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AuditorDashBoard
+--
++ totalNumStudentsForTheoryCourses: Integer
++ totalNumStudentsForHandsOnCourses: Integer
++ averageStudents: Double
++ deviationStudents: Double
++ minStudents: Double
++ maxStudents: Double
++ averageTimeStudentRecords: Map&lt;String, Double&gt;
++ deviationTimeStudentRecords: Map&lt;String, Double&gt;
++ minTimeStudentRecords: Map&lt;String, Double&gt;
++ maxTimeStudentRecords: Map&lt;String, Double&gt;		
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
