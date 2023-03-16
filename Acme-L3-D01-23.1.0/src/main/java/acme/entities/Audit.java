@@ -44,8 +44,8 @@ public class Audit extends AbstractEntity {
 	@Length(min = 1, max = 100)
 	protected String			weakPoints;
 
-	@NotNull
-	protected MarkType			note;
+	@NotBlank
+	protected String			note;
 
 	// Derived attributes -----------------------------------------------------
 
