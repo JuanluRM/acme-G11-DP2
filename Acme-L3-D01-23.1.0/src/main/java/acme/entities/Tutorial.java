@@ -28,34 +28,34 @@ public class Tutorial extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+	protected static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	protected String			code;
+	protected String				code;
 
 	@NotBlank
 	@Length(min = 1, max = 76)
-	protected String			title;
+	protected String				title;
 
 	@NotBlank
 	@Length(min = 1, max = 101)
-	protected String			summary;
+	protected String				summary;
 
 	@NotBlank
 	@Length(min = 1, max = 101)
-	protected String			goals;
+	protected String				goals;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotBlank
-	protected Date				startMoment;
+	protected Date					startMoment;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotBlank
-	protected Date				finishMoment;
+	protected Date					finishMoment;
 
 	// Derived attributes -----------------------------------------------------
 
@@ -63,11 +63,12 @@ public class Tutorial extends AbstractEntity {
 
 	@Valid
 	@OneToMany
-	protected List<Session>		sessions;
+	protected List<SessionTutorial>	tutorialSessions;
 
 	@Valid
 	@ManyToOne(optional = true)
-	protected Assistant			assistant;
+	protected Assistant				assistant;
+
 	/*
 	 * @Valid
 	 * 

@@ -14,7 +14,7 @@ bg=green</help_text>
     <id>UMLClass</id>
     <coordinates>
       <x>77</x>
-      <y>196</y>
+      <y>189</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -34,9 +34,9 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>63</y>
+      <y>56</y>
       <w>315</w>
-      <h>105</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Banner
@@ -54,7 +54,7 @@ bg=green
     <id>UMLClass</id>
     <coordinates>
       <x>77</x>
-      <y>63</y>
+      <y>56</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -74,8 +74,8 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>371</y>
+      <x>56</x>
+      <y>336</y>
       <w>385</w>
       <h>175</h>
     </coordinates>
