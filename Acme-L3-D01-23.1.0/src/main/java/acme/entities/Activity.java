@@ -1,22 +1,18 @@
 
 package acme.entities;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -28,38 +24,37 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-//@CustomLog
-
-public class Session extends AbstractEntity {
+public class Activity extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes --------------------------------------------------------------
+	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Length(min = 1, max = 75)
+	@Max(75)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
-	protected String			summary;
+	@Max(100)
+	protected String			activityAbstract;
 
-	@NotNull
-	@Range(min = 0)
-	protected Double			timePeriod;
+	protected ActivityType		activityType;
+
+	//Restriccion pasado y futuro (de momento no se hace)
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				timePeriod;
 
 	@URL
 	protected String			link;
-
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
 	@NotNull
-	@ManyToOne
-	protected Practicum			practicum;
-
-
+	@Valid
+	@ManyToOne(optional = true)
+	protected Enrolment			enrolment;
+}

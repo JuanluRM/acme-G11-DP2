@@ -4,20 +4,11 @@ package acme.entities;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
-import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
-
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
@@ -28,9 +19,7 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-//@CustomLog
-
-public class Session extends AbstractEntity {
+public class Lecture extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -39,27 +28,27 @@ public class Session extends AbstractEntity {
 	// Attributes --------------------------------------------------------------
 
 	@NotBlank
-	@Length(min = 1, max = 75)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
-	protected String			summary;
+	@Length(max = 100)
+	protected String			lectureAbstract;
 
 	@NotNull
-	@Range(min = 0)
-	protected Double			timePeriod;
+	@Min(0)
+	protected Double			estimatedLearningTime;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			body;
+
+	@NotNull
+	protected LectureType		type;
 
 	@URL
 	protected String			link;
 
-
-	// Derived attributes -----------------------------------------------------
-
 	// Relationships ----------------------------------------------------------
 
-	@NotNull
-	@ManyToOne
-	protected Practicum			practicum;
-
-
+}

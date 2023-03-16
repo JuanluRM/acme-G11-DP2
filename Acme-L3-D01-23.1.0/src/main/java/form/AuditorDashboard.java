@@ -1,5 +1,5 @@
 
-package acme.entities;
+package form;
 
 import java.io.Serializable;
 

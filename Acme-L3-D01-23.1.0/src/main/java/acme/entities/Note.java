@@ -1,36 +1,33 @@
 
 package acme.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
-
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+ * @pattern(reg)
+ */
+
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-//@CustomLog
-
-public class Session extends AbstractEntity {
+public class Note extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -38,28 +35,31 @@ public class Session extends AbstractEntity {
 
 	// Attributes --------------------------------------------------------------
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotBlank
-	@Length(min = 1, max = 75)
+	protected Date				instantiationMoment;
+
+	@NotBlank
+	@Length(min = 1, max = 76)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
-	protected String			summary;
+	@Length(min = 1, max = 76)
+	@Pattern(regexp = "^\\(\\w+\\) - \\(\\w+,\\s\\w+\\)$")
+	protected String			author;
 
-	@NotNull
-	@Range(min = 0)
-	protected Double			timePeriod;
+	@NotBlank
+	@Length(min = 1, max = 101)
+	protected String			message;
+
+	@Email
+	protected String			email;
 
 	@URL
 	protected String			link;
-
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
-	@NotNull
-	@ManyToOne
-	protected Practicum			practicum;
-
-
+}

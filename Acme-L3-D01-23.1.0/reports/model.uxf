@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
   <help_text>&lt;&lt;Entity&gt;&gt;
-Banner
+Tutorial
 --
 + instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
 + displayPeriod: Period {NotBlank}
@@ -21,9 +21,9 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>301</y>
-      <w>343</w>
+      <x>77</x>
+      <y>196</y>
+      <w>315</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
@@ -41,8 +41,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>469</x>
-      <y>301</y>
+      <x>420</x>
+      <y>63</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
@@ -50,7 +50,8 @@ bg=green</panel_attributes>
 Banner
 --
 + instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
-+ displayPeriod: Period {NotBlank}
++ start: Date {Temporal(TIMESTAMP),Past,NotNull}
++ end: Date {Temporal(TIMESTAMP),Past,NotNull}
 + picture: String {NotBlank, URL}
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
@@ -64,12 +65,11 @@ bg=green
       <x>469</x>
       <y>168</y>
       <w>315</w>
-      <h>112</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Note
 --
-+ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ instantiationMoment: LocalDate {Temporal(TIMESTAMP), Past, NotNull}
 + title: String {NotBlank, Lenght = 76}
 + author: String {NotBlank, Lenght = 76}
 + message: String {NotBlank, Lenght = 101}
@@ -96,6 +96,48 @@ Bulletin
 + flag: Boolean (NotNull)
 + link: String {URL}
 bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>469</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ heading: String {NotBlank, Length = 75}
++ sumary: String {NotBlank, Length = 100}
++ availabilityPeriod: Period {NotBlank}
++ price: Double {NotNull, Min = 0}
++ link: String {URL}
+bg=green
+      <y>371</y>
+      <w>385</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;From&gt;&gt;
+DashBoard
+--
++ numberPerPrincipal: Map&lt;String,Integer&gt;
++ ratioOfCompletePeeps: Double
++ ratioOfCriticalBulletin: Double
++ ratioOfNonCriticalBulletin: Double
++ averageBudgetPerCurrency: Map&lt;String, Double&gt;
++ minimumBudgetPerCurrency: Map&lt;String,Double&gt;
++ maximumBudgetPerCurrency: Map&lt;String,Double&gt;
++ standardDeviationBudgetPerCurrency: Map&lt;String,Double&gt;
++ averageNotesLast10Weeks: Double
++ minimumNotesLast10Weeks: Double
++ maximumNotesLast10Weeks: Double
++ standardDeviationNotesLast10Weeks: Double
+
+bg=cyan
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
