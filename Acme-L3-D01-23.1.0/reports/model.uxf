@@ -98,4 +98,25 @@ Bulletin
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>469</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ heading: String {NotBlank, Length = 75}
++ sumary: String {NotBlank, Length = 100}
++ availabilityPeriod: Period {NotBlank}
++ price: Double {NotNull, Min = 0}
++ link: String {URL}
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
