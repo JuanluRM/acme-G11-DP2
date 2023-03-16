@@ -23,8 +23,8 @@ Session
 --
 + title: Date {Temporal(TIMESTAMP), Past, NotNull}
 + abstract: String {NotBlank, Lenght = 75}
-+ start: Datetime
-+ end: DateTime
++ start: Date
++ end: Date
 + link: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -49,6 +49,25 @@ bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>63</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Company
+--
++ name: String {Length(1, 75)}
++ vatNumber: String {NotBlank, Lenght(1,75)}
++ summary: String {NotBlank, Lenght(1,100)}
++ link: String {URL}
+bg=green
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
       <x>280</x>
@@ -56,10 +75,23 @@ bg=green</panel_attributes>
       <w>70</w>
       <h>126</h>
     </coordinates>
-    <panel_attributes>lt=-
-m1=1..n
-m2=1
-contains &gt;</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..n
+registeredBy &gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>343</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
 </diagram>
