@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.Max;
@@ -52,5 +53,10 @@ public class Enrolment extends AbstractEntity {
 	@Valid
 	@OneToMany
 	protected List<Activity>	workbook;
+
+	@NotNull
+	@Valid
+	@ManyToOne
+	protected Course			course;
 
 }
