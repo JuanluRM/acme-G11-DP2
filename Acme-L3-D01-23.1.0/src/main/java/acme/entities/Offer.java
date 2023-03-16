@@ -25,14 +25,9 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-<<<<<<<< HEAD:Acme-L3-D01-23.1.0/src/main/java/acme/entities/PracticumSession.java
 //@CustomLog
 
-public class PracticumSession extends AbstractEntity {
-
-========
 public class Offer extends AbstractEntity {
->>>>>>>> develop:Acme-L3-D01-23.1.0/src/main/java/acme/entities/Offer.java
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
