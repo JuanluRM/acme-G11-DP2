@@ -54,5 +54,5 @@ public class Audit extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Auditor			auditors;
+	protected Auditor			auditor;
 }

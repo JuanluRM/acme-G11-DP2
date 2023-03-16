@@ -13,6 +13,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,15 +36,15 @@ public class Practicum extends AbstractEntity {
 	protected String			code;
 
 	@NotBlank
-	@Length(min = 1, max = 75)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
+	@Length(max = 100)
 	protected String			summary;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
+	@Length(max = 100)
 	protected String			goals;
 
 	@Min(0)
@@ -54,7 +55,7 @@ public class Practicum extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@ManyToOne
-	protected Practicum			company;
+	protected Company			company;
 
 	@NotNull
 	@ManyToOne
