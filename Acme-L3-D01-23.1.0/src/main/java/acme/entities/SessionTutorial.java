@@ -41,11 +41,11 @@ public class SessionTutorial extends AbstractEntity {
 	protected SessionType		tiposesion;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotBlank
+	@NotNull
 	protected Date				startMoment;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotBlank
+	@NotNull
 	protected Date				finishMoment;
 
 	@URL
