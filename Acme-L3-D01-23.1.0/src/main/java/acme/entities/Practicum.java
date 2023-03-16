@@ -1,70 +1,56 @@
 
 package acme.entities;
 
-import java.util.Date;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.Valid;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
-import acme.roles.Assistant;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-public class Tutorial extends AbstractEntity {
+//@CustomLog
+
+public class Practicum extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
+	// Attributes --------------------------------------------------------------
 
-	@NotBlank
-	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
+	@NotNull
 	protected String			code;
 
 	@NotBlank
-	@Length(min = 1, max = 76)
+	@Length(min = 1, max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 101)
+	@Length(min = 1, max = 100)
 	protected String			summary;
 
 	@NotBlank
-	@Length(min = 1, max = 101)
+	@Length(min = 1, max = 100)
 	protected String			goals;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotBlank
-	protected Date				startMoment;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotBlank
-	protected Date				finishMoment;
+	@Min(0)
+	@NotNull
+	protected Double			estimatedTotalTime;
 
 	// Derived attributes -----------------------------------------------------
-
 	// Relationships ----------------------------------------------------------
 
-	@Valid
-	@ManyToOne(optional = true)
-	protected Assistant			assistant;
-
-	@Valid
-	@ManyToOne
-	protected Course			course;
-
+	// 
 }

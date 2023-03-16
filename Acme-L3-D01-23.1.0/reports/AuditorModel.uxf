@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>&lt;&lt;Entity&gt;&gt;
+Banner
+--
+
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green</help_text>
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>138</x>
+      <y>162</y>
+      <w>258</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Audit
+--
++ code: String {NotBlank, Unique, Pattern ("[A-Z]{1,3}[0-9][0-9]{3}")}
++ conclusion: String {NotBlank, Lenght = 100}
++ strongPoints: String {NotBlank, Lenght = 100}
++ weakPoints: String {NotBlank, Lenght = 100}
++ note: MarkType
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>300</y>
+      <w>246</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AuditorDashBoard
+--
++ totalNumAuditsForTheoryCourses: Integer
++ totalNumAuditsForHandsOnCourses: Integer
++ averageAudits: Double
++ deviationAudits: Double
++ minAudits: Double
++ maxAudits: Double
++ averageTimeAuditingRecords: Map&lt;String, Double&gt;
++ deviationTimeAuditingRecords: Map&lt;String, Double&gt;
++ minTimeAuditingRecords: Map&lt;String, Double&gt;
++ maxTimeAuditingRecords: Map&lt;String, Double&gt;		
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>138</x>
+      <y>324</y>
+      <w>264</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AuditRecord
+--
++ subject: String {NotBlank, Lenght = 75}
++ assessment: String {NotBlank, Lenght = 100}
++ startAudition: Date {Temporal(TIMESTAMP), Past, NotNull}
++ endAudition: Date {Temporal(TIMESTAMP), Past, NotNull}
++ mark: MarkType
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>162</y>
+      <w>198</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+Registered by &gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;300.0;80.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>246</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>96</y>
+      <w>222</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Auditor
+--
++ firm: String {NotBlank, Lenght = 75}
++ professionalId: String {NotBlank, Lenght = 25}
++ certificationsList: List&lt;String&gt; {NotBlank, Lenght = 100}
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>186</y>
+      <w>84</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+MarkType
+--
++ A_PLUS
++ A
++ B
++ C
++ F
++ F_MINUS
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

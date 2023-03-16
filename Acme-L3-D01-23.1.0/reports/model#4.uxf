@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
++ displayPeriod: Period {NotBlank}
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank, Lenght = 75}
++ link: String {NotBlank,URL}
+bg=green</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>119</x>
+      <y>294</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Session
+--
++ title: Date {Temporal(TIMESTAMP), Past, NotNull}
++ abstract: String {NotBlank, Lenght = 75}
++ start: Datetime
++ end: DateTime
++ link: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>77</y>
+      <w>343</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Practicum
+--
++ code: String {Past, NotNull, Pattern = “[A-Z]{1,3}[0-9][0-9]{3}”}
++ title: String {NotBlank, Lenght = 75}
++ abstract: String {NotBlank, Lenght = 100}
++ goals: String {NotBlank, Lenght = 100}
++ estimatedTotalTime: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>175</y>
+      <w>70</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
