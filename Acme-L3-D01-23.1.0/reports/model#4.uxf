@@ -13,8 +13,8 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>301</y>
+      <x>119</x>
+      <y>294</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -32,8 +32,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>21</x>
-      <y>84</y>
+      <x>126</x>
+      <y>77</y>
       <w>343</w>
       <h>105</h>
     </coordinates>
@@ -51,8 +51,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>175</x>
-      <y>182</y>
+      <x>280</x>
+      <y>175</y>
       <w>70</w>
       <h>126</h>
     </coordinates>

@@ -2,12 +2,10 @@
 package acme.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -62,17 +60,11 @@ public class Tutorial extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 
 	@Valid
-	@OneToMany
-	protected List<Session>		sessions;
-
-	@Valid
 	@ManyToOne(optional = true)
 	protected Assistant			assistant;
-	/*
-	 * @Valid
-	 * 
-	 * @ManyToOne
-	 * protected Course course;
-	 */
+
+	@Valid
+	@ManyToOne
+	protected Course			course;
 
 }

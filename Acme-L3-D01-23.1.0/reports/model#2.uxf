@@ -22,8 +22,9 @@ bg=green</help_text>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>371</x>
-      <y>518</y>
+
+      <x>322</x>
+      <y>357</y>
       <w>385</w>
       <h>126</h>
     </coordinates>
@@ -40,8 +41,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>406</y>
+      <x>7</x>
+      <y>350</y>
       <w>273</w>
       <h>105</h>
     </coordinates>
@@ -52,14 +53,15 @@ Student
 + strongFeatures: String {NotBlank, Lenght = 100}
 + weakFeatures: String {NotBlank, Lenght = 100}
 + link: String {URL}
-bg=YELLOW</panel_attributes>
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
-      <y>294</y>
+      <x>329</x>
+      <y>154</y>
+
       <w>385</w>
       <h>126</h>
     </coordinates>
@@ -76,31 +78,36 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>413</y>
+      <x>511</x>
+      <y>273</y>
+
       <w>35</w>
-      <h>119</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..*</panel_attributes>
-    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>168</x>
-      <y>273</y>
+
+      <x>70</x>
+      <y>196</y>
       <w>126</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ActivityType
 --
 THEORY
 HANDSON
 
+bg=orange
 
+
+</panel_attributes>
 
 bg=ORANGE</panel_attributes>
     <additional_attributes/>
