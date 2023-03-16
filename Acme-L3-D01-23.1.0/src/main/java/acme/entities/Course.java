@@ -1,22 +1,16 @@
 
 package acme.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -52,6 +46,10 @@ public class Course extends AbstractEntity {
 	@Length(max = 100)
 	protected String			courseAbstract;
 
+	@NotNull
+	protected CourseType		type;
+
+	@NotNull
 	protected Money				retailPrice;
 
 	@URL
@@ -59,43 +57,39 @@ public class Course extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+	// Esto lo vas a calcular en el controlador 
 
-	@Transient
-	public CourseType getCourseType() {
-		CourseType courseType = null;
-		int theorical = 0;
-		int hands_on = 0;
-
-		for (int i = 0; i < this.lectures.size(); i++) {
-			final Lecture l = this.lectures.get(i);
-
-			if (l.getType() == LectureType.HANDS_ON)
-				hands_on++;
-			else
-				theorical++;
-		}
-
-		if (theorical > hands_on)
-			courseType = CourseType.THEORICAL;
-		else if (hands_on > theorical)
-			courseType = CourseType.HANDS_ON;
-		else
-			courseType = CourseType.BALANCED;
-
-		return courseType;
-	}
-
+	//	@Transient
+	//	public CourseType getCourseType() {
+	//		CourseType courseType = null;
+	//		int theorical = 0;
+	//		int hands_on = 0;
+	//
+	//		for (int i = 0; i < this.lectures.size(); i++) {
+	//			final Lecture l = this.lectures.get(i);
+	//
+	//			if (l.getType() == LectureType.HANDS_ON)
+	//				hands_on++;
+	//			else
+	//				theorical++;
+	//		}
+	//
+	//		if (theorical > hands_on)
+	//			courseType = CourseType.THEORICAL;
+	//		else if (hands_on > theorical)
+	//			courseType = CourseType.HANDS_ON;
+	//		else
+	//			courseType = CourseType.BALANCED;
+	//
+	//		return courseType;
+	//	}
 
 	// Relationships ----------------------------------------------------------
-	@Valid
-	@OneToMany(mappedBy = "course")
-	protected List<Lecture>	lectures;
 
 	@NotNull
 	@Valid
-	@OnDelete(action = OnDeleteAction.CASCADE)
 	@ManyToOne(optional = true)
-	protected Lecturer		lecturer;
+	protected Lecturer			lecturer;
 	//como hacer que el sistema descarte los cursos puramente teoricos --> formulario, aqui no
 
 }
