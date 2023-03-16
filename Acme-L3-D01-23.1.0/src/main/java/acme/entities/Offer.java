@@ -25,6 +25,8 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
+//@CustomLog
+
 public class Offer extends AbstractEntity {
 	// Serialisation identifier -----------------------------------------------
 

@@ -17,6 +17,7 @@ Banner
 + slogan: String {NotBlank, Lenght = 75}
 + link: String {NotBlank,URL}
 bg=green</help_text>
+
   <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
@@ -25,6 +26,7 @@ bg=green</help_text>
       <y>133</y>
       <w>301</w>
       <h>105</h>
+
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Audit
@@ -40,10 +42,12 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>399</x>
       <y>294</y>
       <w>287</w>
       <h>154</h>
+
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 AuditorDashBoard
@@ -69,6 +73,7 @@ bg=CYAN</panel_attributes>
       <y>322</y>
       <w>308</w>
       <h>105</h>
+
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 AuditRecord
@@ -85,6 +90,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>315</x>
       <y>133</y>
       <w>231</w>
@@ -99,10 +105,12 @@ Registered by &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
+
       <x>168</x>
       <y>231</y>
       <w>35</w>
       <h>105</h>
+
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
 m2=1..*</panel_attributes>
@@ -111,10 +119,12 @@ m2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>392</x>
       <y>56</y>
       <w>259</w>
       <h>84</h>
+
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Auditor
@@ -129,10 +139,12 @@ bg=YELLOW</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
       <x>595</x>
       <y>161</y>
       <w>98</w>
       <h>105</h>
+
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 MarkType

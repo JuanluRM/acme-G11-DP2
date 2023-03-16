@@ -1,0 +1,5 @@
+key,code,motivation,goals,workTime,key:course,key:student
+enrolment-01,A1233,Es una clase que tratara sobre los bases de la ingenieria,Es una clase que tratara sobre los bases de la ingenieria,10.0,course-01,student-01
+enrolment-02,B1233,La clase tratará sobre las práticas que se pueden realizar en ingenieria,Es una clase que tratara sobre los bases de la ingenieria,10.0,course-01,student-01
+enrolment-03,C1233,Es una clase que tratara sobre los bases de la fisica,Es una clase que tratara sobre los bases de la ingenieria,10.0,course-02,student-02
+enrolment-04,D1233,La clase tratará sobre las práticas que se pueden realizar en fisica,Es una clase que tratara sobre los bases de la ingenieria,10.0,course-02,student-02

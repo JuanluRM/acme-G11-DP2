@@ -11,13 +11,6 @@ import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
 
-/*
- * -Relacion entre Asistente con las otras entidades
- * -Tutorial estimatedTime regulaion noNull/blank
- * -Session time period regulacion, explicacion
- * 
- */
-
 @Entity
 @Getter
 @Setter
