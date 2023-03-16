@@ -1,0 +1,5 @@
+key,title,lecture-abstract,estimated-learning-time,body,type,link
+lecture-01,Fundamentos de la Ingenieria,Es una clase que tratara sobre los bases de la ingenieria,2.25,hola que tal,THEORICAL,https://www.lecture01.com
+lecture-02,Prácticas en Ingenieria,La clase tratará sobre las práticas que se pueden realizar en ingenieria,1.50,hola que tal,HANDS_ON,https://www.lecture02.com
+lecture-03,Fundamentos de la Fisica,Es una clase que tratara sobre los bases de la fisica,2.50,hola que tal,THEORICAL,https://www.lecture03.com
+lecture-04,Prácticas en Fisica,La clase tratará sobre las práticas que se pueden realizar en fisica,1.15,hola que tal,HANDS_ON,https://www.lecture04.com

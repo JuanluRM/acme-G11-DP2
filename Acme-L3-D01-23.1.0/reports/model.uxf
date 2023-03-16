@@ -68,7 +68,6 @@ bg=green
       <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Note
 --
 + instantiationMoment: Date {Temporal(TIMESTAMP), Past, NotNull}
 + title: String {NotBlank, Lenght = 76}
