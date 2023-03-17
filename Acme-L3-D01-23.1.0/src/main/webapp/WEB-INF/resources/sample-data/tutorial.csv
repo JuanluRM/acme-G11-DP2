@@ -1,0 +1,3 @@
+key,code,title,summary,goals,startMoment,finishMoment,key:assistant,key:course
+tutorial-01,A1003,Tutoria de Matematicas,Tutoria de prueba,Entender los ejercicios 1 al 4,2021/02/13 19:39,2021/02/13 20:40,assistant-01,course-01
+tutorial-02,A1013,Tutoria de DP2,Tutoria de prueba,Entender relaciones,2021/02/13 20:40,2021/02/13 21:40,assistant-02,course-02
