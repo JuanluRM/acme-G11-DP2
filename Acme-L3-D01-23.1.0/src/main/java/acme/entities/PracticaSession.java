@@ -5,15 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
-import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +22,7 @@ import lombok.Setter;
 @Setter
 //@CustomLog
 
-public class Practicum extends AbstractEntity {
+public class PracticaSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -31,34 +30,27 @@ public class Practicum extends AbstractEntity {
 
 	// Attributes --------------------------------------------------------------
 
-	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	@NotNull
-	protected String			code;
-
 	@NotBlank
-	@Length(max = 75)
+	@Length(min = 1, max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Length(max = 100)
+	@Length(min = 1, max = 100)
 	protected String			summary;
 
-	@NotBlank
-	@Length(max = 100)
-	protected String			goals;
-
-	@Min(0)
 	@NotNull
-	protected Double			estimatedTotalTime;
+	@Range(min = 0)
+	protected Double			timePeriod;
+
+	@URL
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
+
 	// Relationships ----------------------------------------------------------
-	@NotNull
-	@ManyToOne
-	protected Company			company;
 
 	@NotNull
 	@ManyToOne
-	protected Course			course;
-	// 
+	protected Practica			practica;
+
 }
