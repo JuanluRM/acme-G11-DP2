@@ -1,0 +1,3 @@
+key,instantiationMoment,title,author,message,email,link
+note-01,2023/01/01 8:30,title1,"(administrator) - (Joestar, Joseph)",message1,note1@mail.com,http://www.example.com
+note-02,2023/01/01 10:40,title2,"(administrator) - (Wake, Alan)",message1,note2@mail.com,http://www.example.com
