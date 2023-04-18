@@ -1,31 +1,29 @@
 
 package form;
 
-import java.io.Serializable;
-
+import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-
-public class LecturerDashboard implements Serializable {
+public class LecturerDashboard extends AbstractForm {
 
 	private static final long	serialVersionUID	= 1L;
 
-	Integer						totalNTheoryLectures;
+	Integer						totalNTheoricalLectures;
 	Integer						totalNHandsOnLectures;
 
-	Double						averageLearningTimeByLectures;
-	Double						averageLearningTimeByCourses;
+	Double						averageEstimatedLearningTimeByLectures;
+	Double						averageEstimatedLearningTimeByCourses;
 
-	Double						deviationLearningTimeByLectures;
-	Double						deviationLearningTimeByCourses;
+	Double						deviationEstimatedLearningTimeByLectures;
+	Double						deviationEstimatedLearningTimeByCourses;
 
-	Double						minimumLearningTimeByLectures;
-	Double						minimumLearningTimeByCourses;
+	Double						minimumEstimatedLearningTimeByLectures;
+	Double						minimumEstimatedLearningTimeByCourses;
 
-	Double						maximumLearningTimeByLectures;
-	Double						maximumLearningTimeByCourses;
+	Double						maximumEstimatedLearningTimeByLectures;
+	Double						maximumEstimatedLearningTimeByCourses;
 
 }

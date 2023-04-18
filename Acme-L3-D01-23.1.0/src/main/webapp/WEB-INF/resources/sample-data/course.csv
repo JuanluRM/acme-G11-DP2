@@ -1,3 +1,3 @@
-key,code,title,course-abstract,type,retail-price,link,key:lecturer
-course-01,COU 001,Curso Ingenieria,Curso que tratara sobre la ingenieria,BALANCED,EUR 24.99,https://www.course001.com,lecturer-01
-course-02,COU 002,Curso Fisica,Curso que tratara sobre la fisica,BALANCED,EUR 19.99,https://www.course002.com,lecturer-02
+key,code,title,course-abstract,retail-price,publish,link,key:lecturer
+course-01,COU 001,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,true,https://www.course001.com,lecturer-01
+course-02,COU 002,Curso Fisica,Curso que tratara sobre la fisica,EUR 19.99,false,https://www.course002.com,lecturer-02

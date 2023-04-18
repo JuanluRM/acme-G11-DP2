@@ -44,11 +44,22 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Profesor
+master.menu.lecturer.course = Mis cursos
+master.menu.lecturer.dashboard = Tus tableros de profesor
+
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquiera
+master.menu.any.course = Todos los cursos Publicados
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.lecturer = Datos del profesor
+master.menu.user-account.become-lecturer = Hazte profesor

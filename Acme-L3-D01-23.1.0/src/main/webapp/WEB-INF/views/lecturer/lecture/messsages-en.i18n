@@ -1,0 +1,22 @@
+# messages-en.i18n
+
+lecturer.lecture.list.label.title = Title
+lecturer.lecture.list.label.lectureAbstract = Abstract
+lecturer.lecture.list.label.type = Type
+lecturer.lecture.list.label.publish = Publish
+
+lecturer.lecture.form.label.title = Title
+lecturer.lecture.form.label.lectureAbstract = Abstract
+lecturer.lecture.form.label.estimatedLearningTime = Learning time
+lecturer.lecture.form.label.body = Body
+lecturer.lecture.form.label.type = Type
+lecturer.lecture.form.label.link = Link
+lecturer.lecture.form.label.publish = Publish
+
+
+lecturer.lecture.list.button.create = Create
+lecturer.lecture.form.button.create = Create
+
+lecturer.lecture.form.button.update = Update
+lecturer.lecture.form.button.delete = Delete
+lecturer.lecture.form.button.publish = Publish

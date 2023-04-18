@@ -1,0 +1,14 @@
+# messages-es.i18n
+
+lecturer.dashboard.label.totalNumberOfTheoricalLectures = Numero de clases teoricas
+lecturer.dashboard.label.totalNumberOfHandsOnLectures = Numero de clases practicas
+
+lecturer.dashboard.label.averageEstimatedLearningTimeOfLectures = Media del tiempo de aprendizaje de tus clases
+lecturer.dashboard.label.deviationEstimatedLearningTimeOfLectures = Desviación estandar del tiempo de aprendizaje de tus clases
+lecturer.dashboard.label.minimumEstimatedLearningTimeOfLectures = Tu clase con menor tiempo de aprendizaje
+lecturer.dashboard.label.maximumEstimatedLearningTimeOfLectures = Tu clase con mayor tiempo de aprendizaje
+
+lecturer.dashboard.label.averageEstimatedLearningTimeOfCourses = Media del tiempo de aprendizaje de tus cursos
+lecturer.dashboard.label.deviationEstimatedLearningTimeOfCourses = Desviación estandar del tiempo de aprendizaje de tus clases
+lecturer.dashboard.label.minimumEstimatedLearningTimeOfCourses = Tu curso con menor tiempo de aprendizaje
+lecturer.dashboard.label.maximumEstimatedLearningTimeOfCourses = Tu curso con mayor tiempo de aprendizaje
