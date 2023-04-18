@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 key,instantiationMoment,title,author,message,email,link
 note-01,2023/01/01 8:30,title1,"(administrator) - (Joestar, Joseph)",message1,note1@mail.com,http://www.example.com
 note-02,2023/01/01 10:40,title2,"(administrator) - (Wake, Alan)",message1,note2@mail.com,http://www.example.com
+note-03,2022/02/13 18:40,He conseguido trabajo,(pabquide) - (Pablo Pablon),he sido contratado en la compañia Copyright Clearance Center aprendiendo en Acme L3,pabquide@padre.com,
+note-04,2022/02/13 18:40,Busco trabajo,(zacarias) - (Zacarias Zacaro),Con los conocimientos adquiridos en Acme L3 me he decidido por buscar trabajo,,
+
