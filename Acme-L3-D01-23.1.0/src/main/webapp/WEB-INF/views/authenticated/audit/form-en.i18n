@@ -1,0 +1,13 @@
+authenticated.audit.data = Audit data
+authenticated.audit.form.label.code = Code
+authenticated.audit.form.label.conclusion = Conclusion
+authenticated.audit.form.label.strongPoints = Strong points
+authenticated.audit.form.label.weakPoints = Weak points
+authenticated.audit.form.label.note = Note
+
+authenticated.audit.auditor.data = Auditor data
+authenticated.audit.form.label.auditor.userName = User name
+authenticated.audit.form.label.auditor.firm = Firm
+authenticated.audit.form.label.auditor.professionalId = Professional ID
+authenticated.audit.form.label.auditor.certificationsList = List of certifications
+authenticated.audit.form.label.auditor.link = Link

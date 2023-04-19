@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -48,8 +49,9 @@ public class AuditRecord extends AbstractEntity {
 	@NotNull
 	protected Date				endAudition;
 
-	@NotNull
-	protected MarkType			mark;
+	@NotBlank
+	@Pattern(regexp = "^((A\\+|A|B|C|F|F\\-))$", message = "{validation.regex.mark}")
+	protected String			mark;
 
 	@URL
 	protected String			link;
@@ -61,10 +63,5 @@ public class AuditRecord extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Audit				audit;
-
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Course			course;
 
 }
