@@ -17,4 +17,7 @@ public interface AdministratorOfferRepository extends AbstractRepository {
 
 	@Query("select o from Offer o where o.id = :id")
 	Offer findOfferById(int id);
+
+	@Query("select o from Offer o where o.id = :id")
+	Offer findOneOfferById(int id);
 }

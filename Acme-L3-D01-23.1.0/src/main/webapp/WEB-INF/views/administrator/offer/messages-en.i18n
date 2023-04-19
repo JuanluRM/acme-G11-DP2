@@ -14,3 +14,16 @@ administrator.offer.list.label.summary = Summary:
 administrator.offer.list.label.availabilityPeriod = Availability Period:
 administrator.offer.list.label.price = Price:
 administrator.offer.list.label.link = Link:
+
+administrator.offer.form.label.instantiationMoment = Instantiation moment:
+administrator.offer.form.label.heading = Heading:
+administrator.offer.form.label.summary = Summary:
+administrator.offer.form.label.availabilityPeriod = Availability Period:
+administrator.offer.form.label.price = Price:
+administrator.offer.form.label.link = Link:
+
+administrator.offer.form.button.create = Create
+administrator.offer.form.button.update = Update
+administrator.offer.form.button.delete = Delete
+
+administrator.offer.list.button.create = Create
