@@ -1,3 +1,4 @@
 key,title,summary,tipoSesion,startMoment,finishMoment,moreInfo,isPublished,key:tutorial
 sessionTutorial-01,Tutoria de Matematicas,De repaso,THEORY,2022/02/13 18:40,2022/02/13 20:40,https://www.tutoria.com,true,tutorial-01
 sessionTutorial-02,Tutoria de Matematicas,De repaso,THEORY,2022/03/13 18:40,2022/03/13 20:40,https://www.tutoria.com,false,tutorial-02
+sessionTutorial-03,Tutoria de DP2,De repaso,HANDS_ON,2022/03/13 18:40,2022/03/13 20:40,https://www.tutoria.com,false,tutorial-02

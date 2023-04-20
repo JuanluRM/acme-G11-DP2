@@ -16,11 +16,13 @@ assistant.tutorial.form.label.title = Title
 assistant.tutorial.form.label.summary = Summary
 assistant.tutorial.form.label.goals = Goals
 assistant.tutorial.form.label.course = Course
+assistant.tutorial.form.label.startMoment = Start Hour
+assistant.tutorial.form.label.finishMoment = Finish Hour
 	
-assistant.tutorial.form.button.tutorialSessions = Tutorial Sessions       
+assistant.tutorial.form.button.session-tutorial = Tutorial Sessions       
 assistant.tutorial.form.button.update = Update
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
-assistant.tutorial.form.button.publish = Publish
+assistant.tutorial.form.button.publish = Published
 
 assistant.tutorial.form.error.code = Error, code already exist on another tutorial

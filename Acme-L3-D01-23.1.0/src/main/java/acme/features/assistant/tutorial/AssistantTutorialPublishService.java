@@ -60,7 +60,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	public void bind(final Tutorial object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "summary", "goals");
+		super.bind(object, "code", "title", "summary", "startMoment", "finishMoment", "goals");
 	}
 
 	@Override
@@ -95,7 +95,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		courses = this.repository.findPublishedCourses();
 		choices = SelectChoices.from(courses, "title", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "course");
+		tuple = super.unbind(object, "code", "title", "summary", "startMoment", "finishMoment", "goals", "course");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

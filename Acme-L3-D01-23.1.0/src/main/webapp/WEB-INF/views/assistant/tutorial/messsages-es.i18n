@@ -19,12 +19,14 @@ assistant.tutorial.form.label.title = Título
 assistant.tutorial.form.label.summary = Resumen
 assistant.tutorial.form.label.goals = Objetivos
 assistant.tutorial.form.label.course = Curso
+assistant.tutorial.form.label.startMoment = Hora de inicio
+assistant.tutorial.form.label.finishMoment = Hora de Fin
 	
-assistant.tutorial.form.button.tutorialSessions = Sesiones de tutoria      
+assistant.tutorial.form.button.session-tutorial = Sesiones de tutoria      
 assistant.tutorial.form.button.update = Actualizar
 assistant.tutorial.form.button.delete = Borrar
 assistant.tutorial.form.button.create = Crear
-assistant.tutorial.form.button.publish = Publicar
+assistant.tutorial.form.button.publish = Publicado
 
 
 assistant.tutorial.form.error.code = Error, el código ya existe en otra tutoria
