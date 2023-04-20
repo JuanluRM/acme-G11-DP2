@@ -21,6 +21,11 @@
 	<acme:input-textbox code="student.enrolment.form.label.goals" path="goals"/>
 	<acme:input-textbox code="student.enrolment.form.label.workTime" path="workTime"/>
 	<jstl:choose>
+	<jstl:when test="${_command == 'create'}">
+	<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>
+	</jstl:when>
+	</jstl:choose>
+	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
 			<acme:submit code="student.enrolment.form.button.update" action="/student/enrolment/update"/>
 			<acme:submit code="student.enrolment.form.button.delete" action="/student/enrolment/delete"/>

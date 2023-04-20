@@ -62,6 +62,12 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Enrolment existing;
+
+			existing = this.repository.findOneEnrolmentByCode(object.getCode());
+			super.state(existing == null, "code", "student.enrolment.form.error.duplicated");
+		}
 	}
 
 	@Override
@@ -75,16 +81,14 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 	public void unbind(final Enrolment object) {
 		assert object != null;
 
-		final int studentId;
 		Collection<Course> courses;
 		SelectChoices choices;
 		Tuple tuple;
 
-		studentId = super.getRequest().getPrincipal().getActiveRoleId();
-		courses = this.repository.findManyCoursesByStudentId(studentId);
+		courses = this.repository.findCourses();
 		choices = SelectChoices.from(courses, "title", object.getCourse());
 
-		tuple = super.unbind(object, "code", "motivation", "goals", "workTime");
+		tuple = super.unbind(object, "code", "motivation", "goals", "workTime", "course");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 
