@@ -14,8 +14,12 @@ import acme.roles.Company;
 @Service
 public class CompanyPracticaListService extends AbstractService<Company, Practica> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
-	PracticaRepository repository;
+	CompanyPracticaRepository repository;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -45,7 +49,7 @@ public class CompanyPracticaListService extends AbstractService<Company, Practic
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime");
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "published");
 
 		super.getResponse().setData(tuple);
 	}

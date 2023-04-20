@@ -13,13 +13,8 @@ company.practica.list.label.title = Titulo:
 company.practica.list.label.summary = Resumen:
 company.practica.list.label.goals = Objetivos: (Optional)
 company.practica.list.label.estimatedTotalTime = Tiempo total estimado
-company.practica.list.label.published = Publicada?
-company.practica.list.label.course = Cursos
 
-company.practica.form.button.create = Crear
-company.practica.form.button.session = Sesión
-company.practica.form.button.update = Editar
-company.practica.form.button.delete = Eliminar
-company.practica.form.button.publish = Publicar
-
-company.practica.error.code.duplicated = El código de la practica ya existe
+company.practica.session.list.label.title = Codigo:
+company.practica.session.list.label.summary = Titulo:
+company.practica.session.list.label.timePeriod = Resumen:
+company.practica.session.list.label.link = Objetivos: (Optional)

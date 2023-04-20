@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
@@ -22,7 +24,7 @@ import lombok.Setter;
 @Setter
 //@CustomLog
 
-public class PracticaSession extends AbstractEntity {
+public class Session extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -51,6 +53,7 @@ public class PracticaSession extends AbstractEntity {
 
 	@NotNull
 	@ManyToOne
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Practica			practica;
 
 }

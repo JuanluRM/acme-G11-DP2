@@ -55,6 +55,9 @@ public class Course extends AbstractEntity {
 	@URL
 	protected String			link;
 
+	@NotNull
+	protected Boolean			publish;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Esto lo vas a calcular en el controlador 

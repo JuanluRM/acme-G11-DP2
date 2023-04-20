@@ -1,10 +1,14 @@
 
 package acme.features.company.practica;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Course;
 import acme.entities.Practica;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
@@ -13,7 +17,7 @@ import acme.roles.Company;
 public class CompanyPracticaShowService extends AbstractService<Company, Practica> {
 
 	@Autowired
-	PracticaRepository repository;
+	CompanyPracticaRepository repository;
 
 
 	@Override
@@ -53,9 +57,23 @@ public class CompanyPracticaShowService extends AbstractService<Company, Practic
 	public void unbind(final Practica object) {
 		assert object != null;
 
+		int assistantId;
+		Collection<Course> courses;
+		SelectChoices choices;
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime");
+		if (object.getPublished())
+			courses = this.repository.findAllCourses();
+		else {
+			assistantId = super.getRequest().getPrincipal().getActiveRoleId();
+			courses = this.repository.findPublishedCourses();
+		}
+
+		choices = SelectChoices.from(courses, "title", object.getCourse());
+
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "published", "course");
+		tuple.put("course", choices.getSelected().getKey());
+		tuple.put("courses", choices);
 
 		super.getResponse().setData(tuple);
 	}

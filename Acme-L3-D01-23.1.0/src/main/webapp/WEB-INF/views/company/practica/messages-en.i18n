@@ -12,4 +12,15 @@ company.practica.list.label.code = Code:
 company.practica.list.label.title = Title:
 company.practica.list.label.summary = Summary:
 company.practica.list.label.goals = Goals
-company.practica.list.label.estimatedTotalTime = Estimated total time
+company.practica.list.label.estimatedTotalTime = Estimated Total Time
+company.practica.list.label.published = Published?
+company.practica.list.label.course = Courses
+
+
+company.practica.form.button.create = Create
+company.practica.form.button.session = Session
+company.practica.form.button.update = Update
+company.practica.form.button.delete = Delete
+company.practica.form.button.publish = Publish
+
+company.practica.error.code.duplicated = The practica code already exists

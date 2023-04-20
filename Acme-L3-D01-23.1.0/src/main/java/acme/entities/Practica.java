@@ -51,8 +51,12 @@ public class Practica extends AbstractEntity {
 	@NotNull
 	protected Double			estimatedTotalTime;
 
+	@NotNull
+	protected Boolean			published;
+
 	// Derived attributes -----------------------------------------------------
 	// Relationships ----------------------------------------------------------
+
 	@NotNull
 	@ManyToOne
 	protected Company			company;
