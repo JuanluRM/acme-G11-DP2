@@ -16,22 +16,25 @@ public class LecturerLecturesController extends AbstractController<Lecturer, Lec
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerLecturesListService	listService;
+	protected LecturerLecturesListService		listService;
 
 	@Autowired
-	protected LecturerLecturesShowService	showService;
+	protected LecturerAllLecturesListService	listAllService;
 
 	@Autowired
-	protected LecturerLecturesCreateService	createService;
+	protected LecturerLecturesShowService		showService;
 
-	//	@Autowired
-	//	protected LecturerLecturesUpdateService		updateService;
-	//
-	//	@Autowired
-	//	protected LecturerLecturesDeleteService		deleteService;
-	//
-	//	@Autowired
-	//	protected LecturerLecturesPublishService	publishService;
+	@Autowired
+	protected LecturerLecturesCreateService		createService;
+
+	@Autowired
+	protected LecturerLecturesUpdateService		updateService;
+
+	@Autowired
+	protected LecturerLecturesDeleteService		deleteService;
+
+	@Autowired
+	protected LecturerLecturesPublishService	publishService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -39,12 +42,12 @@ public class LecturerLecturesController extends AbstractController<Lecturer, Lec
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
+		super.addCustomCommand("list-all", "list", this.listAllService);
 		super.addBasicCommand("show", this.showService);
-
 		super.addBasicCommand("create", this.createService);
-		//super.addBasicCommand("update", this.updateService);
-		//super.addBasicCommand("delete", this.deleteService);
-		//super.addBasicCommand("publish", this.publishService);
+		super.addBasicCommand("update", this.updateService);
+		super.addBasicCommand("delete", this.deleteService);
+		super.addCustomCommand("publish", "update", this.publishService);
 	}
 
 }

@@ -60,16 +60,13 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 	@Override
 	public void validate(final Course object) {
 		assert object != null;
-		//PARECE QUE GUARDA EL DATO EN LA BASE DE DATOS Y DESPUES HACE LA VALIDACION EN EL FORMULARIO
-		//		System.out.println(object.getRetailPrice());
-		//		System.out.println(object.getCode());
-		//		System.out.println(this.repository.findOneCourseByCode(object.getCode()));
-		//		if (!super.getBuffer().getErrors().hasErrors("code")) {
-		//			final Course course;
-		//
-		//			course = this.repository.findOneCourseByCode(object.getCode());
-		//			super.state(course == null, "code", "lecturer.course.error.code.duplicated");
-		//		}
+		//PARECE QUE GUARDA final EL DATO EN final LA BASE DE DATOS Y DESPUES HACE LA VALIDACION EN EL FORMULARIO
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Course course;
+
+			course = this.repository.findOneCourseByCode(object.getCode());
+			super.state(course == null || course.equals(object), "code", "lecturer.course.error.code.duplicated");
+		}
 
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
 			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");

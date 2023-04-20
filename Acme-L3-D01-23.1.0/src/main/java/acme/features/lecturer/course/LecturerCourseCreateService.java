@@ -60,15 +60,14 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void validate(final Course object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			Course course;
+		//		if (!super.getBuffer().getErrors().hasErrors("code")) {
+		//			Course course;
+		//
+		//			course = this.repository.findOneCourseByCode(object.getCode());
+		//			super.state(course == null, "code", "lecturer.course.error.code.duplicated");
+		//		}
 
-			course = this.repository.findOneCourseByCode(object.getCode());
-			super.state(course == null, "code", "lecturer.course.error.code.duplicated");
-		}
-
-		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
-			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+		super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
 
 	}
 

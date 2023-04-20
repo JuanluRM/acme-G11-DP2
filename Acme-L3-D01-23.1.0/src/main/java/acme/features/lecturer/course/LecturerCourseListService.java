@@ -50,7 +50,7 @@ public class LecturerCourseListService extends AbstractService<Lecturer, Course>
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "retailPrice");
+		tuple = super.unbind(object, "code", "title", "retailPrice", "publish");
 		tuple.put("type", this.repository.courseType(object.getId()));
 		super.getResponse().setData(tuple);
 	}

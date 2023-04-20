@@ -10,7 +10,10 @@
 	<acme:list-column code="lecturer.lecture.list.label.publish" path="publish" width="10%"/>
 </acme:list>
 
-<acme:button test="${showCreate}" code="lecturer.lecture.list.button.create" 
-action="/lecturer/lecture/create?courseId=${courseId}"/>
+<acme:button test="${not empty masterId}" code="lecturer.lecture.list.button.create" 
+action="/lecturer/lecture/create?masterId=${masterId}"/>
+
+<acme:button test="${empty masterId}" code="lecturer.lecture.list.button.create" 
+action="/lecturer/lecture/create"/>
 
 

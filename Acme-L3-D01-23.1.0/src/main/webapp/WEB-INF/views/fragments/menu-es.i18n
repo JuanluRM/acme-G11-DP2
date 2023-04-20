@@ -48,6 +48,7 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.lecturer = Profesor
 master.menu.lecturer.course = Mis cursos
+master.menu.lecturer.lecture = Mis clases
 master.menu.lecturer.dashboard = Tus tableros de profesor
 
 # master.menu.any ##########################################################

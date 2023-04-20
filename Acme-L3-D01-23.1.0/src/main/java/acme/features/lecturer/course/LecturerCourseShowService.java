@@ -25,7 +25,6 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		boolean status;
 
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 
 	}

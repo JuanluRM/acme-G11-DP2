@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import acme.entities.Course;
 import acme.entities.CourseLecture;
 import acme.entities.Lecture;
+import acme.entities.LectureType;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -24,37 +26,39 @@ public class LecturerLecturesCreateService extends AbstractService<Lecturer, Lec
 
 	@Override
 	public void check() {
-		boolean status;
 
-		status = super.getRequest().hasData("courseId", int.class);
-
-		super.getResponse().setChecked(status);
+		super.getResponse().setChecked(true);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-		int courseId;
+		int masterId;
 		Course course;
 
-		courseId = super.getRequest().getData("courseId", int.class);
-		course = this.repository.findOneCourseById(courseId);
-		status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer());
+		if (super.getRequest().hasData("masterId", int.class)) {
+			masterId = super.getRequest().getData("masterId", int.class);
+			course = this.repository.findOneCourseById(masterId);
+			status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer());
+		} else
+			status = super.getRequest().getPrincipal().hasRole(Lecturer.class);
 
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
+		int userAccountId;
 		Lecture lecture;
+		Lecturer lecturer;
+
+		userAccountId = super.getRequest().getPrincipal().getActiveRoleId();
+
+		lecturer = this.repository.findOneLecturerById(userAccountId);
 
 		lecture = new Lecture();
-		lecture.setTitle("");
-		lecture.setLectureAbstract("");
-		lecture.setEstimatedLearningTime(0.0);
-		lecture.setBody("");
 		lecture.setPublish(false);
-		lecture.setLink("");
+		lecture.setLecturer(lecturer);
 
 		super.getBuffer().setData(lecture);
 	}
@@ -79,9 +83,10 @@ public class LecturerLecturesCreateService extends AbstractService<Lecturer, Lec
 		assert object != null;
 
 		this.repository.save(object);
-		if (super.getRequest().hasData("courseId", int.class)) {
+
+		if (super.getRequest().hasData("masterId", int.class)) {
 			final CourseLecture cl = new CourseLecture();
-			cl.setCourse(this.repository.findOneCourseById(super.getRequest().getData("courseId", int.class)));
+			cl.setCourse(this.repository.findOneCourseById(super.getRequest().getData("masterId", int.class)));
 			cl.setLecture(object);
 			this.repository.save(cl);
 		}
@@ -90,11 +95,17 @@ public class LecturerLecturesCreateService extends AbstractService<Lecturer, Lec
 	@Override
 	public void unbind(final Lecture object) {
 		assert object != null;
-
+		int masterId;
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "lectureAbstract", "estimatedLearningTime", "body", "type", "link");
-		//tuple.put("courseId", super.getRequest().getData("courseId", int.class));
+		tuple = super.unbind(object, "title", "lectureAbstract", "estimatedLearningTime", "body", "type", "publish", "link");
+		tuple.put("lectureTypes", SelectChoices.from(LectureType.class, object.getType()));
+
+		if (super.getRequest().hasData("masterId", int.class)) {
+			masterId = super.getRequest().getData("masterId", int.class);
+			super.getResponse().setGlobal("masterId", masterId);
+		}
+
 		super.getResponse().setData(tuple);
 	}
 

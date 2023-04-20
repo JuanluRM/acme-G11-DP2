@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Lecturer;
 
 @Repository
 public interface LecturerLecturesRepository extends AbstractRepository {
@@ -23,6 +24,12 @@ public interface LecturerLecturesRepository extends AbstractRepository {
 	Course findOneCourseById(int courseId);
 
 	@Query("select c from Course c where c.id in (select cl.course from CourseLecture cl where cl.lecture in (select l from Lecture l where l.id = :masterId))")
-	Course findOneCourseByLectureId(int masterId);
+	Collection<Course> findCoursesByLectureId(int masterId);
+
+	@Query("select l from Lecturer l where l.id = :id")
+	Lecturer findOneLecturerById(int id);
+
+	@Query("select l from Lecture l where l.lecturer.id = :id")
+	Collection<Lecture> findLecturesByLecturerId(int id);
 
 }

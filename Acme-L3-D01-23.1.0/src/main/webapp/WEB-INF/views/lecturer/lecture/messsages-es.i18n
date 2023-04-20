@@ -14,8 +14,10 @@ lecturer.lecture.form.label.link = Link
 lecturer.lecture.form.label.publish = Publicada
 
 lecturer.lecture.list.button.create = Crear
-lecturer.lecture.form.button.create = Crear
+lecturer.lecture.form.button.create = Crear 
 
 lecturer.lecture.form.button.update = Actualizar
 lecturer.lecture.form.button.delete = Borrar
 lecturer.lecture.form.button.publish = Publicar
+
+lecturer.lecture.error.estimatedLearningTime.negative = El tiempo de aprendizaje de la clase no puede ser negativo

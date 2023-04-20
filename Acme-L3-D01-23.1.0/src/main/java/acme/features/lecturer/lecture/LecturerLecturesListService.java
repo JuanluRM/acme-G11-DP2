@@ -27,8 +27,7 @@ public class LecturerLecturesListService extends AbstractService<Lecturer, Lectu
 	public void check() {
 		boolean status;
 
-		System.out.println(super.getRequest());
-		status = super.getRequest().hasData("courseId", int.class);
+		status = super.getRequest().hasData("masterId", int.class);
 
 		super.getResponse().setChecked(status);
 
@@ -37,11 +36,11 @@ public class LecturerLecturesListService extends AbstractService<Lecturer, Lectu
 	@Override
 	public void authorise() {
 		boolean status;
-		int courseId;
+		int masterId;
 		Course course;
 
-		courseId = super.getRequest().getData("courseId", int.class);
-		course = this.repository.findOneCourseById(courseId);
+		masterId = super.getRequest().getData("masterId", int.class);
+		course = this.repository.findOneCourseById(masterId);
 		status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer());
 
 		super.getResponse().setAuthorised(status);
@@ -50,10 +49,10 @@ public class LecturerLecturesListService extends AbstractService<Lecturer, Lectu
 	@Override
 	public void load() {
 		Collection<Lecture> objects;
-		int courseId;
+		int masterId;
 
-		courseId = super.getRequest().getData("courseId", int.class);
-		objects = this.repository.findLecturesByCourseId(courseId);
+		masterId = super.getRequest().getData("masterId", int.class);
+		objects = this.repository.findLecturesByCourseId(masterId);
 
 		super.getBuffer().setData(objects);
 	}
@@ -61,11 +60,14 @@ public class LecturerLecturesListService extends AbstractService<Lecturer, Lectu
 	@Override
 	public void unbind(final Lecture object) {
 		assert object != null;
-
+		int masterId;
 		Tuple tuple;
+
+		masterId = super.getRequest().getData("masterId", int.class);
 
 		tuple = super.unbind(object, "title", "lectureAbstract", "type", "publish");
 
+		super.getResponse().setGlobal("masterId", masterId);
 		super.getResponse().setData(tuple);
 	}
 

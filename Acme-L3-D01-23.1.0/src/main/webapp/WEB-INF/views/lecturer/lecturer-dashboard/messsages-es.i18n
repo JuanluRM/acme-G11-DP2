@@ -9,6 +9,6 @@ lecturer.dashboard.label.minimumEstimatedLearningTimeOfLectures = Tu clase con m
 lecturer.dashboard.label.maximumEstimatedLearningTimeOfLectures = Tu clase con mayor tiempo de aprendizaje
 
 lecturer.dashboard.label.averageEstimatedLearningTimeOfCourses = Media del tiempo de aprendizaje de tus cursos
-lecturer.dashboard.label.deviationEstimatedLearningTimeOfCourses = Desviación estandar del tiempo de aprendizaje de tus clases
+lecturer.dashboard.label.deviationEstimatedLearningTimeOfCourses = Desviación estandar del tiempo de aprendizaje de tus cursos
 lecturer.dashboard.label.minimumEstimatedLearningTimeOfCourses = Tu curso con menor tiempo de aprendizaje
 lecturer.dashboard.label.maximumEstimatedLearningTimeOfCourses = Tu curso con mayor tiempo de aprendizaje
