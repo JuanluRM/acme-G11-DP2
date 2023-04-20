@@ -14,6 +14,8 @@ master.menu.home = Inicio
 master.menu.sign-up = Registrarse
 master.menu.sign-in = Entrar
 master.menu.sign-out = Salir
+master.menu.student = Estudiante
+master.menu.student.enrolment = Lista de inscripciones
 
 # master.menu.anonymous #######################################################
 

@@ -40,6 +40,7 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 
 		student = this.repository.findOneStudentById(super.getRequest().getPrincipal().getActiveRoleId());
 		object = new Enrolment();
+		object.setIsFinalised(false);
 		object.setStudent(student);
 
 		super.getBuffer().setData(object);

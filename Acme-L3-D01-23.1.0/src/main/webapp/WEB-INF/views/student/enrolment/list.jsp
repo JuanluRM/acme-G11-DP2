@@ -20,6 +20,7 @@
 	<acme:list-column code="student.enrolment.list.label.motivation" path="motivation"/>
 	<acme:list-column code="student.enrolment.list.label.goals" path="goals"/>
 	<acme:list-column code="student.enrolment.list.label.workTime" path="workTime"/>
+	<acme:list-column code="student.enrolment.list.label.isFinalised" path="isFinalised"/>
 </acme:list>
 
 <acme:button code="student.enrolment.list.button.create" action="/student/enrolment/create"/>

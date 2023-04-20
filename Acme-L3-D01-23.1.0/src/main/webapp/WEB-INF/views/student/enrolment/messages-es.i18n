@@ -12,6 +12,7 @@ student.enrolment.list.label.code = Codigo:
 student.enrolment.list.label.motivation = Motivacion:
 student.enrolment.list.label.goals = Metas:
 student.enrolment.list.label.workTime = Tiempo de trabajo:
+student.enrolment.list.label.isFinalised = ¿Esta finalizado?
 
 student.enrolment.form.label.code = Codigo:
 student.enrolment.form.label.motivation = Motivacion:
@@ -22,7 +23,10 @@ student.enrolment.form.label.course = Curso:
 student.enrolment.form.button.create = Crear
 student.enrolment.form.button.update = Actualizar
 student.enrolment.form.button.delete = Borrar
+student.enrolment.form.button.finalise = Finalizar
 
 student.enrolment.list.button.create = Crear
 
 student.enrolment.form.error.duplicated = Duplicado
+
+student.enrolment.form.error.code= Error
