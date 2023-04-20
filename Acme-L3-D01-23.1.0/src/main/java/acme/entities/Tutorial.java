@@ -56,6 +56,8 @@ public class Tutorial extends AbstractEntity {
 	@NotNull
 	protected Date				finishMoment;
 
+	protected Boolean			isPublished;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------

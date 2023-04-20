@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.framework.components.accounts.UserAccount;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Assistant;
 
 @Repository
 public interface AutheticatedAssistantRepository extends AbstractRepository {
@@ -13,4 +14,6 @@ public interface AutheticatedAssistantRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
 
+	@Query("select a from Assistant a where a.userAccount.id = :userAccountId")
+	Assistant findOneAssistantByUserAccountId(int userAccountId);
 }
