@@ -33,6 +33,12 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.banner = Lista de Banner
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.course.list = Lista de Cursos
 
 # master.menu.authenticated ###################################################
 
@@ -75,6 +81,19 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-auditor = Hazte auditor
+master.menu.user-account.auditor = Datos del perfil de auditor
+
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.my-audits = Ver mis auditorias
+master.menu.auditor.auditorDashboard = Estadísticas Auditor
+
+# master.menu.any #######################################################
+
+master.menu.any = Any
+master.menu.any.audit = Auditorias por Curso
 master.menu.user-account.assistant = Datos de asistente
 master.menu.user-account.become-assistant = Hazte asistente
 master.menu.user-account.lecturer = Datos del profesor

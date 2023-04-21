@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -50,8 +51,9 @@ public class AuditRecord extends AbstractEntity {
 	@NotNull
 	protected Date				endAudition;
 
-	@NotNull
-	protected MarkType			mark;
+	@NotBlank
+	@Pattern(regexp = "^((A\\+|A|B|C|F|F\\-))$", message = "{validation.regex.mark}")
+	protected String			mark;
 
 	@URL
 	protected String			link;
