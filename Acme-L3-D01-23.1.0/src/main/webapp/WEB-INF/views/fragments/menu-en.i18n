@@ -55,6 +55,18 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.assistant = Assistant
 master.menu.assistant.tutorials = Tutorial list
 master.menu.assistant.dashboard = Dashboard
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Lecturer
+master.menu.lecturer.course = My courses
+master.menu.lecturer.lecture = My lectures
+master.menu.lecturer.dashboard = Your lecturer dashboard
+
+# master.menu.any ##########################################################
+
+master.menu.any = Any
+master.menu.any.course = All publish courses
+master.menu.any.peep = Posted Peeps
 
 # master.menu.user-account ####################################################
 
@@ -66,3 +78,6 @@ master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.assistant = Assistant Data
 master.menu.user-account.become-assistant = Become an Assistant
+master.menu.user-account.lecturer = Lecturer data
+master.menu.user-account.become-lecturer = Become a lecturer
+master.menu.authenticated.money-exchage = Money exchange

@@ -4,14 +4,19 @@ package acme.entities;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -46,9 +51,17 @@ public class Lecture extends AbstractEntity {
 	@NotNull
 	protected LectureType		type;
 
+	protected Boolean			publish;
+
 	@URL
 	protected String			link;
 
 	// Relationships ----------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	protected Lecturer			lecturer;
 
 }
