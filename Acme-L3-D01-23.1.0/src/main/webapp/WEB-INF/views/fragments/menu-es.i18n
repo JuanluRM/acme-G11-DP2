@@ -34,6 +34,18 @@ master.menu.administrator.bulletin.list = Listar Boletines
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.banner = Lista de Banner
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.course.list = Lista de Cursos
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.note.list = Ver notas
+master.menu.authenticated.tutorial.list = Acceder a Tutoriales
 
 # master.menu.provider ########################################################
 
@@ -44,6 +56,23 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Asistente
+master.menu.assistant.tutorials = Tus tutorías
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Profesor
+master.menu.lecturer.course = Mis cursos
+master.menu.lecturer.lecture = Mis clases
+master.menu.lecturer.dashboard = Tus tableros de profesor
+
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquiera
+master.menu.any.course = Todos los cursos Publicados
+master.menu.any.peep = Mensajes publicados
 
 # master.menu.user-account ####################################################
 
@@ -60,3 +89,22 @@ master.menu.user-account.bulletin-list = Listar boletines
 
 master.menu.company = Compañia
 master.menu.company.practica.list = Listar Practicas
+
+master.menu.user-account.become-auditor = Hazte auditor
+master.menu.user-account.auditor = Datos del perfil de auditor
+
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.my-audits = Ver mis auditorias
+master.menu.auditor.auditorDashboard = Estadísticas Auditor
+
+# master.menu.any #######################################################
+
+master.menu.any = Any
+master.menu.any.audit = Auditorias por Curso
+master.menu.user-account.assistant = Datos de asistente
+master.menu.user-account.become-assistant = Hazte asistente
+master.menu.user-account.lecturer = Datos del profesor
+master.menu.user-account.become-lecturer = Hazte profesor
+master.menu.authenticated.money-exchage = Cambio de dinero

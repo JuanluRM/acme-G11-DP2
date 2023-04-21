@@ -1,0 +1,23 @@
+# messages-es.i18n
+
+lecturer.lecture.list.label.title = Titulo
+lecturer.lecture.list.label.lectureAbstract = Abstract
+lecturer.lecture.list.label.type = Tipo
+lecturer.lecture.list.label.publish = Publicada
+
+lecturer.lecture.list.label.title = Titulo
+lecturer.lecture.list.label.lectureAbstract = Abstract
+lecturer.lecture.form.label.estimatedLearningTime = Tiempo de aprendizaje
+lecturer.lecture.form.label.body = Cuerpo
+lecturer.lecture.form.label.type = Tipo
+lecturer.lecture.form.label.link = Link
+lecturer.lecture.form.label.publish = Publicada
+
+lecturer.lecture.list.button.create = Crear
+lecturer.lecture.form.button.create = Crear 
+
+lecturer.lecture.form.button.update = Actualizar
+lecturer.lecture.form.button.delete = Borrar
+lecturer.lecture.form.button.publish = Publicar
+
+lecturer.lecture.error.estimatedLearningTime.negative = El tiempo de aprendizaje de la clase no puede ser negativo

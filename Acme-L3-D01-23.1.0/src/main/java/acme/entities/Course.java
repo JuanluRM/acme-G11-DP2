@@ -11,6 +11,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -46,16 +48,16 @@ public class Course extends AbstractEntity {
 	@Length(max = 100)
 	protected String			courseAbstract;
 
-	@NotNull
 	protected CourseType		type;
 
 	@NotNull
 	protected Money				retailPrice;
 
+	protected Boolean			publish;
+
 	@URL
 	protected String			link;
 
-	@NotNull
 	protected Boolean			publish;
 
 	// Derived attributes -----------------------------------------------------
@@ -92,7 +94,7 @@ public class Course extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Lecturer			lecturer;
-	//como hacer que el sistema descarte los cursos puramente teoricos --> formulario, aqui no
 
 }
