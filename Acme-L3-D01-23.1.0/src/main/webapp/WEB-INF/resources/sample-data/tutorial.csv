@@ -1,6 +1,6 @@
 key,code,title,summary,goals,startMoment,finishMoment,isPublished,key:assistant,key:course
-tutorial-01,A1003,Tutoria de Matematicas,Tutoria de prueba,Entender los ejercicios 1 al 4,2021/02/13 19:39,2021/02/13 20:40,true,assistant-02,course-01
-tutorial-02,A1013,Tutoria de DP2,Tutoria de prueba,Entender relaciones,2021/02/13 20:40,2021/02/13 21:40,true,assistant-01,course-02
-tutorial-03,A1023,Tutoria de DP2,Tutoria de prueba,Entender las entidades,2021/03/13 20:40,2021/02/13 21:40,true,assistant-01,course-02
-tutorial-04,A1033,Tutoria de DP2,Tutoria de prueba,Entender los service,2021/04/23 20:40,2021/02/13 21:40,false,assistant-01,course-02
-tutorial-05,A1043,Tutoria de DP2,Tutoria de prueba,Entender las query,2021/05/13 20:40,2021/02/13 21:40,false,assistant-01,course-02
+tutorial-01,A1003,Tutoria de prueba 1,Tutoria de prueba,Entender los ejercicios 1 al 3,2021/02/13 19:40,2021/02/13 20:40,true,assistant-02,course-01
+tutorial-02,A1013,Tutoria de prueba 2,Tutoria de prueba,Entender los ejercicios 1 al 4,2021/02/13 12:40,2021/02/13 13:40,true,assistant-01,course-02
+tutorial-03,A1023,Tutoria de prueba 3,Tutoria de prueba,Entender los ejercicios 1 al 5,2021/03/13 10:40,2021/02/13 16:40,true,assistant-01,course-03
+tutorial-04,A1033,Tutoria de prueba 4,Tutoria de prueba,Entender los ejercicios 1 al 6,2021/04/23 12:40,2021/02/13 15:40,false,assistant-01,course-03
+tutorial-05,A1043,Tutoria de prueba 5,Tutoria de prueba,Entender los ejercicios 1 al 7,2021/05/13 16:40,2021/02/13 20:40,false,assistant-01,course-04
