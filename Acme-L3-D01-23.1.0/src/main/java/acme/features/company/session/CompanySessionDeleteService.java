@@ -11,18 +11,16 @@ import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
-public class CompanySessionShowService extends AbstractService<Company, Session> {
+public class CompanySessionDeleteService extends AbstractService<Company, Session> {
 
 	@Autowired
-	CompanySessionRepository repository;
+	protected CompanySessionRepository repository;
 
 
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -31,34 +29,45 @@ public class CompanySessionShowService extends AbstractService<Company, Session>
 		boolean status;
 		int sessionId;
 		Practica practica;
-
 		sessionId = super.getRequest().getData("id", int.class);
 		practica = this.repository.findOnePracticaBySessionId(sessionId);
-		status = practica != null && super.getRequest().getPrincipal().hasRole(practica.getCompany());
+		status = practica != null && !practica.getPublished() && super.getRequest().getPrincipal().hasRole(practica.getCompany());
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		Session object;
+		final Session object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneSessionById(id);
-
 		super.getBuffer().setData(object);
+	}
+
+	@Override
+	public void bind(final Session object) {
+		assert object != null;
+		super.bind(object, "title", "summary", "startDate", "endDate", "link");
+	}
+
+	@Override
+	public void validate(final Session object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final Session object) {
+		assert object != null;
+		this.repository.delete(object);
 	}
 
 	@Override
 	public void unbind(final Session object) {
 		assert object != null;
-
 		Tuple tuple;
-
 		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link");
-		tuple.put("practicaId", object.getPractica().getId());
+		tuple.put("practicaId", super.getRequest().getData("practicaId", int.class));
 		tuple.put("published", object.getPractica().getPublished());
-
 		super.getResponse().setData(tuple);
 	}
 }

@@ -15,12 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
-
 <acme:list>
-    <acme:list-column code="company.session.list.label.title" path="title" width="15%"/>
-    <acme:list-column code="company.session.list.label.summary" path="summary" width="60%"/>
-    <acme:list-column code="company.session.list.label.practica.title" path="practica.title" width="15%"/>
+	<acme:list-column code="administrator.bulletin.list.label.instantiationMoment" path="instantiationMoment" width="20%"/>
+	<acme:list-column code="administrator.bulletin.list.label.title" path="title" width="20%"/>
+	<acme:list-column code="administrator.bulletin.list.label.message" path="message" width="20%"/>
+	<acme:list-column code="administrator.bulletin.list.label.critical" path="critical" width="20%"/>
+	<acme:list-column code="administrator.bulletin.list.label.link" path="link" width="20%"/>
 </acme:list>
 
-<acme:button test="${showCreate && !published}" code="company.session.list.button.create" action="/company/session/create?practicaId=${practicaId}"/>
-<acme:button test="${showCreate && published}" code="company.session.list.button.createAddendum" action="/company/session/create?practicaId=${practicaId}"/>
+<acme:button code="administrator.bulletin.list.button.create" action="/administrator/bulletin/create"/>
+

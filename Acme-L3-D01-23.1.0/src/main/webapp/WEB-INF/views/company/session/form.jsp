@@ -16,10 +16,23 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="company.session.list.label.code" path="code"/>
-	<acme:input-textbox code="company.session.list.label.title" path="title"/>
-	<acme:input-textbox code="company.session.list.label.summary" path="summary"/>
-	<acme:input-textbox code="company.session.list.label.goals" path="goals"/>
-	<acme:input-textbox code="company.session.list.label.practica" path="practica"/>
-	
+    <acme:input-textbox code="company.session.form.label.title" path="title"/>
+    <acme:input-textbox code="company.session.form.label.summary" path="summary"/>
+    <acme:input-moment code="company.session.form.label.startDate" path="startDate"/>
+    <acme:input-moment code="company.session.form.label.endDate" path="endDate"/>
+    <acme:input-url code="company.session.form.label.link" path="link"/>
+    <jstl:choose>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && published == false}">
+			<acme:submit code="company.session.form.button.update" action="/company/session/update"/>
+			<acme:submit code="company.session.form.button.delete" action="/company/session/delete"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create' && published == false}">
+			<acme:submit code="company.session.form.button.create" action="/company/session/create?practicaId=${practicaId}"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create' && published == true}">
+			<acme:input-checkbox code="company.session.form.button.confirmation" path="confirmation"/>
+			<acme:submit code="company.session.form.button.createAddendum" action="/company/session/create?practicaId=${practicaId}"/>
+		</jstl:when>
+					
+	</jstl:choose>
 </acme:form>

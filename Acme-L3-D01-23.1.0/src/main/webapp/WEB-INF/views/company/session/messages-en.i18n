@@ -9,7 +9,23 @@
 # they accept any liabilities with respect to them.
 
 
-company.session.list.label.title = Code:
-company.session.list.label.summary = Title:
-company.session.list.label.timePeriod = Summary:
-company.session.list.label.link = Goals
+company.session.list.label.title = Title
+company.session.list.label.summary = Summary
+company.session.list.label.timePeriod = Time Period
+company.session.list.label.link = Link
+company.session.list.label.published = Published?
+
+company.session.form.label.title = Title
+company.session.form.label.summary = Summary
+company.session.form.label.startDate = Start Date
+company.session.form.label.endDate = End Date
+company.session.form.label.link = Link
+company.session.form.label.published = Published?
+
+company.session.list.button.create = Create
+company.session.list.button.createAddendum = Create Addendum
+
+company.session.form.button.update = Update
+company.session.form.button.delete = Delete
+company.session.form.button.publish = Publish
+

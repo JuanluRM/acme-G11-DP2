@@ -8,13 +8,22 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-company.practica.list.label.code = Codigo:
-company.practica.list.label.title = Titulo:
-company.practica.list.label.summary = Resumen:
-company.practica.list.label.goals = Objetivos: (Optional)
-company.practica.list.label.estimatedTotalTime = Tiempo total estimado
+company.session.list.label.title = Titulo
+company.session.list.label.summary = Resumen
+company.session.list.label.timePeriod = Duracion
+company.session.list.label.link = Enlace
+company.session.list.label.published = Publicado?
 
-company.practica.session.list.label.title = Codigo:
-company.practica.session.list.label.summary = Titulo:
-company.practica.session.list.label.timePeriod = Resumen:
-company.practica.session.list.label.link = Objetivos: (Optional)
+company.session.form.label.title = Titulo
+company.session.form.label.summary = Resumen
+company.session.form.label.startDate = Fecha de comienzo
+company.session.form.label.endDate = Fecha de fin
+company.session.form.label.link = Link
+company.session.form.label.published = Publicado?
+
+company.session.list.button.create = Crear
+company.session.list.button.createAddendum = Crear apendice
+
+company.session.form.button.update = Actualizar
+company.session.form.button.delete = Eliminar
+company.session.form.button.publish = Publicar
