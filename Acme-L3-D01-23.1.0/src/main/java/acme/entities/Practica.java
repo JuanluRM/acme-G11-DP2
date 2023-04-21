@@ -1,29 +1,29 @@
 
 package acme.entities;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
-// @CustomLog
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
-public class Bulletin extends AbstractEntity {
+//@CustomLog
+
+public class Practica extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -31,26 +31,38 @@ public class Bulletin extends AbstractEntity {
 
 	// Attributes --------------------------------------------------------------
 
-	@Temporal(TemporalType.TIMESTAMP)
+	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
 	@NotNull
-	protected Date				instantiationMoment;
+	protected String			code;
 
 	@NotBlank
-	@Length(min = 1, max = 75)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Length(min = 1, max = 100)
-	protected String			message;
+	@Length(max = 100)
+	protected String			summary;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			goals;
+
+	@Min(0)
+	@NotNull
+	protected Double			estimatedTotalTime;
 
 	@NotNull
-	protected Boolean			critical;
-
-	@URL
-	protected String			link;
+	protected Boolean			published;
 
 	// Derived attributes -----------------------------------------------------
-
 	// Relationships ----------------------------------------------------------
 
+	@NotNull
+	@ManyToOne
+	protected Company			company;
+
+	@NotNull
+	@ManyToOne
+	protected Course			course;
+	// 
 }
