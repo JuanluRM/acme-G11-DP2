@@ -50,6 +50,19 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Profesor
+master.menu.lecturer.course = Mis cursos
+master.menu.lecturer.lecture = Mis clases
+master.menu.lecturer.dashboard = Tus tableros de profesor
+
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquiera
+master.menu.any.course = Todos los cursos Publicados
+master.menu.any.peep = Mensajes publicados
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -71,3 +84,6 @@ master.menu.auditor.auditorDashboard = Estadísticas Auditor
 
 master.menu.any = Any
 master.menu.any.audit = Auditorias por Curso
+master.menu.user-account.lecturer = Datos del profesor
+master.menu.user-account.become-lecturer = Hazte profesor
+master.menu.authenticated.money-exchage = Cambio de dinero

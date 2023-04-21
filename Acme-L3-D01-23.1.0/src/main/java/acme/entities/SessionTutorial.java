@@ -11,6 +11,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -57,5 +59,6 @@ public class SessionTutorial extends AbstractEntity {
 
 	@Valid
 	@ManyToOne
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Tutorial			tutorial;
 }

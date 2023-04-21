@@ -1,0 +1,16 @@
+# messages-en.i18n
+
+any.peep.list.label.instantiationMoment = Publish Moment
+any.peep.list.label.title = Title
+any.peep.list.label.nick = Nick
+
+any.peep.list.button.create = Create
+
+any.peep.form.label.instantiationMoment = Publish Moment
+any.peep.form.label.title = Title
+any.peep.form.label.nick = Nick
+any.peep.form.label.message = Menssage
+any.peep.form.label.email = Email
+any.peep.form.label.link = Link
+
+any.peep.form.button.create = Create

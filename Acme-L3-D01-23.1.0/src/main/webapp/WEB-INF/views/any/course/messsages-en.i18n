@@ -1,0 +1,11 @@
+# messages-es.i18n
+
+any.course.list.label.title = Title
+any.course.list.label.type = Type
+any.course.list.label.retailPrice = Price
+
+any.course.form.label.title = Title
+any.course.form.label.courseAbstract = Course Abstract
+any.course.form.label.type = Type
+any.course.form.label.retailPrice = Price
+any.course.form.label.link = Link
