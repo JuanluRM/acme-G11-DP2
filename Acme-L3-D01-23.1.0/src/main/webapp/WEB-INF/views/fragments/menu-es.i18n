@@ -40,6 +40,12 @@ master.menu.administrator.banner = Lista de Banner
 master.menu.authenticated = Authenticated
 master.menu.authenticated.course.list = Lista de Cursos
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.note.list = Ver notas
+master.menu.authenticated.tutorial.list = Acceder a Tutoriales
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -50,6 +56,10 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Asistente
+master.menu.assistant.tutorials = Tus tutorías
 # master.menu.lecturer ##########################################################
 
 master.menu.lecturer = Profesor
@@ -84,6 +94,8 @@ master.menu.auditor.auditorDashboard = Estadísticas Auditor
 
 master.menu.any = Any
 master.menu.any.audit = Auditorias por Curso
+master.menu.user-account.assistant = Datos de asistente
+master.menu.user-account.become-assistant = Hazte asistente
 master.menu.user-account.lecturer = Datos del profesor
 master.menu.user-account.become-lecturer = Hazte profesor
 master.menu.authenticated.money-exchage = Cambio de dinero

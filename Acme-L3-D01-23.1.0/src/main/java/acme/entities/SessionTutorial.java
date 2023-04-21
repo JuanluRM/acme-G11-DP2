@@ -40,7 +40,7 @@ public class SessionTutorial extends AbstractEntity {
 	protected String			summary;
 
 	@NotNull
-	protected SessionType		tiposesion;
+	protected SessionType		tipoSesion;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
@@ -52,6 +52,8 @@ public class SessionTutorial extends AbstractEntity {
 
 	@URL
 	protected String			moreInfo;
+
+	protected Boolean			isPublished;
 
 	// Derived attributes -----------------------------------------------------
 
