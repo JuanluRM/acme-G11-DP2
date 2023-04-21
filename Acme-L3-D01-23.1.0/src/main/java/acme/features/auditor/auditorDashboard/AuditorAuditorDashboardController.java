@@ -1,5 +1,5 @@
 
-package acme.features.auditor.dashboard;
+package acme.features.auditor.auditorDashboard;
 
 import javax.annotation.PostConstruct;
 
@@ -11,10 +11,10 @@ import acme.roles.Auditor;
 import form.AuditorDashboard;
 
 @Controller
-public class AuditorDashboardController extends AbstractController<Auditor, AuditorDashboard> {
+public class AuditorAuditorDashboardController extends AbstractController<Auditor, AuditorDashboard> {
 
 	@Autowired
-	protected AuditorDashboardService showService;
+	protected AuditorAuditorDashboardService showService;
 
 
 	@PostConstruct

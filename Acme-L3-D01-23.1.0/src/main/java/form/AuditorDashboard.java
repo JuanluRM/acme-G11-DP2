@@ -11,9 +11,6 @@ public class AuditorDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	//Map<SessionType, Integer>	totalNumAuditsForTheoryCourses;
-	//Map<SessionType, Integer>	totalNumAuditsForHandsOnCourses;
-
 	Double						totalNumberOfAudits;
 
 	Double						averageAuditingRecord;

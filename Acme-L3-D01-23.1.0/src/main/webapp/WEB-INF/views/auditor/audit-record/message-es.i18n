@@ -1,0 +1,14 @@
+auditor.auditRecord.list.label.subject=Tema
+auditor.auditRecord.list.label.assessment=Evaluación
+auditor.auditRecord.list.button.create=Crear Reg Auditoría
+
+auditor.auditRecord.form.label.subject = Tema
+auditor.auditRecord.form.label.assessment = Evaluación
+auditor.auditRecord.form.label.startAudition = Inicio Auditoría
+auditor.auditRecord.form.label.endAudition = Fin Auditoría
+auditor.auditRecord.form.label.mark= Nota
+auditor.auditRecord.form.label.link = Información adicional
+
+auditor.auditRecord.form.button.update=Actualizar Reg Auditoría
+auditor.auditRecord.form.button.delete=Eliminar Reg Auditoría
+auditor.auditRecord.form.button.create=Crear Reg Auditoría

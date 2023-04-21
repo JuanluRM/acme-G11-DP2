@@ -1,5 +1,5 @@
 
-package acme.features.auditor.auditingRecord;
+package acme.features.auditor.auditRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,14 +11,15 @@ import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
 
 @Service
-public class AuditorAuditingRecordShowService extends AbstractService<Auditor, AuditRecord> {
+public class AuditorAuditRecordShowService extends AbstractService<Auditor, AuditRecord> {
 
 	@Autowired
-	protected AuditorAuditingRecordRepository repository;
+	protected AuditorAuditRecordRepository repository;
 
 
 	@Override
 	public void check() {
+
 		boolean status;
 		status = super.getRequest().hasData("id", int.class);
 		super.getResponse().setChecked(status);
@@ -27,10 +28,10 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 	@Override
 	public void authorise() {
 		boolean status;
-		int auditingRecordId;
+		int auditRecordId;
 		Audit audit;
-		auditingRecordId = super.getRequest().getData("id", int.class);
-		audit = this.repository.findOneAuditByAuditingRecordId(auditingRecordId);
+		auditRecordId = super.getRequest().getData("id", int.class);
+		audit = this.repository.findOneAuditByAuditRecordId(auditRecordId);
 		status = audit != null && (!audit.isDraftMode() || super.getRequest().getPrincipal().hasRole(audit.getAuditor()));
 		super.getResponse().setAuthorised(status);
 	}
@@ -40,7 +41,7 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 		AuditRecord object;
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOneAuditingRecordById(id);
+		object = this.repository.findOneAuditRecordById(id);
 		super.getBuffer().setData(object);
 	}
 
@@ -49,7 +50,7 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 		assert object != null;
 		Tuple tuple;
 		tuple = super.unbind(object, "subject", "assessment", "startAudition", "endAudition", "mark", "link");
-		tuple.put("masterId", object.getAudit().getId());
+		tuple.put("auditId", object.getAudit().getId());
 		tuple.put("draftMode", object.getAudit().isDraftMode());
 		super.getResponse().setData(tuple);
 	}

@@ -64,7 +64,7 @@ master.menu.user-account.auditor = Datos del perfil de auditor
 
 master.menu.auditor = Auditor
 master.menu.auditor.my-audits = Ver mis auditorias
-master.menu.auditor.dashboard = Estadísticas
+master.menu.auditor.auditorDashboard = Estadísticas Auditor
 
 # master.menu.any #######################################################
 

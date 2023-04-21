@@ -1,0 +1,14 @@
+auditor.auditRecord.list.label.subject=Subject
+auditor.auditRecord.list.label.assessment=Assessment
+auditor.auditRecord.list.button.create=Create Auditing Record
+
+auditor.auditRecord.form.label.subject=Subject
+auditor.auditRecord.form.label.assessment=Assessment
+auditor.auditRecord.form.label.startAudition=Start Audition
+auditor.auditRecord.form.label.endAudition=End Audition
+auditor.auditRecord.form.label.mark=Mark
+auditor.auditRecord.form.label.link=Additional Info
+
+auditor.auditRecord.form.button.update=Update Auditing Record
+auditor.auditRecord.form.button.delete=Delete Auditing Record
+auditor.auditRecord.form.button.create=Create Auditing Record

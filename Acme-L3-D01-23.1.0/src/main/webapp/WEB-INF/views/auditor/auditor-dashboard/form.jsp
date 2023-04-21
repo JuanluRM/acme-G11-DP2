@@ -16,13 +16,13 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <h2>
-	<acme:message code="auditor.dashboard.form.title.general-indicators"/>
+	<acme:message code="auditor.auditorDashboard.form.title.statistics"/>
 </h2>
 
 <table class="table table-sm">
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.total-number-of-audits"/>
+			<acme:message code="auditor.auditorDashboard.form.label.total-number-of-audits"/>
 		</th>
 		<td>
 			<acme:print value="${totalNumberOfAudits}"/>
@@ -30,66 +30,66 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.average-number-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.average-number-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfAuditingRecords}"/>
+			<acme:print value="${averageAuditingRecord}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.deviation-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.deviation-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${deviationOfAuditingRecords}"/>
+			<acme:print value="${deviationAuditingRecord}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.maximum-number-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.maximum-number-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${maximumNumberOfAuditingRecords}"/>
+			<acme:print value="${maxAuditingRecord}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.minimum-number-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.minimum-number-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${minimumNumberOfAuditingRecords}"/>
+			<acme:print value="${minAuditingRecord}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.average-time-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.average-time-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${averageTimeOfAuditingRecords}"/>
+			<acme:print value="${averageTimeAuditingRecords}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.time-deviation-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.time-deviation-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${timeDeviationOfAuditingRecords}"/>
+			<acme:print value="${deviationTimeAuditingRecords}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.maximum-time-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.maximum-time-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${maximumTimeOfAuditingRecords}"/>
+			<acme:print value="${maxTimeAuditingRecords}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="auditor.dashboard.form.label.minimum-time-of-auditing-records"/>
+			<acme:message code="auditor.auditorDashboard.form.label.minimum-time-of-auditing-records"/>
 		</th>
 		<td>
-			<acme:print value="${minimumTimeOfAuditingRecords}"/>
+			<acme:print value="${minTimeAuditingRecords}"/>
 		</td>
 	</tr>			
 </table>

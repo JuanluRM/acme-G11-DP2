@@ -1,5 +1,5 @@
 
-package acme.features.auditor.auditingRecord;
+package acme.features.auditor.auditRecord;
 
 import javax.annotation.PostConstruct;
 
@@ -11,22 +11,22 @@ import acme.framework.controllers.AbstractController;
 import acme.roles.Auditor;
 
 @Controller
-public class AuditorAuditingRecordController extends AbstractController<Auditor, AuditRecord> {
+public class AuditorAuditRecordController extends AbstractController<Auditor, AuditRecord> {
 
 	@Autowired
-	protected AuditorAuditingRecordListService		listService;
+	protected AuditorAuditRecordListService		listService;
 
 	@Autowired
-	protected AuditorAuditingRecordShowService		showService;
+	protected AuditorAuditRecordShowService		showService;
 
 	@Autowired
-	protected AuditorAuditingRecordDeleteService	deleteService;
+	protected AuditorAuditRecordDeleteService	deleteService;
 
 	@Autowired
-	protected AuditorAuditingRecordUpdateService	updateService;
+	protected AuditorAuditRecordUpdateService	updateService;
 
 	@Autowired
-	protected AuditorAuditingRecordCreateService	createService;
+	protected AuditorAuditRecordCreateService	createService;
 
 
 	@PostConstruct
