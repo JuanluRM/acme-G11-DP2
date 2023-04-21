@@ -1,0 +1,5 @@
+authenticated.audit.list.label.code = código
+authenticated.audit.list.label.conclusion = conclusión
+authenticated.audit.list.label.strongPoints = puntos fuertes
+authenticated.audit.list.label.weakPoints = puntos débiles
+authenticated.audit.list.label.note = notas

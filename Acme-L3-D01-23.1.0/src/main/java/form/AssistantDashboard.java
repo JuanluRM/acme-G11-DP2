@@ -1,9 +1,6 @@
 
 package form;
 
-import java.util.Map;
-
-import acme.entities.SessionType;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,11 +15,12 @@ public class AssistantDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<SessionType, Integer>	TotalNumberOfSessionType;
+	Integer						totalNumberOfTutorialsWithTheoricalCourses;
+	Integer						totalNumberOfTutorialsWithHandsOnlCourses;
 
 	Double						averageLearningTimeByTutorials;
 	Double						deviationLearningTimeByTutorials;
-	Double						minimumLearningTimeByTutoarials;
+	Double						minimumLearningTimeByTutorials;
 	Double						maximumLearningTimeByTutorials;
 
 	Double						averageLearningTimeBySessions;

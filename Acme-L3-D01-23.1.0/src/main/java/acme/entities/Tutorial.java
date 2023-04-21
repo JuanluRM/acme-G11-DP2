@@ -13,6 +13,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
@@ -56,6 +58,8 @@ public class Tutorial extends AbstractEntity {
 	@NotNull
 	protected Date				finishMoment;
 
+	protected Boolean			isPublished;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
@@ -66,6 +70,7 @@ public class Tutorial extends AbstractEntity {
 
 	@Valid
 	@ManyToOne
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Course			course;
 
 }

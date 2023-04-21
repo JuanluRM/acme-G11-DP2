@@ -11,6 +11,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -56,7 +58,7 @@ public class Activity extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 
 	@Valid
-	@NotNull
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Enrolment			enrolment;
 }

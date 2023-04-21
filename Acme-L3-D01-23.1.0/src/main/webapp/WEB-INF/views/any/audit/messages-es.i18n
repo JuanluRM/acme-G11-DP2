@@ -1,0 +1,17 @@
+any.audit.list.label.code = Codigo
+any.audit.list.label.conclusion=Conclusion
+any.audit.list.label.strongPoints= Puntos fuertes
+any.audit.list.label.weakPoints=Puntos Debiles
+any.audit.form.label.auditor=Auditor
+any.audit.form.label.course=Curso
+any.audit.form.label.draftMode=Borrador
+
+
+
+any.audit.form.label.code=Codigo
+any.audit.form.label.conclusion=Conclusion
+any.audit.form.label.strongPoints=Puntos fuertes
+any.audit.form.label.weakPoints=Puntos Debiles
+any.audit.form.label.auditor=Auditor
+any.audit.form.label.course=Curso
+any.audit.form.label.draftMode=Borrador
