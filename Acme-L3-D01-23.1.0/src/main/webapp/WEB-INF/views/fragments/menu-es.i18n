@@ -55,6 +55,7 @@ master.menu.lecturer.dashboard = Tus tableros de profesor
 
 master.menu.any = Cualquiera
 master.menu.any.course = Todos los cursos Publicados
+master.menu.any.peep = Mensajes publicados
 
 # master.menu.user-account ####################################################
 
@@ -64,3 +65,4 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.lecturer = Datos del profesor
 master.menu.user-account.become-lecturer = Hazte profesor
+master.menu.authenticated.money-exchage = Cambio de dinero
