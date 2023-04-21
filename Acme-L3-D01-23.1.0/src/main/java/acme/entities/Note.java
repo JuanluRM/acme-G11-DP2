@@ -46,7 +46,7 @@ public class Note extends AbstractEntity {
 
 	@NotBlank
 	@Length(min = 1, max = 76)
-	@Pattern(regexp = "^\\(\\w+\\) - \\(\\w+\\s\\w+\\)$")
+	@Pattern(regexp = "^\\(\\w+\\) - \\(\\w+\\, \\w+\\)$")
 	protected String			author;
 
 	@NotBlank
