@@ -1,0 +1,12 @@
+administrator.banner.label.instantiationMoment = Instantiation Moment
+administrator.banner.label.start = Start date
+administrator.banner.label.end = Finish date
+administrator.banner.label.picture = Image 
+administrator.banner.label.slogan = Slogan
+administrator.banner.label.link =  link
+administrator.banner.button.create = Create 
+administrator.banner.button.update = Update
+administrator.banner.button.delete = Delete
+administrator.banner.error.startDate.beforeInstantiation = Start date cannot be earlier than actual date
+administrator.banner.error.finishDate.beforeStartDate = Finish date cannot be earlier or equal than start date
+administrator.banner.error.finishDate.notLongEnough = The period between start and finish date must last 7 days at least
