@@ -35,4 +35,5 @@
 			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
 		</jstl:when>		
 	</jstl:choose>	
+	<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
 </acme:form>

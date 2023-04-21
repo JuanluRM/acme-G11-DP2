@@ -4,8 +4,6 @@ package acme.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,7 +19,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
 public class Activity extends AbstractEntity {
@@ -40,11 +37,16 @@ public class Activity extends AbstractEntity {
 	@Length(max = 100)
 	protected String			activityAbstract;
 
+	@NotNull
 	protected ActivityType		activityType;
 
-	//Restriccion pasado y futuro (de momento no se hace)
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				timePeriod;
+	protected Date				startPeriod;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endPeriod;
 
 	@URL
 	protected String			link;
@@ -53,8 +55,8 @@ public class Activity extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	@NotNull
 	@Valid
-	@ManyToOne(optional = true)
+	@NotNull
+	@ManyToOne(optional = false)
 	protected Enrolment			enrolment;
 }

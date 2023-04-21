@@ -1,5 +1,5 @@
-key,title,activityAbstract,activityType,timePeriod,link,key:enrolment
-activity-01,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/02/13 19:39,https://www.activity01.com,enrolment-01
-activity-02,actividad2,La actividad tratará sobre las práticas que se pueden realizar en ingenieria,THEORY,2021/02/13 19:39,https://www.activity02.com,enrolment-02
-activity-03,actividad3,Es una actividad que tratara sobre los bases de la fisica,THEORY,2021/02/13 19:39,https://www.activity03.com,enrolment-03
-activity-04,actividad4,La actividad tratará sobre las práticas que se pueden realizar en fisica,HANDSON,2021/02/13 19:39,https://www.activity04.com,enrolment-04
+key,title,activityAbstract,activityType,startPeriod,endPeriod,link,key:enrolment
+activity-01,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/02/13 19:39,2021/02/13 19:45,https://www.activity01.com,enrolment-01
+activity-02,actividad2,La actividad tratará sobre las práticas que se pueden realizar en ingenieria,THEORY,2021/02/13 19:39,2021/02/13 21:00,https://www.activity02.com,enrolment-02
+activity-03,actividad3,Es una actividad que tratara sobre los bases de la fisica,THEORY,2021/02/13 19:39,2021/02/13 22:00,https://www.activity03.com,enrolment-03
+activity-04,actividad4,La actividad tratará sobre las práticas que se pueden realizar en fisica,HANDSON,2021/02/13 19:39,2021/02/13 21:37,https://www.activity04.com,enrolment-04
