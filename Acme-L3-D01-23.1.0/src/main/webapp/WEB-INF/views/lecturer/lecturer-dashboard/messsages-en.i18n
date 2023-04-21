@@ -1,0 +1,15 @@
+# messages-en.i18n
+
+lecturer.dashboard.label.totalNumberOfTheoricalLectures = Number of Theorical Lectures
+lecturer.dashboard.label.totalNumberOfHandsOnLectures = Number of Hands On Lectures
+
+lecturer.dashboard.label.averageEstimatedLearningTimeOfLectures = Average learning time of your lectures
+lecturer.dashboard.label.deviationEstimatedLearningTimeOfLectures = Deviation learning time of your lectures
+lecturer.dashboard.label.minimumEstimatedLearningTimeOfLectures = Your minimum learning time lecture
+lecturer.dashboard.label.maximumEstimatedLearningTimeOfLectures = Your maximum learning time lecture
+
+lecturer.dashboard.label.averageEstimatedLearningTimeOfCourses = Average learning time of your courses
+lecturer.dashboard.label.deviationEstimatedLearningTimeOfCourses = Deviation learning time of your courses
+lecturer.dashboard.label.minimumEstimatedLearningTimeOfCourses = Your minimum learning time course
+lecturer.dashboard.label.maximumEstimatedLearningTimeOfCourses = Your maximum learning time course
+
