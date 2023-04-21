@@ -58,36 +58,7 @@ public class Course extends AbstractEntity {
 	@URL
 	protected String			link;
 
-	protected Boolean			publish;
-
 	// Derived attributes -----------------------------------------------------
-
-	// Esto lo vas a calcular en el controlador 
-
-	//	@Transient
-	//	public CourseType getCourseType() {
-	//		CourseType courseType = null;
-	//		int theorical = 0;
-	//		int hands_on = 0;
-	//
-	//		for (int i = 0; i < this.lectures.size(); i++) {
-	//			final Lecture l = this.lectures.get(i);
-	//
-	//			if (l.getType() == LectureType.HANDS_ON)
-	//				hands_on++;
-	//			else
-	//				theorical++;
-	//		}
-	//
-	//		if (theorical > hands_on)
-	//			courseType = CourseType.THEORICAL;
-	//		else if (hands_on > theorical)
-	//			courseType = CourseType.HANDS_ON;
-	//		else
-	//			courseType = CourseType.BALANCED;
-	//
-	//		return courseType;
-	//	}
 
 	// Relationships ----------------------------------------------------------
 

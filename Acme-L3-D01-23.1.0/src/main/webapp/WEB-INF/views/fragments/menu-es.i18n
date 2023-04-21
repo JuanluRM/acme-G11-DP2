@@ -110,3 +110,6 @@ master.menu.user-account.become-assistant = Hazte asistente
 master.menu.user-account.lecturer = Datos del profesor
 master.menu.user-account.become-lecturer = Hazte profesor
 master.menu.authenticated.money-exchage = Cambio de dinero
+
+
+master.menu.authenticated.offer.list= Lista de ofertas

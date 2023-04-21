@@ -8,13 +8,13 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,9 +47,8 @@ public class Offer extends AbstractEntity {
 	@NotNull
 	protected Date				availabilityPeriod;
 
-	@Min(0)
 	@NotNull
-	protected Double			price;
+	protected Money				price;
 
 	@URL
 	protected String			link;

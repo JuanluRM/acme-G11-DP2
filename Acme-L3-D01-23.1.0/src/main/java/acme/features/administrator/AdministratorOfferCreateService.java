@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -34,7 +35,7 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 		Offer object;
 
 		object = new Offer();
-
+		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
 		super.getBuffer().setData(object);
 	}
 

@@ -109,3 +109,5 @@ master.menu.user-account.become-assistant = Become an Assistant
 master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
 master.menu.authenticated.money-exchage = Money exchange
+
+master.menu.authenticated.offer.list= Offer list
