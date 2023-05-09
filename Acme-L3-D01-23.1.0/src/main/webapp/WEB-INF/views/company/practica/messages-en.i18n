@@ -13,7 +13,7 @@ company.practica.list.label.title = Title:
 company.practica.list.label.summary = Summary:
 company.practica.list.label.goals = Goals
 company.practica.list.label.estimatedTotalTime = Estimated Total Time
-company.practica.list.label.published = Published?
+company.practica.list.label.draftMode = Draft Mode
 company.practica.list.label.course = Courses
 
 

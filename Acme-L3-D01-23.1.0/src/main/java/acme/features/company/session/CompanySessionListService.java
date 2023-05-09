@@ -16,7 +16,7 @@ import acme.roles.Company;
 public class CompanySessionListService extends AbstractService<Company, Session> {
 
 	@Autowired
-	CompanySessionRepository repository;
+	protected CompanySessionRepository repository;
 
 
 	@Override
@@ -47,7 +47,7 @@ public class CompanySessionListService extends AbstractService<Company, Session>
 		int practicaId;
 
 		practicaId = super.getRequest().getData("practicaId", int.class);
-		objects = this.repository.findManySessionsByPracticaId(practicaId);
+		objects = this.repository.findSessionByPracticaId(practicaId);
 
 		super.getBuffer().setData(objects);
 	}
@@ -66,18 +66,17 @@ public class CompanySessionListService extends AbstractService<Company, Session>
 	@Override
 	public void unbind(final Collection<Session> objects) {
 		assert objects != null;
-
 		int practicaId;
 		Practica practica;
 		final boolean showCreate;
-		final boolean published;
+		final boolean draftMode;
 		practicaId = super.getRequest().getData("practicaId", int.class);
 		practica = this.repository.findOnePracticaById(practicaId);
 		showCreate = super.getRequest().getPrincipal().hasRole(practica.getCompany());
-		published = practica.getPublished();
+		draftMode = practica.getDraftMode();
 		super.getResponse().setGlobal("practicaId", practicaId);
 		super.getResponse().setGlobal("showCreate", showCreate);
-		super.getResponse().setGlobal("published", published);
+		super.getResponse().setGlobal("draftMode", draftMode);
 	}
 
 }

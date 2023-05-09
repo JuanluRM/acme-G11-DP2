@@ -41,7 +41,7 @@ public class CompanyPracticaDeleteService extends AbstractService<Company, Pract
 
 		id = super.getRequest().getData("id", int.class);
 		practica = this.repository.findOnePracticaById(id);
-		status = practica != null && !practica.getPublished() && super.getRequest().getPrincipal().getActiveRoleId() == practica.getCompany().getId();
+		status = practica != null && practica.getDraftMode() && super.getRequest().getPrincipal().getActiveRoleId() == practica.getCompany().getId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -65,7 +65,7 @@ public class CompanyPracticaDeleteService extends AbstractService<Company, Pract
 		Course course;
 		courseId = super.getRequest().getData("course", int.class);
 		course = this.repository.findOneCourseById(courseId);
-		super.bind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "published");
+		super.bind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "draftMode");
 		object.setCourse(course);
 	}
 

@@ -14,7 +14,7 @@ import acme.roles.Company;
 public class CompanySessionShowService extends AbstractService<Company, Session> {
 
 	@Autowired
-	CompanySessionRepository repository;
+	protected CompanySessionRepository repository;
 
 
 	@Override
@@ -57,8 +57,9 @@ public class CompanySessionShowService extends AbstractService<Company, Session>
 
 		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link");
 		tuple.put("practicaId", object.getPractica().getId());
-		tuple.put("published", object.getPractica().getPublished());
+		tuple.put("draftMode", object.getPractica().getDraftMode());
 
 		super.getResponse().setData(tuple);
 	}
+
 }

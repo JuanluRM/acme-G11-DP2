@@ -21,7 +21,7 @@
 	<acme:list-column code="company.practica.list.label.summary" path="summary" width="35%"/>
 	<acme:list-column code="company.practica.list.label.goals" path="goals" width="15%"/>
 	<acme:list-column code="company.practica.list.label.estimatedTotalTime" path="estimatedTotalTime" width="10%"/>
-	<acme:list-column code="company.practica.list.label.published" path="published" width="35%"/>
+	<acme:list-column code="company.practica.list.label.draftMode" path="draftMode" width="35%"/>
 </acme:list>
 
 <acme:button code="company.practica.form.button.create" action="/company/practica/create"/>

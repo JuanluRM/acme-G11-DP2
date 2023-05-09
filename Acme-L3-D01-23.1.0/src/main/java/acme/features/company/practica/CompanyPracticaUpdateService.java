@@ -52,7 +52,7 @@ public class CompanyPracticaUpdateService extends AbstractService<Company, Pract
 
 		id = super.getRequest().getData("id", int.class);
 		practica = this.repository.findOnePracticaById(id);
-		status = practica != null && !practica.getPublished() && super.getRequest().getPrincipal().getActiveRoleId() == practica.getCompany().getId();
+		status = practica != null && practica.getDraftMode() && super.getRequest().getPrincipal().getActiveRoleId() == practica.getCompany().getId();
 
 		super.getResponse().setAuthorised(status);
 	}

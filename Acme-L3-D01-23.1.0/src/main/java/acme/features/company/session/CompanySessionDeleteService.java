@@ -31,7 +31,7 @@ public class CompanySessionDeleteService extends AbstractService<Company, Sessio
 		Practica practica;
 		sessionId = super.getRequest().getData("id", int.class);
 		practica = this.repository.findOnePracticaBySessionId(sessionId);
-		status = practica != null && !practica.getPublished() && super.getRequest().getPrincipal().hasRole(practica.getCompany());
+		status = practica != null && practica.getDraftMode() && super.getRequest().getPrincipal().hasRole(practica.getCompany());
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -53,6 +53,7 @@ public class CompanySessionDeleteService extends AbstractService<Company, Sessio
 	@Override
 	public void validate(final Session object) {
 		assert object != null;
+
 	}
 
 	@Override
@@ -67,7 +68,8 @@ public class CompanySessionDeleteService extends AbstractService<Company, Sessio
 		Tuple tuple;
 		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link");
 		tuple.put("practicaId", super.getRequest().getData("practicaId", int.class));
-		tuple.put("published", object.getPractica().getPublished());
+		tuple.put("draftMode", object.getPractica().getDraftMode());
 		super.getResponse().setData(tuple);
 	}
+
 }

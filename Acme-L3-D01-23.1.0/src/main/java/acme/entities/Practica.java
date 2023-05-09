@@ -52,7 +52,7 @@ public class Practica extends AbstractEntity {
 	protected Double			estimatedTotalTime;
 
 	@NotNull
-	protected Boolean			published;
+	protected Boolean			draftMode;
 
 	// Derived attributes -----------------------------------------------------
 	// Relationships ----------------------------------------------------------
@@ -64,5 +64,5 @@ public class Practica extends AbstractEntity {
 	@NotNull
 	@ManyToOne
 	protected Course			course;
-	// 
+	//
 }

@@ -12,7 +12,7 @@ company.session.list.label.title = Titulo
 company.session.list.label.summary = Resumen
 company.session.list.label.timePeriod = Duracion
 company.session.list.label.link = Enlace
-company.session.list.label.published = Publicado?
+company.session.list.label.practica.title = Practica
 
 company.session.form.label.title = Titulo
 company.session.form.label.summary = Resumen
@@ -27,3 +27,4 @@ company.session.list.button.createAddendum = Crear apendice
 company.session.form.button.update = Actualizar
 company.session.form.button.delete = Eliminar
 company.session.form.button.publish = Publicar
+company.session.form.button.confirmation = Confirmar

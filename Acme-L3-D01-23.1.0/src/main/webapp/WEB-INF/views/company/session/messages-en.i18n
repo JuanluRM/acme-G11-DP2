@@ -13,7 +13,8 @@ company.session.list.label.title = Title
 company.session.list.label.summary = Summary
 company.session.list.label.timePeriod = Time Period
 company.session.list.label.link = Link
-company.session.list.label.published = Published?
+company.session.list.label.practica.title = Practica
+
 
 company.session.form.label.title = Title
 company.session.form.label.summary = Summary
@@ -28,4 +29,6 @@ company.session.list.button.createAddendum = Create Addendum
 company.session.form.button.update = Update
 company.session.form.button.delete = Delete
 company.session.form.button.publish = Publish
+company.session.form.button.confirmation = Confirmation
+
 

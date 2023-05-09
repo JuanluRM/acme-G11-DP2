@@ -62,7 +62,7 @@ public class CompanyPracticaShowService extends AbstractService<Company, Practic
 		SelectChoices choices;
 		Tuple tuple;
 
-		if (object.getPublished())
+		if (!object.getDraftMode())
 			courses = this.repository.findAllCourses();
 		else {
 			assistantId = super.getRequest().getPrincipal().getActiveRoleId();
@@ -71,7 +71,7 @@ public class CompanyPracticaShowService extends AbstractService<Company, Practic
 
 		choices = SelectChoices.from(courses, "title", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "published", "course");
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "estimatedTotalTime", "draftMode", "course");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

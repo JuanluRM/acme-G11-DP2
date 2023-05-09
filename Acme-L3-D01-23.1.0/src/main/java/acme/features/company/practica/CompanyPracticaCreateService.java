@@ -45,7 +45,7 @@ public class CompanyPracticaCreateService extends AbstractService<Company, Pract
 
 		company = this.repository.findOneCompanyById(super.getRequest().getPrincipal().getActiveRoleId());
 		object = new Practica();
-		object.setPublished(false);
+		object.setDraftMode(true);
 		object.setCompany(company);
 
 		super.getBuffer().setData(object);
