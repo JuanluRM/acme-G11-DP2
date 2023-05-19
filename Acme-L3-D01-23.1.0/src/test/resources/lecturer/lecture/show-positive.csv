@@ -1,0 +1,4 @@
+courseRecordIndex,lectureRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,publish,link
+0,0,Fundamentos de la Ingenieria,Es una clase que tratara sobre los bases de la ingenieria,2.25,hola que tal,THEORICAL,true,https://www.lecture01.com
+0,1,Prácticas en Ingenieria,La clase tratará sobre las práticas que se pueden realizar en ingenieria,1.50,hola que tal,HANDS_ON,false,https://www.lecture02.com
+1,0,Fundamentos de la Quimica,Es una clase que tratara sobre los bases de la química,1.50,hola que tal,THEORICAL,false,https://www.lecture05.com
