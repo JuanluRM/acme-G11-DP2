@@ -14,21 +14,15 @@
 	
 	
 	<jstl:choose>	 
-		<jstl:when test="${_command == 'show' && publish == true && hasLectures == true}">
+		<jstl:when test="${_command == 'show' && publish == true}">
 			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
 			<acme:button code="lecturer.course.form.button.createCourseLecture" action="/lecturer/course-lecture/create-courseLecture?courseId=${id}"/>				
-		</jstl:when>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && publish == false && hasLectures == true}">
-			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
-			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>
-			<acme:submit code="lecturer.course.form.button.delete" action="/lecturer/course/delete"/>
-			<acme:submit code="lecturer.course.form.button.publish" action="/lecturer/course/publish"/>	
-			<acme:button code="lecturer.course.form.button.createCourseLecture" action="/lecturer/course-lecture/create-courseLecture?courseId=${id}"/>		
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && publish == false}">
 			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>
 			<acme:submit code="lecturer.course.form.button.delete" action="/lecturer/course/delete"/>
 			<acme:submit code="lecturer.course.form.button.publish" action="/lecturer/course/publish"/>
+			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
 			<acme:button code="lecturer.course.form.button.createCourseLecture" action="/lecturer/course-lecture/create-courseLecture?courseId=${id}"/>	
 		</jstl:when>	
 		<jstl:when test="${_command == 'create'}">

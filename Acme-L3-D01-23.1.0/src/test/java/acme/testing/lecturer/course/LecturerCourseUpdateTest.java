@@ -11,27 +11,44 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.entities.Course;
 import acme.testing.TestHarness;
 
-public class LecturerCourseShowTest extends TestHarness {
+public class LecturerCourseUpdateTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	protected LecturerCourseTestRepository repository;
 
-	// Test data --------------------------------------------------------------
+	// Test methods ------------------------------------------------------------
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/lecturer/course/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/lecturer/course/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String publish, final String link) {
 
 		super.signIn("lecturer1", "lecturer1");
 
 		super.clickOnMenu("Lecturer", "My courses");
+		super.checkListingExists();
 		super.sortListing(0, "asc");
+
+		super.checkColumnHasValue(recordIndex, 3, publish);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
+		super.fillInputBoxIn("code", code);
+		super.fillInputBoxIn("title", title);
+		super.fillInputBoxIn("courseAbstract", courseAbstract);
+		super.fillInputBoxIn("retailPrice", price);
+		super.fillInputBoxIn("link", link);
+		super.clickOnSubmit("Update");
 
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 2, price);
+		super.checkColumnHasValue(recordIndex, 3, publish);
+
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("courseAbstract", courseAbstract);
@@ -42,10 +59,28 @@ public class LecturerCourseShowTest extends TestHarness {
 		super.signOut();
 	}
 
-	@Test
-	public void test200Negative() {
-		// HINT: there aren't any negative tests for this feature because it's a listing
-		// HINT+ that doesn't involve entering any data in any forms.
+	@ParameterizedTest
+	@CsvFileSource(resources = "/lecturer/course/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String publish, final String link) {
+		super.signIn("lecturer1", "lecturer1");
+
+		super.clickOnMenu("Lecturer", "My courses");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.checkColumnHasValue(recordIndex, 3, publish);
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.fillInputBoxIn("code", code);
+		super.fillInputBoxIn("title", title);
+		super.fillInputBoxIn("courseAbstract", courseAbstract);
+		super.fillInputBoxIn("retailPrice", price);
+		super.fillInputBoxIn("link", link);
+		super.clickOnSubmit("Update");
+
+		super.checkErrorsExist();
+
+		super.signOut();
 	}
 
 	@Test
@@ -63,22 +98,22 @@ public class LecturerCourseShowTest extends TestHarness {
 				super.checkPanicExists();
 
 				super.signIn("administrator1", "administrator1");
-				super.request("/lecturer/course/show", param);
+				super.request("/lecturer/course/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("administrator2", "administrator2");
-				super.request("/lecturer/course/show", param);
+				super.request("/lecturer/course/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer2", "lecturer2");
-				super.request("/lecturer/course/show", param);
+				super.request("/lecturer/course/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/lecturer/course/show", param);
+				super.request("/lecturer/course/update", param);
 				super.checkPanicExists();
 				super.signOut();
 			}
