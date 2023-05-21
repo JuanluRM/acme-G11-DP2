@@ -1,5 +1,5 @@
 key,code,title,course-abstract,type,retail-price,link,publish,key:lecturer
 course-01,COU 001,Curso Ingenieria,Curso que tratara sobre la ingenieria,BALANCED,EUR 24.99,https://www.course001.com,false,lecturer-01
 course-02,COU 002,Curso Fisica,Curso que tratara sobre la fisica,BALANCED,EUR 19.99,https://www.course002.com,true,lecturer-02
-course-03,COU 003,Curso Ingenieria Aplicada,Curso que tratara sobre la Ingenieria Aplicada,THEORICAL,EUR 99.99,https://www.course003.com,true,lecturer-02
+course-03,COU 003,Curso Ingenieria Aplicada,Curso que tratara sobre la Ingenieria Aplicada,THEORICAL,EUR 99.99,https://www.course003.com,false,lecturer-02
 course-04,COU 004,Curso Química,Curso que tratara sobre la qímica,HANDS_ON,EUR 49.99,https://www.course004.com,false,lecturer-01

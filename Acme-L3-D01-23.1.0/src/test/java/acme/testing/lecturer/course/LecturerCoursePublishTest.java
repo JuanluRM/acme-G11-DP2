@@ -62,7 +62,7 @@ public class LecturerCoursePublishTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to publish a job with a role other than "Lecturer".
+		// HINT: this test tries to publish a course with a role other than "Lecturer".
 
 		Collection<Course> courses;
 		String param;
@@ -112,7 +112,7 @@ public class LecturerCoursePublishTest extends TestHarness {
 
 	@Test
 	public void test302Hacking() {
-		// HINT: this test tries to publish a job that wasn't registered by the principal,
+		// HINT: this test tries to publish a course that wasn't registered by the principal,
 		// HINT+ be it published or unpublished.
 
 		Collection<Course> courses;

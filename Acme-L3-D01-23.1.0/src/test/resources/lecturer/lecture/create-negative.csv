@@ -1,0 +1,8 @@
+courseRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,publish,link
+1,,Esto es una clase de test,1.50,Clase de test para DP2,THEORICAL,false,https://www.clasetestcreate.com
+1,Clase de test,,1.50,Clase de test para DP2,THEORICAL,false,https://www.clasetestcreate.com
+1,Clase de test,Esto es una clase de test,-1.50,Clase de test para DP2,THEORICAL,false,https://www.clasetestcreate.com
+1,Clase de test,Esto es una clase de test,Muy larga,Clase de test para DP2,THEORICAL,false,https://www.clasetestcreate.com
+1,Clase de test,Esto es una clase de test,1.50,,THEORICAL,false,https://www.clasetestcreate.com
+1,Clase de test,Esto es una clase de test,1.50,Clase de test para DP2,---,false,https://www.clasetestcreate.com
+1,Clase de test,Esto es una clase de test,1.50,Clase de test para DP2,THEORICAL,false,esto no es una URL

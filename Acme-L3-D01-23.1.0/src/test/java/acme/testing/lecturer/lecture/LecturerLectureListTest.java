@@ -61,33 +61,32 @@ public class LecturerLectureListTest extends TestHarness {
 		String param;
 
 		courses = this.repository.findManyCoursesByLecturerUsername("lecturer1");
-		for (final Course course : courses)
-			if (course.getPublish() == false) {
-				param = String.format("masterId=%d", course.getId());
+		for (final Course course : courses) {
+			param = String.format("masterId=%d", course.getId());
 
-				super.checkLinkExists("Sign in");
-				super.request("/lecturer/lectures/list", param);
-				super.checkPanicExists();
+			super.checkLinkExists("Sign in");
+			super.request("/lecturer/lecture/list", param);
+			super.checkPanicExists();
 
-				super.signIn("administrator1", "administrator1");
-				super.request("/lecturer/lectures/list", param);
-				super.checkPanicExists();
-				super.signOut();
+			super.signIn("administrator1", "administrator1");
+			super.request("/lecturer/lecture/list", param);
+			super.checkPanicExists();
+			super.signOut();
 
-				super.signIn("administrator2", "administrator2");
-				super.request("/lecturer/lectures/list", param);
-				super.checkPanicExists();
-				super.signOut();
+			super.signIn("administrator2", "administrator2");
+			super.request("/lecturer/lecture/list", param);
+			super.checkPanicExists();
+			super.signOut();
 
-				super.signIn("lecturer2", "lecturer2");
-				super.request("/lecturer/lectures/list", param);
-				super.checkPanicExists();
-				super.signOut();
+			super.signIn("lecturer2", "lecturer2");
+			super.request("/lecturer/lecture/list", param);
+			super.checkPanicExists();
+			super.signOut();
 
-				super.signIn("auditor1", "auditor1");
-				super.request("/lecturer/lectures/list", param);
-				super.checkPanicExists();
-				super.signOut();
-			}
+			super.signIn("auditor1", "auditor1");
+			super.request("/lecturer/lecture/list", param);
+			super.checkPanicExists();
+			super.signOut();
+		}
 	}
 }
