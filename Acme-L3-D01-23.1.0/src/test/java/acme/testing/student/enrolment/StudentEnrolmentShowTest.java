@@ -47,7 +47,7 @@ public class StudentEnrolmentShowTest extends TestHarness {
 	@Test
 	public void test300Hacking() {
 		// HINT: this test tries to show an unpublished course by someone who is not the principal.
-		final Collection<Enrolment> enrolments;
+		Collection<Enrolment> enrolments;
 		String param;
 
 		enrolments = this.repository.findManyEnrolmentsByStudentUsername("student1");
