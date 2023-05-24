@@ -23,6 +23,6 @@ assistant.tutorial.form.button.session-tutorial = Tutorial Sessions
 assistant.tutorial.form.button.update = Update
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
-assistant.tutorial.form.button.publish = Published
+assistant.tutorial.form.button.publish = Publish
 
 assistant.tutorial.form.error.code = Error, code already exist on another tutorial

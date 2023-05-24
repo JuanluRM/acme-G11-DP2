@@ -77,7 +77,7 @@ public class AssistantSessionTutorialCreateService extends AbstractService<Assis
 	public void perform(final SessionTutorial object) {
 		assert object != null;
 
-		object.setIsPublished(true);
+		object.setIsPublished(false);
 		this.repository.save(object);
 	}
 

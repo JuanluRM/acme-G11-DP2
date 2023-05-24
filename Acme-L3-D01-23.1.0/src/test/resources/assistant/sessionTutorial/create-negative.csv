@@ -1,0 +1,6 @@
+tutorialRecordIndex, sessionRecordIndex, title, sessionType, summary,  startMoment, finishMoment,moreInfo
+0, 0,,HANDS_ON,esto es una prueba negativa,2022/03/13 18:40,2022/03/13 20:40,https://www.tutoria.com
+0, 0,AAA Test create,---,esto es una prueba negativa,2022/03/13 18:40,2022/03/13 20:40,https://www.tutoria.com
+0, 0,AAA Test create,HANDS_ON,,2022/03/13 18:40,2022/03/13 20:40,https://www.tutoria.com
+0, 0,AAA Test create,HANDS_ON,esto es una prueba negativa,,2022/03/13 20:40,https://www.tutoria.com
+0, 0,AAA Test create,HANDS_ON,esto es una prueba negativa,2022/03/13 18:40,,https://www.tutoria.com
