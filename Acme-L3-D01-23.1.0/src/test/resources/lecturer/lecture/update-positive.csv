@@ -1,3 +1,3 @@
-courseRecordIndex,lectureRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,publish,link
-1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update sin link,actualizando datos sin link,1.50,Clase de test de update para DP2 sin link,THEORICAL,false,
+courseRecordIndex,lectureRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,link
+1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update sin link,actualizando datos sin link,1.50,Clase de test de update para DP2 sin link,THEORICAL,

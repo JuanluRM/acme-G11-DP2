@@ -46,8 +46,7 @@ public class LecturerLecturePublishTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int courseRecordIndex, final int lectureRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String publish,
-		final String link) {
+	public void test200Negative(final int courseRecordIndex, final int lectureRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String link) {
 
 		super.signIn("lecturer2", "lecturer2");
 
@@ -57,8 +56,6 @@ public class LecturerLecturePublishTest extends TestHarness {
 
 		super.clickOnListingRecord(courseRecordIndex);
 		super.clickOnButton("Lectures");
-
-		super.checkColumnHasValue(lectureRecordIndex, 3, publish);
 
 		super.clickOnListingRecord(lectureRecordIndex);
 		super.checkFormExists();

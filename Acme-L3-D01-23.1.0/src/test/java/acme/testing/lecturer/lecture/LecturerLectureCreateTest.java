@@ -23,8 +23,7 @@ public class LecturerLectureCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int courseRecordIndex, final int lectureRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String publish,
-		final String link) {
+	public void test100Positive(final int courseRecordIndex, final int lectureRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String link) {
 
 		super.signIn("lecturer1", "lecturer1");
 
@@ -55,7 +54,6 @@ public class LecturerLectureCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("estimatedLearningTime", estimatedLearningTime);
 		super.checkInputBoxHasValue("body", body);
 		super.checkInputBoxHasValue("type", type);
-		super.checkInputBoxHasValue("publish", publish);
 		super.checkInputBoxHasValue("link", link);
 
 		super.signOut();
@@ -63,7 +61,7 @@ public class LecturerLectureCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int courseRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String publish, final String link) {
+	public void test200Negative(final int courseRecordIndex, final String title, final String lectureAbstract, final String estimatedLearningTime, final String body, final String type, final String link) {
 
 		super.signIn("lecturer1", "lecturer1");
 

@@ -9,14 +9,13 @@
 	<acme:input-textarea code="lecturer.course.form.label.courseAbstract" path="courseAbstract"/>
 	<acme:input-double code="lecturer.course.form.label.retailPrice" path="retailPrice"/>
 	<acme:input-textbox code="lecturer.course.form.label.type" path="type" readonly="true"/>
-	<acme:input-textbox code="lecturer.course.form.label.publish" path="publish" readonly="true"/>
+	<acme:input-checkbox code="lecturer.course.form.label.publish" path="publish" readonly="true"/>
 	<acme:input-url code="lecturer.course.form.label.link" path="link"/>
 	
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && publish == true}">
-			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?masterId=${id}"/>
-			<acme:button code="lecturer.course.form.button.createCourseLecture" action="/lecturer/course-lecture/create-courseLecture?courseId=${id}"/>				
+			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?masterId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && publish == false}">
 			<acme:submit code="lecturer.course.form.button.update" action="/lecturer/course/update"/>

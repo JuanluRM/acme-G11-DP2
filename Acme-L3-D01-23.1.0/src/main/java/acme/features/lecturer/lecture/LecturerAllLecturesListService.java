@@ -6,7 +6,6 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -25,10 +24,7 @@ public class LecturerAllLecturesListService extends AbstractService<Lecturer, Le
 
 	@Override
 	public void check() {
-		final boolean status;
-
 		super.getResponse().setChecked(true);
-
 	}
 
 	@Override
@@ -55,9 +51,13 @@ public class LecturerAllLecturesListService extends AbstractService<Lecturer, Le
 	public void unbind(final Lecture object) {
 		assert object != null;
 		Tuple tuple;
-		final Course lectureCourse;
 
 		tuple = super.unbind(object, "title", "lectureAbstract", "type", "publish");
+
+		if (object.getPublish() == true)
+			tuple.put("publishInternacionalizado", "Ok");
+		else
+			tuple.put("publishInternacionalizado", "No");
 
 		super.getResponse().setData(tuple);
 	}

@@ -23,7 +23,7 @@ public class LecturerLectureListTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int courseRecordIndex, final String title, final int lectureRecordIndex, final String titleLecture, final String lectureAbstract, final String type, final String publish) {
+	public void test100Positive(final int courseRecordIndex, final String title, final int lectureRecordIndex, final String titleLecture, final String lectureAbstract, final String type) {
 
 		super.signIn("lecturer1", "lecturer1");
 
@@ -40,7 +40,6 @@ public class LecturerLectureListTest extends TestHarness {
 		super.checkColumnHasValue(lectureRecordIndex, 0, titleLecture);
 		super.checkColumnHasValue(lectureRecordIndex, 1, lectureAbstract);
 		super.checkColumnHasValue(lectureRecordIndex, 2, type);
-		super.checkColumnHasValue(lectureRecordIndex, 3, publish);
 		super.clickOnListingRecord(lectureRecordIndex);
 
 		super.signOut();

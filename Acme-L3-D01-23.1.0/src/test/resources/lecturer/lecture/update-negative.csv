@@ -1,9 +1,9 @@
-courseRecordIndex,lectureRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,publish,link
-1,0,,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,,1.50,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,-1.50,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,dura mucho,Clase de test de update para DP2,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,1.50,,THEORICAL,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,---,false,https://www.clasetestupdate.com
-1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,false,esto no es una url
+courseRecordIndex,lectureRecordIndex,title,lecture-abstract,estimated-learning-time,body,type,link
+1,0,,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,,1.50,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,-1.50,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,dura mucho,Clase de test de update para DP2,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,1.50,,THEORICAL,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,---,https://www.clasetestupdate.com
+1,0,Esto es un test de update,actualizando datos,1.50,Clase de test de update para DP2,THEORICAL,esto no es una url

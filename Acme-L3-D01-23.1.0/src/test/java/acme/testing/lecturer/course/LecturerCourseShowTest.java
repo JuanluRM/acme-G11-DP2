@@ -23,7 +23,7 @@ public class LecturerCourseShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String publish, final String link) {
+	public void test100Positive(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String link) {
 
 		super.signIn("lecturer1", "lecturer1");
 
@@ -36,7 +36,6 @@ public class LecturerCourseShowTest extends TestHarness {
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("courseAbstract", courseAbstract);
 		super.checkInputBoxHasValue("retailPrice", price);
-		super.checkInputBoxHasValue("publish", publish);
 		super.checkInputBoxHasValue("link", link);
 
 		super.signOut();

@@ -11,7 +11,7 @@ public class LecturerCourseListTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String title, final String price, final String publish) {
+	public void test100Positive(final int recordIndex, final String title, final String price) {
 
 		super.signIn("lecturer1", "lecturer1");
 
@@ -22,7 +22,6 @@ public class LecturerCourseListTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, title);
 		//No compruebo Type dado que es un valor que es cambiante (segun las clases del curso)
 		super.checkColumnHasValue(recordIndex, 2, price);
-		super.checkColumnHasValue(recordIndex, 3, publish);
 
 		super.signOut();
 	}
