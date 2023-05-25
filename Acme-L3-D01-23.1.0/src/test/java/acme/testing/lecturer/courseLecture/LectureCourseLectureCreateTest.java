@@ -33,9 +33,8 @@ public class LectureCourseLectureCreateTest extends TestHarness {
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(courseRecordIndex);
-		super.clickOnButton("Lectures");
-
 		super.clickOnButton("Add a lecture");
+
 		super.fillInputBoxIn("lecture", lecture);
 		super.clickOnSubmit("Add lecture");
 
@@ -51,7 +50,7 @@ public class LectureCourseLectureCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/courseLecture/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int courseRecordIndex, final String lecture) {
+	public void test200Negative(final int courseRecordIndex) {
 
 		super.signIn("lecturer1", "lecturer1");
 
@@ -60,10 +59,8 @@ public class LectureCourseLectureCreateTest extends TestHarness {
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(courseRecordIndex);
-		super.clickOnButton("Lectures");
 
 		super.clickOnButton("Add a lecture");
-		super.fillInputBoxIn("lecture", lecture);
 		super.clickOnSubmit("Add lecture");
 
 		super.checkErrorsExist();
