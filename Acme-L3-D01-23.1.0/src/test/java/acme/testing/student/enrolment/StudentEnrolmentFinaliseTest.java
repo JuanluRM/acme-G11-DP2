@@ -53,9 +53,7 @@ public class StudentEnrolmentFinaliseTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.clickOnSubmit("Finalise");
-		super.checkAlertExists(false);
-
+		super.checkNotButtonExists("Finalise");
 		super.signOut();
 	}
 

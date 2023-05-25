@@ -40,7 +40,7 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 
 		id = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findOneEnrolmentById(id);
-		status = enrolment != null && !enrolment.getIsFinalised();
+		status = enrolment != null && !enrolment.getIsFinalised() && super.getRequest().getPrincipal().hasRole(enrolment.getStudent());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -66,6 +66,12 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Enrolment enrolment;
+
+			enrolment = this.repository.findOneEnrolmentByCode(object.getCode());
+			super.state(enrolment == null || enrolment.equals(object), "code", "student.enrolment.error.code.duplicated");
+		}
 	}
 
 	@Override

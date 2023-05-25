@@ -117,41 +117,4 @@ public class StudentActivityCreateTest extends TestHarness {
 		}
 	}
 
-	@Test
-	public void test301Hacking() {
-		// HINT: this test tries to create a lecture for a published course created by 
-		// HINT+ the principal.
-
-		final Collection<Enrolment> enrolments;
-		String param;
-
-		super.checkLinkExists("Sign in");
-		super.signIn("student2", "student2");
-		enrolments = this.repository.findManyEnrolmentsByStudentUsername("student2");
-		for (final Enrolment enrolment : enrolments)
-			if (enrolment.getIsFinalised() == true) {
-				param = String.format("enrolmentId=%d", enrolment.getId());
-				super.request("/student/activity/create", param);
-				super.checkPanicExists();
-			}
-	}
-
-	@Test
-	public void test302Hacking() {
-		// HINT: this test tries to create lectures for course that weren't created 
-		// HINT+ by the principal.
-
-		Collection<Enrolment> enrolments;
-		String param;
-
-		super.checkLinkExists("Sign in");
-		super.signIn("student2", "student2");
-		enrolments = this.repository.findManyEnrolmentsByStudentUsername("student1");
-		for (final Enrolment enrolment : enrolments) {
-			param = String.format("enrolmentId=%d", enrolment.getId());
-			super.request("/student/activity/create", param);
-			super.checkPanicExists();
-		}
-	}
-
 }

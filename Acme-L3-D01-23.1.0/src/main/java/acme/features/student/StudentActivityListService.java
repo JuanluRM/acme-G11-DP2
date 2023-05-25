@@ -35,7 +35,15 @@ public class StudentActivityListService extends AbstractService<Student, Activit
 	@Override
 	public void authorise() {
 
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		int enrolmentId;
+		Enrolment enrolment;
+
+		enrolmentId = super.getRequest().getData("enrolmentId", int.class);
+		enrolment = this.repository.findEnrolmentById(enrolmentId);
+		status = enrolment != null && super.getRequest().getPrincipal().hasRole(enrolment.getStudent());
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

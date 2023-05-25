@@ -30,10 +30,10 @@ public class StudentEnrolmentShowTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 
-		super.checkInputBoxHasValue("Code", code);
-		super.checkInputBoxHasValue("Motivation", motivation);
-		super.checkInputBoxHasValue("Goals", goals);
-		super.checkInputBoxHasValue("WorkTime", workTime);
+		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("motivation", motivation);
+		super.checkInputBoxHasValue("goals", goals);
+		super.checkInputBoxHasValue("workTime", workTime);
 
 		super.signOut();
 	}

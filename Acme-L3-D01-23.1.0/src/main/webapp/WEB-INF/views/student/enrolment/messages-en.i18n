@@ -32,3 +32,5 @@ student.enrolment.form.error.duplicated = Duplicated
 student.enrolment.form.error.code= Error
 
 student.enrolment.form.button.activities= Activities
+
+student.enrolment.error.code.duplicated= Code duplicated

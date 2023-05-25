@@ -20,7 +20,6 @@ public class StudentEnrolmentListTest extends TestHarness {
 		super.sortListing(0, "asc");
 
 		super.checkColumnHasValue(recordIndex, 0, code);
-		//No compruebo Type dado que es un valor que es cambiante (segun las clases del curso)
 		super.checkColumnHasValue(recordIndex, 1, motivation);
 		super.checkColumnHasValue(recordIndex, 2, goals);
 		super.checkColumnHasValue(recordIndex, 3, workTime);

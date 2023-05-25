@@ -1,3 +1,7 @@
 enrolmentRecordIndex,activityRecordIndex,title,activityAbstract,activityType,startPeriod,endPeriod,link
-0,0,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,,2021/02/13 19:39,2021// 19:45,https://www.activity01.com
-0,1,actividad2,,THEORY,2021/02/13 19:39,,https://www.activity02.com
+0,0,,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/15345/13 19:45,2021/02/13 19:45,https://www.activity01.com
+0,0,actividad1,,THEORY,2021/02/13 19:39,2021/02/13 19:45,https://www.activity01.com
+0,0,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/pepe/13 19:39,2021/02/13 19:45,https://www.activity01.com
+0,0,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/02/13 19:39,2021/02/13 19:38,https://www.activity01.com
+0,0,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,,2021/02/13 19:45,https://www.activity01.com
+0,0,actividad1,Es una actividad que tratara sobre los bases de la ingenieria,THEORY,2021/02/13 19:39,,https://www.activity01.com

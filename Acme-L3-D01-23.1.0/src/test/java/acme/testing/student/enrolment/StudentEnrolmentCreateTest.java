@@ -13,7 +13,7 @@ public class StudentEnrolmentCreateTest extends TestHarness {
 	@CsvFileSource(resources = "/student/enrolment/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code, final String motivation, final String goals, final String workTime, final String course) {
 
-		super.signIn("lecturer1", "lecturer1");
+		super.signIn("student1", "student1");
 
 		super.clickOnMenu("Student", "Enrolment List");
 		super.checkListingExists();
