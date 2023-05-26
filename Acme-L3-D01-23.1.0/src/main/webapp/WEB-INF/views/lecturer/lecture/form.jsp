@@ -15,7 +15,7 @@
 	<jstl:if test="${publish == false}">
 	<acme:input-select code="lecturer.lecture.form.label.type" path="type" choices="${lectureTypes}"/>
 	</jstl:if> 
-	<acme:input-textbox code="lecturer.lecture.form.label.publish" path="publish" readonly="true"/>
+	<acme:input-checkbox code="lecturer.lecture.form.label.publish" path="publish" readonly="true"/>
 	<acme:input-url code="lecturer.lecture.form.label.link" path="link"/>
 	
 	<jstl:choose>

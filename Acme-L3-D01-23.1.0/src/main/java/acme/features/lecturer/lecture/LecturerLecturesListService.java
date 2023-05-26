@@ -61,13 +61,16 @@ public class LecturerLecturesListService extends AbstractService<Lecturer, Lectu
 	public void unbind(final Lecture object) {
 		assert object != null;
 		int masterId;
+		Course course;
 		Tuple tuple;
 
 		masterId = super.getRequest().getData("masterId", int.class);
+		course = this.repository.findOneCourseById(masterId);
 
-		tuple = super.unbind(object, "title", "lectureAbstract", "type", "publish");
+		tuple = super.unbind(object, "title", "lectureAbstract", "type");
 
 		super.getResponse().setGlobal("masterId", masterId);
+		super.getResponse().setGlobal("publishCourse", course.getPublish());
 		super.getResponse().setData(tuple);
 	}
 
