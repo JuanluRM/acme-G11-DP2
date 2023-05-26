@@ -7,7 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.auditingRecords.AuditingRecord;
+import acme.entities.AuditRecord;
 import acme.testing.TestHarness;
 
 public class AuditorAuditingRecordShowTest extends TestHarness {
