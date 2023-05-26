@@ -34,10 +34,13 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		boolean status;
 		int masterId;
 		Course course;
+		boolean lecturerCourse;
 
 		masterId = super.getRequest().getData("id", int.class);
 		course = this.repository.findOneCourseById(masterId);
-		status = course != null;
+		lecturerCourse = super.getRequest().getPrincipal().hasRole(course.getLecturer());
+
+		status = course != null && lecturerCourse;
 
 		super.getResponse().setAuthorised(status);
 	}

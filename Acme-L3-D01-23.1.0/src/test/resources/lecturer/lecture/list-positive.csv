@@ -1,0 +1,4 @@
+courseRecordIndex,title,lectureRecordIndex,title,abstract,type
+0,Curso Ingenieria,0,Fundamentos de la Ingenieria,Es una clase que tratara sobre los bases de la ingenieria,THEORICAL
+0,Curso Ingenieria,1,Prácticas en Ingenieria,La clase tratará sobre las práticas que se pueden realizar en ingenieria,HANDS_ON
+1,Curso Química,0,Fundamentos de la Quimica,Es una clase que tratara sobre los bases de la química,THEORICAL

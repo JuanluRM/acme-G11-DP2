@@ -8,7 +8,7 @@
 
 assistant.tutorial.list.label.code = Code
 assistant.tutorial.list.label.title = Title
-assistant.tutorial.list.label.isPublished = Published
+assistant.tutorial.list.label.isPublished = Status
 assistant.tutorial.list.button.create = Create
 
 assistant.tutorial.form.label.code = Code
@@ -23,6 +23,6 @@ assistant.tutorial.form.button.session-tutorial = Tutorial Sessions
 assistant.tutorial.form.button.update = Update
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
-assistant.tutorial.form.button.publish = Published
+assistant.tutorial.form.button.publish = Publish
 
 assistant.tutorial.form.error.code = Error, code already exist on another tutorial

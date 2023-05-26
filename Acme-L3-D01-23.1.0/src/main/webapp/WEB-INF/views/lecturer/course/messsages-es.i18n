@@ -3,7 +3,7 @@
 lecturer.course.list.label.title = Titulo
 lecturer.course.list.label.type = Tipo
 lecturer.course.list.label.retailPrice = Precio
-lecturer.course.list.label.publish = Publicada
+lecturer.course.list.label.publish = Publicado
 
 lecturer.course.form.label.code = Codigo
 lecturer.course.form.label.title = Titulo

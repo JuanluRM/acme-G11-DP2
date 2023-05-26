@@ -38,6 +38,7 @@ public class CompanyPracticaDeleteService extends AbstractService<Company, Pract
 		boolean status;
 		int id;
 		Practica practica;
+		final Company company;
 
 		id = super.getRequest().getData("id", int.class);
 		practica = this.repository.findOnePracticaById(id);

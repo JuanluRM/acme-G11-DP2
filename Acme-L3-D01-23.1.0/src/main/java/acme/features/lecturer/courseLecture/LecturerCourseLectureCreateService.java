@@ -43,7 +43,7 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 
 		courseId = super.getRequest().getData("courseId", int.class);
 		course = this.repository.findOneCourseById(courseId);
-		status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer());
+		status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer()) && course.getPublish() == false;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -110,7 +110,7 @@ public class LecturerCourseLectureCreateService extends AbstractService<Lecturer
 		courseId = super.getRequest().getData("courseId", int.class);
 		course = this.repository.findOneCourseById(courseId);
 		lecturerId = super.getRequest().getPrincipal().getActiveRoleId();
-		lecturesNotInThisCourse = this.repository.findAllPublishLecturesNotInThisCourse(courseId, lecturerId);
+		lecturesNotInThisCourse = this.repository.findAllLecturesNotInThisCourse(courseId, lecturerId);
 		lectureChoices = SelectChoices.from(lecturesNotInThisCourse, "title", object.getLecture());
 
 		tuple = super.unbind(object, "lecture");

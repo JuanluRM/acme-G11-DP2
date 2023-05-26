@@ -30,7 +30,11 @@ public class LecturerCourseListService extends AbstractService<Lecturer, Course>
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().hasRole(Lecturer.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -50,8 +54,9 @@ public class LecturerCourseListService extends AbstractService<Lecturer, Course>
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "retailPrice", "publish");
+		tuple = super.unbind(object, "code", "title", "retailPrice");
 		tuple.put("type", this.repository.courseType(object.getId()));
+
 		super.getResponse().setData(tuple);
 	}
 

@@ -42,7 +42,7 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 		masterId = super.getRequest().getData("id", int.class);
 		course = this.repository.findOneCourseById(masterId);
 		lecturer = course.getLecturer();
-		status = course != null && super.getRequest().getPrincipal().hasRole(lecturer);
+		status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer()) && course.getPublish() == false;
 
 		super.getResponse().setAuthorised(status);
 	}

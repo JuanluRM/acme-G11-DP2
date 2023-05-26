@@ -41,10 +41,17 @@ public class LecturerLecturesShowService extends AbstractService<Lecturer, Lectu
 		int lectureId;
 		Collection<Course> courses;
 
+		boolean lecturerLecture;
+		Lecture lecture;
+
 		lectureId = super.getRequest().getData("id", int.class);
 		courses = this.repository.findCoursesByLectureId(lectureId);
+
+		lecture = this.repository.findOneLectureById(lectureId);
+		lecturerLecture = super.getRequest().getPrincipal().hasRole(lecture.getLecturer());
+
 		if (courses != null)
-			status = courses != null && super.getRequest().getPrincipal().hasRole(Lecturer.class);
+			status = courses != null && super.getRequest().getPrincipal().hasRole(Lecturer.class) && lecturerLecture;
 		else
 			status = super.getRequest().getPrincipal().hasRole(Lecturer.class);
 

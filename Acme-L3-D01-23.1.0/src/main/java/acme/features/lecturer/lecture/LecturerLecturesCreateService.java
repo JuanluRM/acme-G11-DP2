@@ -39,7 +39,7 @@ public class LecturerLecturesCreateService extends AbstractService<Lecturer, Lec
 		if (super.getRequest().hasData("masterId", int.class)) {
 			masterId = super.getRequest().getData("masterId", int.class);
 			course = this.repository.findOneCourseById(masterId);
-			status = course != null && super.getRequest().getPrincipal().hasRole(course.getLecturer());
+			status = course != null && course.getPublish() == false && super.getRequest().getPrincipal().hasRole(course.getLecturer());
 		} else
 			status = super.getRequest().getPrincipal().hasRole(Lecturer.class);
 

@@ -11,7 +11,7 @@
 
 assistant.tutorial.list.label.code = Código
 assistant.tutorial.list.label.title = Título
-assistant.tutorial.list.label.isPublished = Publicado
+assistant.tutorial.list.label.isPublished = Estado
 assistant.tutorial.list.button.create = Crear
 
 assistant.tutorial.form.label.code = Código

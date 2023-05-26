@@ -10,17 +10,17 @@
  * they accept any liabilities with respect to them.
  */
 
-//package acme.testing;
-//
-//import org.junit.jupiter.api.Test;
-//
-//public class FavouriteLinkTest extends TestHarness {
-//
-//	@Test
-//	public void test100Positive() {
-//		super.requestHome();
-//		super.clickOnMenu("Anonymous", "Favourite link");
-//		super.checkCurrentUrl("http://www.example.com");
-//	}
-//
-//}
+package acme.testing;
+
+import org.junit.jupiter.api.Test;
+
+public class FavouriteLinkTest extends TestHarness {
+
+	@Test
+	public void test100Positive() {
+		super.requestHome();
+		super.clickOnMenu("Anonymous", "Favourite link");
+		super.checkCurrentUrl("http://www.example.com");
+	}
+
+}

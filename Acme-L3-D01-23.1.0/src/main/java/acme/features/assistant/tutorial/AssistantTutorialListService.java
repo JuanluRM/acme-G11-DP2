@@ -30,7 +30,10 @@ public class AssistantTutorialListService extends AbstractService<Assistant, Tut
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+
+		boolean status;
+		status = super.getRequest().getPrincipal().hasRole(Assistant.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -50,7 +53,21 @@ public class AssistantTutorialListService extends AbstractService<Assistant, Tut
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "code", "isPublished");
+		tuple = super.unbind(object, "title", "code");
+
+		final String lang = super.getRequest().getLocale().getISO3Language();
+		final boolean isPublished = object.getIsPublished();
+
+		if (lang.equals("spa")) {
+			if (isPublished)
+				tuple.put("isPublished", "Publicado");
+			else
+				tuple.put("isPublished", "No Publicado");
+		} else if (lang.equals("eng"))
+			if (isPublished)
+				tuple.put("isPublished", "Published");
+			else
+				tuple.put("isPublished", "Not Published");
 
 		super.getResponse().setData(tuple);
 	}

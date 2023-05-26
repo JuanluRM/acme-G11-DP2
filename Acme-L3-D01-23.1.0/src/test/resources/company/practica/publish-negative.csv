@@ -1,0 +1,9 @@
+lectureRecordIndex,code,title,summary,goals,estimated-total-time,draft-mode
+0,,Esto es un test de publish,El codigo esta vacio,Fallar la publicacion de la practica,1.50,true
+0,PRA5,Esto es un test de publish,El codigo no cumple el patron de la expresion regular,Fallar la publicacion de la practica,1.50,true
+0,PRA0005,,El titulo esta vacio,Fallar la publicacion de la practica,1.50,true
+0,PRA0005,Esto es un test de publish,,Fallar la publicacion de la practica,1.50,true
+0,PRA0005,Esto es un test de publish,Las metas estan vacias,,1.50,true
+0,PRA0005,Esto es un test de publish,Tiempo total estimado es un numero real sin decimales,Fallar la publicacion de la practica,1.,true
+0,PRA0005,Esto es un test de publish,Tiempo total estimado es un numero real negativo,Fallar la publicacion de la practica,-1.50,true
+0,PRA0005,Esto es un test de publish,Tiempo total estimado no es un valor numerico,Fallar la publicacion de la practica,ey,true

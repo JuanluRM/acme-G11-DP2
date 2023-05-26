@@ -17,11 +17,8 @@
 
 <acme:list>
 	<acme:list-column code="company.practica.list.label.code" path="code" width="10%"/>
-	<acme:list-column code="company.practica.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="company.practica.list.label.summary" path="summary" width="35%"/>
-	<acme:list-column code="company.practica.list.label.goals" path="goals" width="15%"/>
-	<acme:list-column code="company.practica.list.label.estimatedTotalTime" path="estimatedTotalTime" width="10%"/>
-	<acme:list-column code="company.practica.list.label.draftMode" path="draftMode" width="35%"/>
+	<acme:list-column code="company.practica.list.label.title" path="title" width="30%"/>
+	<acme:list-column code="company.practica.list.label.summary" path="summary" width="50%"/>
 </acme:list>
 
 <acme:button code="company.practica.form.button.create" action="/company/practica/create"/>

@@ -1,0 +1,7 @@
+recordIndex,code,title,course-abstract,price,link
+0,COU 008,,Este es el curso de prueba 8,EUR 10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,EUR -10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,esto no es una URL
+0,COU 001,Curso test 8,Este es el curso de prueba 8,EUR 10.99,http://www.cursodeprueba8.com

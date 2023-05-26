@@ -1,6 +1,11 @@
 
 package acme.features.assistant.sessionTutorial;
 
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -65,6 +70,19 @@ public class AssistantSessionTutorialUpdateService extends AbstractService<Assis
 	@Override
 	public void validate(final SessionTutorial object) {
 		assert object != null;
+		Date date;
+
+		if (!super.getBuffer().getErrors().hasErrors("finishMoment"))
+			super.state(object.getStartMoment().before(object.getFinishMoment()), "finishMoment", "tutorial.sessionTutorial.form.error.endAfterStart");
+
+		if (!super.getBuffer().getErrors().hasErrors("startMoment")) {
+			date = AssistantSessionTutorialUpdateService.plusOneDay(Date.from(Instant.now()));
+			super.state(object.getStartMoment().equals(date) || object.getStartMoment().after(date), "startMoment", "tutorial.sessionTutorial.form.error.oneDayAfter");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("finishMoment"))
+			super.state(AssistantSessionTutorialUpdateService.oneToFiveHours(object), "finishMoment", "tutorial.sessionTutorial.form.error.hoursNotAllowed");
+
 	}
 
 	@Override
@@ -89,6 +107,20 @@ public class AssistantSessionTutorialUpdateService extends AbstractService<Assis
 		tuple.put("masterId", object.getTutorial().getId());
 
 		super.getResponse().setData(tuple);
+	}
+	public static Date plusOneDay(final Date date) {
+		final Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.add(Calendar.DAY_OF_YEAR, 1);
+		return calendar.getTime();
+	}
+
+	private static boolean oneToFiveHours(final SessionTutorial object) {
+		final long diffInMilliseconds = object.getFinishMoment().getTime() - object.getStartMoment().getTime();
+
+		final long diffInHours = TimeUnit.MILLISECONDS.toHours(diffInMilliseconds);
+
+		return 1 <= diffInHours && diffInHours <= 5;
 	}
 
 }
