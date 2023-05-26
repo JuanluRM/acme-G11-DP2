@@ -11,7 +11,7 @@ public class StudentEnrolmentListTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/student/enrolment/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String motivation, final String goals, final String workTime, final String isFinalised) {
+	public void test100Positive(final int recordIndex, final String code, final String motivation, final String goals, final String workTime) {
 
 		super.signIn("student1", "student1");
 
@@ -23,7 +23,6 @@ public class StudentEnrolmentListTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 1, motivation);
 		super.checkColumnHasValue(recordIndex, 2, goals);
 		super.checkColumnHasValue(recordIndex, 3, workTime);
-		super.checkColumnHasValue(recordIndex, 4, isFinalised);
 
 		super.signOut();
 	}
