@@ -1,0 +1,25 @@
+auditor.audit-record.list.label.subject = Tema
+auditor.audit-record.list.label.assessment = Evaluacion
+auditor.audit-record.list.label.period = Periodo
+auditor.audit-record.list.label.correction = Correccion
+
+auditor.audit-record.list.button.create = Create
+auditor.audit-record.list.button.create-exceptional = Create exceptional session
+
+auditor.audit-record.form.label.subject = Tema:
+auditor.audit-record.form.label.assessment = Evaluacion:
+auditor.audit-record.form.label.period = Periodo:
+auditor.audit-record.form.label.mark = Nota:
+auditor.audit-record.form.label.link = Link:
+auditor.audit-record.form.label.confirmation = Confirmacion excepcional de un registros de auditoria
+
+auditor.audit-record.form.button.create = Crear
+auditor.audit-record.form.button.exceptional = Crear un registro excepcional
+auditor.audit-record.form.button.update = Actualizar
+auditor.audit-record.form.button.delete = Eliminar
+
+auditor.audit.form.error.start-before-end = La fecha es invalida
+
+auditor.audit-record.form.error.start-before-end = La fecha final debe estar despues de la fecha inicial
+auditor.audit-record.form.error.least-one-week-ahead = The session must be included at least one week before
+auditor.audit-record.form.error.least-one-week-long = The session must last a week

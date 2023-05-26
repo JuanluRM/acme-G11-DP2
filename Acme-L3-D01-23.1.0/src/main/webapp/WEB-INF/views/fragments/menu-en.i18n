@@ -14,6 +14,8 @@ master.menu.home = Home
 master.menu.sign-up = Sign up
 master.menu.sign-in = Sign in
 master.menu.sign-out = Sign out
+master.menu.student = Student
+master.menu.student.enrolment = Enrolment List
 
 # master.menu.anonymous #######################################################
 
@@ -30,9 +32,17 @@ master.menu.fraprapra1 = 30267713N: de la Prada Prados, Francisco Javier
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.bulletin.list = List Bulletins
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.banner =  List of Banners
+
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.course.list = List course
 
 # master.menu.authenticated ###################################################
 
@@ -76,8 +86,28 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.bulletin-list = List bulletins
+
+# master.menu.company ####################################################
+
+master.menu.company = Company
+master.menu.company.practica.list = List Practica
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor = Auditor profile data
+
+# master.menu.auditor ####################################################
+master.menu.auditor = Auditor
+master.menu.auditor.my-audits = List my audits
+master.menu.auditor.auditorDashboard =  Auditor Dashboard
+
+# master.menu.any #######################################################
+
+master.menu.any = Any
+master.menu.any.audit = Audit of Course
 master.menu.user-account.assistant = Assistant Data
 master.menu.user-account.become-assistant = Become an Assistant
 master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
 master.menu.authenticated.money-exchage = Money exchange
+
+master.menu.authenticated.offer.list= Offer list

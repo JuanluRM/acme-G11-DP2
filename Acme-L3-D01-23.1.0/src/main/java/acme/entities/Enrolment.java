@@ -3,8 +3,6 @@ package acme.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -21,7 +19,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
 public class Enrolment extends AbstractEntity {
@@ -47,6 +44,8 @@ public class Enrolment extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	protected Double			workTime;
+
+	protected Boolean			isFinalised;
 
 	// Relationships ----------------------------------------------------------
 

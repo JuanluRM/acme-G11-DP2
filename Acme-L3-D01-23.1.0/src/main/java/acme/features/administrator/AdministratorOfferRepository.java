@@ -1,0 +1,23 @@
+
+package acme.features.administrator;
+
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import acme.entities.Offer;
+import acme.framework.repositories.AbstractRepository;
+
+@Repository
+public interface AdministratorOfferRepository extends AbstractRepository {
+
+	@Query("select o from Offer o")
+	Collection<Offer> findAllOffers();
+
+	@Query("select o from Offer o where o.id = :id")
+	Offer findOfferById(int id);
+
+	@Query("select o from Offer o where o.id = :id")
+	Offer findOneOfferById(int id);
+}

@@ -1,2 +1,6 @@
-key,subject,assessment,start-audition,end-audition,mark,link,key:audit,key:course
-audit-record-01,Issi,nose,2021/02/13 19:39,2021/02/17 15:40,A,,audit-01,course-01
+key,subject,assessment,start-audition,end-audition,mark,link,key:audit,draftMode,Correction
+audit-record-01,Issi,nose,2022/02/13 19:39,2022/06/17 15:40,A,https://google.com,audit-01,false,false
+audit-record-02,Mate,nose,2021/02/14 19:39,2021/02/18 15:40,A,https://google.com,audit-01,false,true
+audit-record-03,Calculo,nose,2021/02/15 19:39,2021/02/19 15:40,A,https://google.com,audit-01,true,true
+audit-record-04,Issi,nose,2021/02/16 19:39,2021/05/20 15:40,A,https://google.com,audit-04,false,true
+audit-record-05,Issi,nose,2021/02/17 19:39,2021/05/21 15:40,A,https://google.com,audit-04,true,false

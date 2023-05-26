@@ -1,0 +1,33 @@
+
+auditor.auditrecord.form.label.subject = Subject:
+auditor.auditrecord.form.label.assessment = Assessment:
+auditor.auditrecord.form.label.starAudition= StartAudition:
+auditor.auditrecord.form.label.endAudition= EndAudition:
+auditor.auditrecord.form.label.mark = Mark:
+auditor.auditrecord.form.label.link = Link:
+auditor.auditrecord.label.confirm = Confirm 
+
+
+auditor.auditrecord.list.label.correction= Correction
+auditor.auditrecord.list.label.subject=Subject
+auditor.auditrecord.list.label.assessment= Assessment
+
+auditor.auditrecord.error.date.startAfterFinish = The start date must be before the end date
+auditor.auditrecord.error.date.shortPeriod = The time period must be at least one hour long
+auditor.auditrecord.error.date.correctionDate = Start date cannot be earlier than the latest existing Auditing Record
+auditor.auditrecord.correction.confirmation = You must confirm the creation of the Correction Record
+
+
+auditor.auditrecord.form.button.create = Create
+auditor.auditrecord.form.button.update = Update
+auditor.auditrecord.form.button.delete = Delete
+auditor.auditrecord.form.button.publish = Publish
+auditor.auditrecord.form.button.correct = Create Correction
+
+auditor.auditrecord.list.button.create = New Auditing Record
+auditor.auditrecord.list.button.correction = New Correction Auditing Record
+
+auditor.auditrecord.message.correction = Correction Auditing Record
+auditor.auditrecord.message.correction.disclaimer = Publish automatically
+auditor.auditrecord.message.blank = formulario vacio
+
