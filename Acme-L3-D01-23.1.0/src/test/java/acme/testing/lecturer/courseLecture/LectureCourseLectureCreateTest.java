@@ -10,14 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.Course;
 import acme.testing.TestHarness;
-import acme.testing.lecturer.lecture.LecturerLectureTestRepository;
 
 public class LectureCourseLectureCreateTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LecturerLectureTestRepository repository;
+	protected LecturerCourseLectureTestRepository repository;
 
 	// Test methods -----------------------------------------------------------
 
@@ -95,6 +94,21 @@ public class LectureCourseLectureCreateTest extends TestHarness {
 			super.request("/lecturer/course-lecture/create-courseLecture", param);
 			super.checkPanicExists();
 			super.signOut();
+		}
+	}
+
+	@Test
+	public void test301Hacking() {
+		Collection<Course> courses;
+		String param;
+
+		super.checkLinkExists("Sign in");
+		super.signIn("lecturer2", "lecturer2");
+		courses = this.repository.findManyPublishCoursesByLecturerUsername("lecturer2");
+		for (final Course course : courses) {
+			param = String.format("courseId=%d", course.getId());
+			super.request("/lecturer/course-lecture/create-courseLecture", param);
+			super.checkPanicExists();
 		}
 	}
 
