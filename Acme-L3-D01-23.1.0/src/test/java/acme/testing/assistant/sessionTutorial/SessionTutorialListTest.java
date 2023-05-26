@@ -75,6 +75,10 @@ public class SessionTutorialListTest extends TestHarness {
 				super.request("/assistant/session-tutorial/list", param);
 				super.checkPanicExists();
 				super.signOut();
+				super.signIn("assistant2", "assistant2");
+				super.request("/assistant/session-tutorial/list", param);
+				super.checkPanicExists();
+				super.signOut();
 			}
 
 	}

@@ -8,7 +8,7 @@
 
 assistant.tutorial.list.label.code = Code
 assistant.tutorial.list.label.title = Title
-assistant.tutorial.list.label.isPublished = Published
+assistant.tutorial.list.label.isPublished = Status
 assistant.tutorial.list.button.create = Create
 
 assistant.tutorial.form.label.code = Code

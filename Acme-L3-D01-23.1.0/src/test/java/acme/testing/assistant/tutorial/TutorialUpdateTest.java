@@ -23,7 +23,7 @@ public class TutorialUpdateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String summary, final String goals, final String startMoment, final String finishMoment, final String course) {
+	public void test100Positive(final int recordIndex, final int recordIndexSecond, final String code, final String title, final String summary, final String goals, final String startMoment, final String finishMoment, final String course) {
 		// HINT: this test logs in as an assistant, lists his or her tutorials, 
 		// HINT+ selects one of them, updates it, and then checks that 
 		// HINT+ the update has actually been performed.
@@ -46,11 +46,11 @@ public class TutorialUpdateTest extends TestHarness {
 		super.clickOnSubmit("Update");
 
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, code);
-		super.checkColumnHasValue(recordIndex, 1, title);
+		super.sortListing(0, "desc");
+		super.checkColumnHasValue(recordIndexSecond, 0, code);
+		super.checkColumnHasValue(recordIndexSecond, 1, title);
 
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(recordIndexSecond);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("title", title);
@@ -116,6 +116,11 @@ public class TutorialUpdateTest extends TestHarness {
 				super.signOut();
 
 				super.signIn("student1", "student1");
+				super.request("/assistant/tutorial/update", param);
+				super.checkPanicExists();
+				super.signOut();
+
+				super.signIn("assistant2", "assistant2");
 				super.request("/assistant/tutorial/update", param);
 				super.checkPanicExists();
 				super.signOut();

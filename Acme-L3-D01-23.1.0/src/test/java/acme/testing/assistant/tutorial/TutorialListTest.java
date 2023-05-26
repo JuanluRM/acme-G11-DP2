@@ -59,5 +59,6 @@ public class TutorialListTest extends TestHarness {
 		super.request("/assistant/tutorial/list");
 		super.checkPanicExists();
 		super.signOut();
+
 	}
 }

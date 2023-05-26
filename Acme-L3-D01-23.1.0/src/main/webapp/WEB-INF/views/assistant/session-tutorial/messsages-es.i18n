@@ -11,7 +11,7 @@
 assistant.session-tutorial.list.label.type = Tipo de sesion
 assistant.session-tutorial.list.label.title = Título
 assistant.session-tutorial.list.button.create = Crear
-assistant.session-tutorial.list.label.isPublished = Publicado
+assistant.session-tutorial.list.label.isPublished = Estado
 
 assistant.session-tutorial.form.label.type = Tipo de sesion
 assistant.session-tutorial.form.label.title = Título
@@ -19,6 +19,9 @@ assistant.session-tutorial.form.label.startMoment = Hora de inicio
 assistant.session-tutorial.form.label.finishMoment = Hora de fin
 assistant.session-tutorial.form.label.moreInfo = Más información
 assistant.session-tutorial.form.label.summary = Resumen
+tutorial.sessionTutorial.form.error.endAfterStart = La fecha de inicio debe ser anterior a la final
+tutorial.sessionTutorial.form.error.oneDayAfter = Las sesiones deben ser reservadas con al menos un dia de adelanto
+tutorial.sessionTutorial.form.error.hoursNotAllowed = Las sesiones deben durar entre 1 y 5 horas
    
 assistant.session-tutorial.form.button.update = Actualizar
 assistant.session-tutorial.form.button.delete = Borrar

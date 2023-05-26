@@ -127,6 +127,10 @@ public class SessionTutorialUpdateTest extends TestHarness {
 					super.checkPanicExists();
 					super.signOut();
 
+					super.signIn("assistant2", "assistant2");
+					super.request("/assistant/session-tutorial/update", param);
+					super.checkPanicExists();
+					super.signOut();
 				}
 
 			}

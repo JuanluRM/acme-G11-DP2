@@ -73,7 +73,7 @@ public class TutorialPublishTest extends TestHarness {
 		Collection<Tutorial> tutorials;
 		String param;
 
-		tutorials = this.repository.findManyTutorialByAssistantUsername("lecturer1");
+		tutorials = this.repository.findManyTutorialByAssistantUsername("assistant1");
 		for (final Tutorial tutorial : tutorials)
 			if (tutorial.getIsPublished() == false) {
 				param = String.format("id=%d", tutorial.getId());
@@ -87,7 +87,7 @@ public class TutorialPublishTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("administrator2", "administrator2");
+				super.signIn("assistant2", "assistant2");
 				super.request("/assistant/tutorial/publish", param);
 				super.checkPanicExists();
 				super.signOut();
@@ -96,6 +96,7 @@ public class TutorialPublishTest extends TestHarness {
 				super.request("/assistant/tutorial/publish", param);
 				super.checkPanicExists();
 				super.signOut();
+
 			}
 	}
 

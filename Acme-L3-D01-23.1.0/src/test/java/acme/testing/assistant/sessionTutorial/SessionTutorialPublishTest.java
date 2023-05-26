@@ -41,6 +41,18 @@ public class SessionTutorialPublishTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
 
+		super.clickOnMenu("Assistant", "Tutorial list");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(tutorialRecordIndex);
+		super.clickOnButton("Tutorial Sessions");
+
+		super.checkListingExists();
+		super.sortListing(0, "desc");
+
+		super.checkColumnHasValue(sessionRecordIndex, 2, "Published");
+
 		super.signOut();
 	}
 
@@ -100,6 +112,11 @@ public class SessionTutorialPublishTest extends TestHarness {
 					super.signOut();
 
 					super.signIn("lecturer1", "lecturer1");
+					super.request("/assistant/session-tutorial/publish", param);
+					super.checkPanicExists();
+					super.signOut();
+
+					super.signIn("assistant2", "assistant2");
 					super.request("/assistant/session-tutorial/publish", param);
 					super.checkPanicExists();
 					super.signOut();

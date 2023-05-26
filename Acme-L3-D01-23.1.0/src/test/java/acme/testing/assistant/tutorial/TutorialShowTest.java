@@ -76,6 +76,11 @@ public class TutorialShowTest extends TestHarness {
 				super.request("/assistant/tutorial/show", param);
 				super.checkPanicExists();
 				super.signOut();
+
+				super.signIn("assistant2", "assistant2");
+				super.request("/assistant/tutorial/show", param);
+				super.checkPanicExists();
+				super.signOut();
 			}
 	}
 

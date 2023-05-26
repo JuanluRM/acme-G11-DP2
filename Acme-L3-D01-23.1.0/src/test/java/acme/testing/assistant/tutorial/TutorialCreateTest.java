@@ -28,8 +28,8 @@ public class TutorialCreateTest extends TestHarness {
 		super.fillInputBoxIn("startMoment", startMoment);
 		super.fillInputBoxIn("finishMoment", finishMoment);
 		super.fillInputBoxIn("course", course);
-
 		super.clickOnSubmit("Create");
+		super.checkNotErrorsExist();
 
 		super.clickOnMenu("Assistant", "Tutorial list");
 		super.checkListingExists();
@@ -99,6 +99,7 @@ public class TutorialCreateTest extends TestHarness {
 		super.request("/assistant/tutorial/create");
 		super.checkPanicExists();
 		super.signOut();
+
 	}
 
 }

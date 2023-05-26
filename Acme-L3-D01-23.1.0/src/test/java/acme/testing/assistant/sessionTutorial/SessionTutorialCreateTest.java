@@ -41,6 +41,7 @@ public class SessionTutorialCreateTest extends TestHarness {
 		super.fillInputBoxIn("finishMoment", finishMoment);
 		super.fillInputBoxIn("moreInfo", moreInfo);
 		super.clickOnSubmit("Create");
+		super.checkNotErrorsExist();
 
 		super.clickOnMenu("Assistant", "Tutorial list");
 		super.checkListingExists();
@@ -115,6 +116,11 @@ public class SessionTutorialCreateTest extends TestHarness {
 					super.signOut();
 
 					super.signIn("lecturer1", "lecturer1");
+					super.request("/assistant/session-tutorial/create", param);
+					super.checkPanicExists();
+					super.signOut();
+
+					super.signIn("assistant2", "assistant2");
 					super.request("/assistant/session-tutorial/create", param);
 					super.checkPanicExists();
 					super.signOut();

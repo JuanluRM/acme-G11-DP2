@@ -70,16 +70,21 @@ public class SessionTutorialShowTest extends TestHarness {
 					param = String.format("id=%d", session.getId());
 
 					super.checkLinkExists("Sign in");
-					super.request("/assistant/session-tutorial/list", param);
+					super.request("/assistant/session-tutorial/show", param);
 					super.checkPanicExists();
 
 					super.signIn("administrator1", "administrator1");
-					super.request("/assistant/session-tutorial/list", param);
+					super.request("/assistant/session-tutorial/show", param);
 					super.checkPanicExists();
 					super.signOut();
 
 					super.signIn("lecturer1", "lecturer1");
-					super.request("/assistant/session-tutorial/list", param);
+					super.request("/assistant/session-tutorial/show", param);
+					super.checkPanicExists();
+					super.signOut();
+
+					super.signIn("assistant2", "assistant2");
+					super.request("/assistant/session-tutorial/show", param);
 					super.checkPanicExists();
 					super.signOut();
 
