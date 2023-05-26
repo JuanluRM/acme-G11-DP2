@@ -61,6 +61,8 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.note.list" action="/authenticated/note/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.tutorial.list" action="/authenticated/tutorial/list"/>
+			<acme:menu-suboption code="master.menu.user-account.bulletin-list" action="/authenticated/bulletin/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
@@ -104,11 +106,6 @@
 			<acme:menu-suboption code="master.menu.user-account.assistant" action="/authenticated/assistant/update" access="hasRole('Assistant')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-lecturer" action="/authenticated/lecturer/create" access="!hasRole('Lecturer')"/>
 			<acme:menu-suboption code="master.menu.user-account.lecturer" action="/authenticated/lecturer/update" access="hasRole('Lecturer')"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.user-account.bulletin-list" action="/authenticated/bulletin/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.note.list" action="/authenticated/note/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.tutorial.list" action="/authenticated/tutorial/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.money-exchage" action="/authenticated/money-exchange/perform"/>
 		</acme:menu-option>
