@@ -19,3 +19,4 @@ employer.audit.form.button.publish=Publicar
 auditor.audit.list.button.create=Crear
 
 auditor.audit.form.button.create=Crear
+auditor.audit.error.code.duplicated= Código duplicado
