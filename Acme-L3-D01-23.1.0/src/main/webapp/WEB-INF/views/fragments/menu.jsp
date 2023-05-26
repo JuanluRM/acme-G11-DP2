@@ -18,6 +18,9 @@
 
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
+	<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com"/>
+		</acme:menu-option>
 		<acme:menu-option code="master.menu.pabquide" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.fernandoalonso.com/"/>
 		</acme:menu-option>
@@ -54,7 +57,12 @@
 			<acme:menu-suboption code="master.menu.administrator.banner" action="/administrator/banner/list"/>
 			<acme:menu-suboption code="master.menu.administrator.offer" action="/administrator/offer/list"/>
 		</acme:menu-option>
-	
+
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.note.list" action="/authenticated/note/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.tutorial.list" action="/authenticated/tutorial/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
 			<acme:menu-suboption code="master.menu.lecturer.course" action="/lecturer/course/list"/>
 			<acme:menu-suboption code="master.menu.lecturer.lecture" action="/lecturer/lecture/list-all"/>

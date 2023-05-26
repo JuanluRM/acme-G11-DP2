@@ -9,7 +9,7 @@
 assistant.session-tutorial.list.label.type = Session type
 assistant.session-tutorial.list.label.title = Title
 assistant.session-tutorial.list.button.create = Create
-assistant.session-tutorial.list.label.isPublished = Published
+assistant.session-tutorial.list.label.isPublished = Status
 
 assistant.session-tutorial.form.label.type = Session type
 assistant.session-tutorial.form.label.title = Title
@@ -17,6 +17,9 @@ assistant.session-tutorial.form.label.startMoment = Starting hour
 assistant.session-tutorial.form.label.finishMoment = Finish hour
 assistant.session-tutorial.form.label.moreInfo = More information
 assistant.session-tutorial.form.label.summary = Summary
+tutorial.sessionTutorial.form.error.endAfterStart = Start date must be before finish date
+tutorial.sessionTutorial.form.error.oneDayAfter = Sessions must be scheduled with at least one day forward
+tutorial.sessionTutorial.form.error.hoursNotAllowed = Sessions must last between 1 and 5 hours
 
    
 assistant.session-tutorial.form.button.update = Update
