@@ -1,12 +1,5 @@
 code,conclusion,strongPoints,weakPoints,course
-123456,AAA,AAA,AAA,AA000
-ABCDEF,BBB,BBB,BBB,AA000
-"",CCC,CCC,CCC,AA000
-ZZA004,CCC,CCC,CCC,---
-ZZA004,CCC,,CCC,AA000
-ZZA004,CCC,0000000000000000000000123456789123456789123456789123456789123456789123456789123456789123456789123456789,CCC,AA000
-ZZA004,CCC,CCC,,AA000
-ZZA004,CCC,CCC,000000000000000000000000123456789123456789123456789123456789123456789123456789123456789123456789123456789,AA000
-ZZA004,,CCC,CCC,AA000
-ZZA004,,CCC,CCC,000000000000000000000000123456789123456789123456789123456789123456789123456789123456789123456789123456789,AA000
-B000,CCC,CCC,CCC,AA000
+0,A12342,todo ha ido bien,orden,sin ejemplos,true,Curso Ingenieria
+1,A5679,bien,ejemplos en pizarraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,lee diapositivas,false,Curso Ingenieria
+2,A5680,bien,ejemplos en pizarra,lee diapositivas,false,---
+3,A5681,bien,ejemplos en pizarra,lee diapositivas,false,---

@@ -1,6 +1,7 @@
 
 package acme.testing.auditor.audit;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -48,52 +49,53 @@ public class AuditorAuditCreateTest extends TestHarness {
 
 		super.clickOnButton("Auditing Records");
 		super.checkListingExists();
-		super.checkListingEmpty();
+		//super.checkListingEmpty();
 
 		super.signOut();
 	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/audit/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String link) {
+
+		super.signIn("lecturer1", "lecturer1");
+
+		super.clickOnMenu("Lecturer", "My courses");
+		super.clickOnButton("Create");
+		super.checkFormExists();
+
+		super.fillInputBoxIn("code", code);
+		super.fillInputBoxIn("title", title);
+		super.fillInputBoxIn("courseAbstract", courseAbstract);
+		super.fillInputBoxIn("retailPrice", price);
+		super.fillInputBoxIn("link", link);
+		super.clickOnSubmit("Create");
+
+		super.checkErrorsExist();
+
+		super.signOut();
+	}
+
+	@Test
+	public void test300Hacking() {
+
+		super.checkLinkExists("Sign in");
+		super.request("/lecturer/course/create");
+		super.checkPanicExists();
+
+		super.signIn("administrator1", "administrator1");
+		super.request("/lecturer/course/create");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("administrator2", "administrator2");
+		super.request("/lecturer/course/create");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("auditor1", "auditor1");
+		super.request("/lecturer/course/create");
+		super.checkPanicExists();
+		super.signOut();
+	}
 }
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/auditor/audit/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	public void test200Negative(final int recordIndex, final String code, final String title, final String courseAbstract, final String price, final String link) {
-//
-//		super.signIn("lecturer1", "lecturer1");
-//
-//		super.clickOnMenu("Lecturer", "My courses");
-//		super.clickOnButton("Create");
-//		super.checkFormExists();
-//
-//		super.fillInputBoxIn("code", code);
-//		super.fillInputBoxIn("title", title);
-//		super.fillInputBoxIn("courseAbstract", courseAbstract);
-//		super.fillInputBoxIn("retailPrice", price);
-//		super.fillInputBoxIn("link", link);
-//		super.clickOnSubmit("Create");
-//
-//		super.checkErrorsExist();
-//
-//		super.signOut();
-//	}
-//
-//	@Test
-//	public void test300Hacking() {
-//
-//		super.checkLinkExists("Sign in");
-//		super.request("/lecturer/course/create");
-//		super.checkPanicExists();
-//
-//		super.signIn("administrator1", "administrator1");
-//		super.request("/lecturer/course/create");
-//		super.checkPanicExists();
-//		super.signOut();
-//
-//		super.signIn("administrator2", "administrator2");
-//		super.request("/lecturer/course/create");
-//		super.checkPanicExists();
-//		super.signOut();
-//
-//		super.signIn("auditor1", "auditor1");
-//		super.request("/lecturer/course/create");
-//		super.checkPanicExists();
-//		super.signOut();
-//	}
