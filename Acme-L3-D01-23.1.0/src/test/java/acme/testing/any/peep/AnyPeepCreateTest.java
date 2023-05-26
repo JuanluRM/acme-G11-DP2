@@ -1,5 +1,5 @@
 
-package acme.testing.peep;
+package acme.testing.any.peep;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,10 +7,10 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class PeepCreateTest extends TestHarness {
+public class AnyPeepCreateTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/peep/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/any/peep/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String moment, final String title, final String nick, final String message, final String email, final String link) {
 		// HINT: this test lists all peeps, creates a new one 
 		// HINT: and checks that it's been created properly.
@@ -49,7 +49,7 @@ public class PeepCreateTest extends TestHarness {
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/peep/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/any/peep/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordIndex, final String moment, final String title, final String nick, final String message, final String email, final String link) {
 		// HINT: this test attempts to create peeps with incorrect data.
 

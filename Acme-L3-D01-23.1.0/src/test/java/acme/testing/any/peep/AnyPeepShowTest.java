@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class PeepShowTest extends TestHarness {
+public class AnyPeepShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/peep/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
