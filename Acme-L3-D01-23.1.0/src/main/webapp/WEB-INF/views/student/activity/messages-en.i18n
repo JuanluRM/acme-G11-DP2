@@ -28,3 +28,5 @@ student.activity.list.label.endPeriod = End Period:
 student.activity.list.label.link = Link:
 student.activity.list.button.create = Create
 student.workbook.form.error.validPeriod = The start has to be before the ending
+
+student.activity.form.error.validPeriod= The start has to be before the ending
