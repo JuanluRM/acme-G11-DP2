@@ -29,9 +29,10 @@ public class AssistantTutorialDeleteService extends AbstractService<Assistant, T
 	public void check() {
 		boolean status;
 
-		status = super.getRequest().hasData("id", int.class);
+		status = super.getRequest().hasData("id", int.class) && super.getRequest().getPrincipal().hasRole(Assistant.class);
 
 		super.getResponse().setChecked(status);
+
 	}
 
 	@Override
@@ -39,12 +40,10 @@ public class AssistantTutorialDeleteService extends AbstractService<Assistant, T
 		final boolean status;
 		int masterId;
 		Tutorial tutorial;
-		Assistant assistant;
 
 		masterId = super.getRequest().getData("id", int.class);
 		tutorial = this.repository.findOneTutorialById(masterId);
-		assistant = tutorial == null ? null : tutorial.getAssistant();
-		status = tutorial != null && !tutorial.getIsPublished() && super.getRequest().getPrincipal().hasRole(assistant);
+		status = tutorial != null && !tutorial.getIsPublished() && super.getRequest().getPrincipal().hasRole(Assistant.class) && super.getRequest().getPrincipal().getActiveRoleId() == tutorial.getAssistant().getId();
 
 		super.getResponse().setAuthorised(status);
 	}

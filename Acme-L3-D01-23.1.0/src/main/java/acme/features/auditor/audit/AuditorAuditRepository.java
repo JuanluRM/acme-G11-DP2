@@ -35,4 +35,16 @@ public interface AuditorAuditRepository extends AbstractRepository {
 
 	@Query("select ar from AuditRecord ar where ar.audit.id=:id")
 	Collection<AuditRecord> findManyAuditingRecordsByAuditId(int id);
+
+	@Query("select a from Auditor a where a.userAccount.id = :accountId")
+	Auditor findAuditorByAccountId(int accountId);
+
+	@Query("select count(a)>0 from Audit a where a.code = :code and a.id != :id")
+	boolean existsAuditWithCode(String code, int id);
+
+	@Query("select c from Course c where c.publish = false")
+	Collection<Course> findAllPublishedCourses();
+
+	@Query("select c from Course c where c.id = :courseId")
+	Course findCourseById(int courseId);
 }

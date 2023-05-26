@@ -37,6 +37,7 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.banner = Lista de Banner
+master.menu.administrator.offer = Lista de Ofertas
 
 # master.menu.authenticated #######################################################
 
@@ -103,7 +104,6 @@ master.menu.auditor.auditorDashboard = Estadísticas Auditor
 
 # master.menu.any #######################################################
 
-master.menu.any = Any
 master.menu.any.audit = Auditorias por Curso
 master.menu.user-account.assistant = Datos de asistente
 master.menu.user-account.become-assistant = Hazte asistente
