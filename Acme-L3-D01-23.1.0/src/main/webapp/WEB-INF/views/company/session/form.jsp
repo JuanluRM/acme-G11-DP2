@@ -28,7 +28,7 @@
 			<acme:submit code="company.session.form.button.delete" action="/company/session/delete"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create' && draftMode == true}">
-			<acme:submit code="company.session.form.button.create" action="/company/session/create?practicaId=${practicaId}"/>
+			<acme:submit code="company.session.list.button.create" action="/company/session/create?practicaId=${practicaId}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create' && draftMode == false}">
 			<acme:input-checkbox code="company.session.form.button.confirmation" path="confirmation"/>

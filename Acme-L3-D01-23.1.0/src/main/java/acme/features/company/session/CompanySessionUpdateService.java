@@ -64,17 +64,17 @@ public class CompanySessionUpdateService extends AbstractService<Company, Sessio
 	public void validate(final Session object) {
 		Date date;
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("endDate"))
+		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("endDate"))
 			super.state(object.getStartDate().before(object.getEndDate()), "endDate", "company.sessionPractica.form.error.endAfterStart");
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
 			date = CompanySessionCreateService.plusOneWeek(Date.from(Instant.now()));
-			super.state(object.getStartDate().after(date) || object.getStartDate().equals(date), "startDate", "company.sessionPractica.form.error.oneWeekAhead");
+			super.state(object.getStartDate().equals(date) || object.getStartDate().after(date), "startDate", "company.sessionPractica.form.error.oneWeekAhead");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("endDate")) {
+		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("endDate")) {
 			date = CompanySessionCreateService.plusOneWeek(object.getStartDate());
-			super.state(object.getEndDate().after(date) || object.getStartDate().equals(date), "endDate", "company.sessionPractica.form.error.oneWeekLong");
+			super.state(object.getStartDate().equals(date) || object.getEndDate().after(date), "endDate", "company.sessionPractica.form.error.oneWeekLong");
 		}
 	}
 

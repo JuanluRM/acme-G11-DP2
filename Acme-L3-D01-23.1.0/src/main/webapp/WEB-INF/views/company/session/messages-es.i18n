@@ -22,9 +22,14 @@ company.session.form.label.link = Link
 company.session.form.label.published = Publicado?
 
 company.session.list.button.create = Crear
-company.session.list.button.createAddendum = Crear apendice
+company.session.form.button.createAddendum = Crear apendice
 
 company.session.form.button.update = Actualizar
 company.session.form.button.delete = Eliminar
 company.session.form.button.publish = Publicar
 company.session.form.button.confirmation = Confirmar
+
+
+company.sessionPractica.form.error.endAfterStart = The session end date must be before the session start date
+company.sessionPractica.form.error.oneWeekAhead = The start date must be before this instant time
+company.sessionPractica.form.error.oneWeekLong = Session must last one week at least
