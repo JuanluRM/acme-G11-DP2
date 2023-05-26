@@ -32,7 +32,11 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().isAuthenticated();
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

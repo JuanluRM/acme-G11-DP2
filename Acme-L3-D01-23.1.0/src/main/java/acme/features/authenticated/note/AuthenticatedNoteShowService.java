@@ -56,7 +56,7 @@ public class AuthenticatedNoteShowService extends AbstractService<Authenticated,
 		deadline = MomentHelper.deltaFromCurrentMoment(-30, ChronoUnit.DAYS);
 		status = MomentHelper.isAfter(note.getInstantiationMoment(), deadline);
 
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(status && super.getRequest().getPrincipal().isAuthenticated());
 	}
 
 	@Override
