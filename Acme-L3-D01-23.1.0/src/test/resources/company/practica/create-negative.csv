@@ -1,0 +1,6 @@
+practicaRecordIndex,code,title,summary,goals,estimated-total-time,draft-mode,course
+0,PRA0001,Practica no creada 1,El codigo de la practica ya existe,No pasar el test de creacion,1.20,false,Curso Química
+0,PRA0007,Practica no creada 2,El valor del tiempo estimado es un numero real sin decimales,Pasar el test de creacion,1.,false,Curso Fisica
+0,PRA0007,,El titulo de la practica es nulo,Pasar el test de creacion,1.40,false,Curso Ingenieria
+0,,Practica no creada 4,El codigo de la practica es nulo,Pasar el test de creacion,1.40,false,Curso Ingenieria
+0,PRACTICA7,Practica no creada 5,El codigo de la practica no cumple la expresion regular,Pasar el test de creacion,1.40,false,Curso Ingenieria

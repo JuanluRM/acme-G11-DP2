@@ -1,0 +1,7 @@
+practicaRecordIndex,sessionRecordIndex,title,summary,start-date,end-date,link,confirmation
+0,0,,Titulo vacio,2023/06/13 20:40,2023/07/14 20:40,https://www.example.com,true
+0,0,Test create,,2023/06/13 20:40,2023/07/14 20:40,https://www.example.com,true
+0,0,Test create,Restriccion de una semana de margen,2023/06/13 20:40,2023/06/14 20:40,https://www.example.com,true
+0,0,Test create,Date de inicio posterior a la final,2023/07/13 20:40,2023/06/14 20:40,https://www.example.com,true
+0,0,Test create,Date de tipo fecha con formato incorrecto,2023/Julio/13 20:40,2023/07/14 20:40,https://www.example.com,true
+0,0,Test de creacion de addendum,Checkbox de confirmacion desmarcado,2023/06/13 18:40,2023/07/13 20:40,https://www.example.com,false
