@@ -1,0 +1,5 @@
+masterIndex,recordIndex,subject,assessment,startDate,finishDate,mark,link
+1,8,prueba1,ASSESSMENT1,2002/01/29 12:00,2002/01/30 12:00,A+,http://test.com,
+1,9,prueba2,ASSESSMENT2,2002/01/29 12:00,2002/01/29 13:00,F-,""
+2,0,prueba3,ASSESSMENT3,2019/01/29 12:00,2019/01/30 12:00,C,http://youtube.com
+2,1,prueba4,ASSESSMENT4,2019/01/29 12:00,2019/01/29 13:00,B,""
