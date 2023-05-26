@@ -24,4 +24,4 @@
 
 
 <acme:button test="${showCreate && draftMode}" code="company.session.list.button.create" action="/company/session/create?practicaId=${practicaId}"/>
-<acme:button test="${showCreate && !draftMode}" code="company.session.list.button.createAddendum" action="/company/session/create?practicaId=${practicaId}"/>
+<acme:button test="${showCreate && !draftMode}" code="company.session.form.button.createAddendum" action="/company/session/create?practicaId=${practicaId}"/>

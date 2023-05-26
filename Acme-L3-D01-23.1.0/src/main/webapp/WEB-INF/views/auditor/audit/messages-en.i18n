@@ -12,10 +12,12 @@ auditor.audit.form.label.course=Course
 auditor.audit.form.label.draftMode=Draft Mode
 
 auditor.audit.form.button.auditRecords = Auditing Records
-auditor.audit.form.button.update= Update Audit
-employer.audit.form.button.delete=Delete Audit
-employer.audit.form.button.publish=Publish Audit
+auditor.audit.form.button.update= Update
+employer.audit.form.button.delete=Delete
+employer.audit.form.button.publish=Publish
 
-auditor.audit.list.button.create=Create Audit
+auditor.audit.list.button.create=Create
 
 auditor.audit.form.button.create=Create
+
+auditor.audit.error.code.duplicated= Code duplicated

@@ -39,7 +39,7 @@ public class AssistantSessionTutorialListService extends AbstractService<Assista
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findOneTutorialById(masterId);
-		status = tutorial != null && (tutorial.getIsPublished() || super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()));
+		status = tutorial != null && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) && super.getRequest().getPrincipal().getActiveRoleId() == tutorial.getAssistant().getId();
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -59,8 +59,20 @@ public class AssistantSessionTutorialListService extends AbstractService<Assista
 		assert object != null;
 
 		Tuple tuple;
+		final String lang = super.getRequest().getLocale().getISO3Language();
+		tuple = super.unbind(object, "title", "tipoSesion");
+		final boolean isPublished = object.getIsPublished();
 
-		tuple = super.unbind(object, "title", "tipoSesion", "isPublished");
+		if (lang.equals("spa")) {
+			if (isPublished)
+				tuple.put("isPublished", "Publicado");
+			else
+				tuple.put("isPublished", "No Publicado");
+		} else if (lang.equals("eng"))
+			if (isPublished)
+				tuple.put("isPublished", "Published");
+			else
+				tuple.put("isPublished", "Not Published");
 
 		super.getResponse().setData(tuple);
 	}
@@ -73,8 +85,9 @@ public class AssistantSessionTutorialListService extends AbstractService<Assista
 		Tutorial tutorial;
 		masterId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findOneTutorialById(masterId);
-
+		final Boolean showCreate = tutorial.getIsPublished() && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
 		super.getResponse().setGlobal("masterId", masterId);
+		super.getResponse().setGlobal("showCreate", showCreate);
 
 	}
 

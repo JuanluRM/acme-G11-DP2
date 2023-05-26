@@ -11,7 +11,7 @@
 administrator.bulletin.list.label.instantiationMoment = Momento de creacion:
 administrator.bulletin.list.label.title = Titulo:
 administrator.bulletin.list.label.message = Mensaje:
-administrator.bulletin.list.label.critical = Critico?
+administrator.bulletin.list.label.critical = Critico
 administrator.bulletin.list.label.link = Enlace
 
 administrator.bulletin.list.button.create = Crear

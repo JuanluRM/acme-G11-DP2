@@ -68,7 +68,7 @@ public class StudentActivityUpdateService extends AbstractService<Student, Activ
 		assert object != null;
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod") && !super.getBuffer().getErrors().hasErrors("endPeriod")) {
 			final boolean validPeriod = MomentHelper.isAfter(object.getEndPeriod(), object.getStartPeriod());
-			super.state(validPeriod, "endDisplayPeriod", "student.workbook.form.error.end-before-start");
+			super.state(validPeriod, "endPeriod", "student.activity.form.error.validPeriod");
 		}
 	}
 

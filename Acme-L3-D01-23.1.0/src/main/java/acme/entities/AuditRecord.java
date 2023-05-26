@@ -1,16 +1,19 @@
 
 package acme.entities;
 
+import java.time.Duration;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.annotations.OnDelete;
@@ -19,6 +22,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
+import acme.framework.helpers.MomentHelper;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -42,12 +46,12 @@ public class AuditRecord extends AbstractEntity {
 	protected String			assessment;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
+	@Past
 	@NotNull
 	protected Date				startAudition;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
+	@Past
 	@NotNull
 	protected Date				endAudition;
 
@@ -57,8 +61,30 @@ public class AuditRecord extends AbstractEntity {
 
 	@URL
 	protected String			link;
+	@NotNull
+	protected boolean			draftMode;
+
+	protected boolean			correction;
 
 	// Derived attributes -----------------------------------------------------
+
+
+	@Transient
+	public Double getHoursFromPeriod() {
+		final Duration duration = MomentHelper.computeDuration(this.startAudition, this.endAudition);
+		return duration.getSeconds() / 3600.0;
+	}
+
+	public Double period() {
+		double res;
+		final Date start = this.startAudition;
+		final Date end = this.endAudition;
+		final Long st = TimeUnit.MILLISECONDS.toMinutes(start.getTime());
+		final Long et = TimeUnit.MILLISECONDS.toMinutes(end.getTime());
+		res = Double.parseDouble(et.toString()) / 60 - Double.parseDouble(st.toString()) / 60;
+		return res;
+	}
+
 
 	// Relationships -------------------------------------------------------
 	@NotNull
@@ -66,5 +92,4 @@ public class AuditRecord extends AbstractEntity {
 	@ManyToOne(optional = false)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Audit				audit;
-
 }
