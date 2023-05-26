@@ -2,6 +2,7 @@
 package acme.features.auditor.auditRecord;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -25,4 +26,9 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	@Query("select ar from AuditRecord ar where ar.id=:id")
 	AuditRecord findOneAuditRecordById(int id);
 
+	@Query("select max(ar.endAudition) from AuditRecord ar where ar.audit.id = :auditId")
+	Date findMaximumAuditRecordsDateByAuditId(int auditId);
+
+	@Query("select p from Audit p where p.id = :id")
+	Audit findAuditById(int id);
 }
