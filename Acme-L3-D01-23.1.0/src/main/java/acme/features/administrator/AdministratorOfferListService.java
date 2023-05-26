@@ -25,7 +25,11 @@ public class AdministratorOfferListService extends AbstractService<Administrator
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().hasRole(Administrator.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
