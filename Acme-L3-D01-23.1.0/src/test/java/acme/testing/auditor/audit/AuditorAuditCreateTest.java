@@ -22,6 +22,15 @@ public class AuditorAuditCreateTest extends TestHarness {
 		super.clickOnMenu("Auditor", "List my audits");
 		super.checkListingExists();
 
+		/*
+		 * super.sortListing(0, "asc");
+		 * super.clickOnListingRecord(masterIndex);
+		 * super.clickOnButton("Auditing Records");
+		 * super.checkListingExists();
+		 * super.clickOnButton("New Auditing Record");
+		 * super.checkFormExists();
+		 */
+
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("conclusion", conclusion);
