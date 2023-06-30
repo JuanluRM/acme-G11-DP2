@@ -1,6 +1,9 @@
 
 package acme.features.lecturer.course;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,14 +63,23 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void validate(final Course object) {
 		assert object != null;
 
-		//		if (!super.getBuffer().getErrors().hasErrors("code")) {
-		//			Course course;
-		//
-		//			course = this.repository.findOneCourseByCode(object.getCode());
-		//			super.state(course == null, "code", "lecturer.course.error.code.duplicated");
-		//		}
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Course course;
 
-		super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+			course = this.repository.findOneCourseByCode(object.getCode());
+			super.state(course == null || course.equals(object), "code", "lecturer.course.error.code.duplicated");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
+			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+
+		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
+			final List<String> currencies = new ArrayList<>();
+			currencies.add("EUR");
+			currencies.add("USD");
+			currencies.add("GBP");
+			super.state(currencies.contains(object.getRetailPrice().getCurrency()), "retailPrice", "lecturer.course.error.retailPrice.currencyNotAllowed");
+		}
 
 	}
 

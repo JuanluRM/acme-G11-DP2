@@ -42,8 +42,8 @@ public class LecturerCourseUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, title);
-		super.checkColumnHasValue(recordIndex, 2, price);
+		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 3, price);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

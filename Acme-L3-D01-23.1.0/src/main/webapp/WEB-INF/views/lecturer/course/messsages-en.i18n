@@ -3,7 +3,7 @@
 lecturer.course.list.label.title = Title
 lecturer.course.list.label.type = Type
 lecturer.course.list.label.retailPrice = Price
-lecturer.course.list.label.publish = Publish
+lecturer.course.list.label.code = Code
 
 lecturer.course.form.label.code = Code
 lecturer.course.form.label.title = Title
@@ -22,6 +22,7 @@ lecturer.course.form.button.publish = Publish
 lecturer.course.form.button.createCourseLecture = Add a lecture
 
 lecturer.course.error.retailPrice.negative = Retail price cannot be negative
+lecturer.course.error.retailPrice.currencyNotAllowed = Currency not accepted (EUR, USD, GBP)
 lecturer.course.error.code.duplicated = The course´s code already exists
 
 lecturer.course.error.lectureNotPublished = The course has not published lectures

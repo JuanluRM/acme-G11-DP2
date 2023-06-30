@@ -1,3 +1,4 @@
-recordIndex,title,price
-0,Curso Ingenieria,EUR 24.99
-1,Curso Química,EUR 49.99
+recordIndex,code,title,price
+0,COU 001,Curso Ingenieria,EUR 24.99
+1,COU 004,Curso Química,EUR 49.99
+2,COU 005,Curso test publish,EUR 49.99

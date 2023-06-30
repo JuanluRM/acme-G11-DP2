@@ -30,7 +30,7 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.clickOnMenu("Lecturer", "My courses");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 1, title);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -42,7 +42,7 @@ public class LecturerCoursePublishTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int recordIndex, final String title) {
+	public void test200Negative(final int recordIndex, final String code, final String title, final String titlePublish, final String courseAbstract, final String price, final String link) {
 		// HINT: this test attempts to publish a course that cannot be published, yet.
 
 		super.signIn("lecturer1", "lecturer1");
@@ -51,11 +51,20 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 1, title);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
+		super.fillInputBoxIn("code", code);
+		super.fillInputBoxIn("title", titlePublish);
+		super.fillInputBoxIn("courseAbstract", courseAbstract);
+		super.fillInputBoxIn("retailPrice", price);
+		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Publish");
-		super.checkAlertExists(false);
+
+		if (title == "Curso Química")
+			super.checkAlertExists(false);
+		else
+			super.checkErrorsExist();
 
 		super.signOut();
 	}

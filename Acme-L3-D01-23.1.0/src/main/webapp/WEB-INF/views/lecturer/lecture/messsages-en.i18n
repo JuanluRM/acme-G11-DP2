@@ -21,4 +21,4 @@ lecturer.lecture.form.button.update = Update
 lecturer.lecture.form.button.delete = Delete
 lecturer.lecture.form.button.publish = Publish
 
-lecturer.lecture.error.estimatedLearningTime.negative = The learning time of the lecture cannot be negative
+lecturer.lecture.error.estimatedLearningTime.negative = The learning time of the lecture cannot be negative or 0

@@ -1,3 +1,26 @@
-recordIndex,code,title,course-abstract,price,link
-1,COU 005,,,EUR -39.99,false,course004ING
-1,COU 001,Curso Química en Ingeniería,Curso que tratara sobre la química en la ingeniería,EUR 39.99,https://www.course004.com
+recordIndex,code,title,titlePublish,course-abstract,price,link
+0,,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,C0U 004,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU 0001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU 01,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU 1,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COUR 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,cou 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,codigo,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,,Curso que tratara sobre la ingenieria,EUR 49.99,https://www.course004.com
+0,COU 001,Curso Ingenieria,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,Curso que tratara sobre la ingenieria,EUR 49.99,https://www.course004.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,,EUR 49.99,https://www.course004.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,EUR 49.99,https://www.course004.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR -10.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,JPY 24.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EU 24.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,E 24.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,24.99,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,esto no es una moneda,https://www.course001.com
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,esto no es una url
+0,COU 001,Curso Ingenieria,Curso Ingenieria,Curso que tratara sobre la ingenieria,EUR 24.99,www.course001.com

@@ -1,2 +1,27 @@
-recordIndex,title
-1,Curso Química
+recordIndex,code,title,titlePublish,course-abstract,price,link
+1,COU 004,Curso Química,Curso Química,Curso que tratara sobre la qímica,EUR 49.99,https://www.course004.com
+2,,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 004,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 0005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 05,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 5,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COUR 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,cou 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,codigo,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 005,Curso test publish,,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 005,Curso test publish,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,Curso de prueba para publish,EUR 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,,EUR 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,EUR 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR -9.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,JPY 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,EU 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,E 49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,49.99,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,esto no es una moneda,https://www.course005.com
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,esto no es una url
+2,COU 005,Curso test publish,Curso test publish,Curso de prueba para publish,EUR 49.99,www.course005.com

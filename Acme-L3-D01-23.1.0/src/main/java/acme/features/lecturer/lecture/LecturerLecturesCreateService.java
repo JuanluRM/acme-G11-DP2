@@ -75,7 +75,7 @@ public class LecturerLecturesCreateService extends AbstractService<Lecturer, Lec
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("estimatedLearningTime"))
-			super.state(object.getEstimatedLearningTime() > 0, "learningTime", "lecturer.course.error.LearningTime.negative");
+			super.state(object.getEstimatedLearningTime() > 0, "estimatedLearningTime", "lecturer.lecture.error.estimatedLearningTime.negative");
 	}
 
 	@Override

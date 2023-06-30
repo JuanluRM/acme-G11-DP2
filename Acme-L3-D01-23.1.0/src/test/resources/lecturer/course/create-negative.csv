@@ -1,7 +1,26 @@
 recordIndex,code,title,course-abstract,price,link
+0,,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,C0U 001,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU 0034,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU 34,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU 3,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COUR 008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,cou 008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
+0,codigo,Curso test 8,Este es el curso de prueba 8,EUR 10.99,false,http://www.cursodeprueba8.com
 0,COU 008,,Este es el curso de prueba 8,EUR 10.99,http://www.cursodeprueba8.com
+0,COU 008,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,Este es el curso de prueba 8,EUR 10.99,http://www.cursodeprueba8.com
 0,COU 008,Curso test 8,,EUR 10.99,false,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,En las verdes praderas el espadachín de noble porte empuñó su acero afilado deslizando sus movimientos con elegancia y destreza desafiando al viento con cada estocada magistral que iluminaba el campo de batalla con su danza mortal,EUR 10.99,false,http://www.cursodeprueba8.com
 0,COU 008,Curso test 8,Este es el curso de prueba 8,,http://www.cursodeprueba8.com
 0,COU 008,Curso test 8,Este es el curso de prueba 8,EUR -10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,AED 10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,AE 10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,A 10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,AED,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,esto es un precio erroneo,http://www.cursodeprueba8.com
 0,COU 008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,esto no es una URL
-0,COU 001,Curso test 8,Este es el curso de prueba 8,EUR 10.99,http://www.cursodeprueba8.com
+0,COU 008,Curso test 8,Este es el curso de prueba 8,EUR 10.99,www.cursodeprueba8.com

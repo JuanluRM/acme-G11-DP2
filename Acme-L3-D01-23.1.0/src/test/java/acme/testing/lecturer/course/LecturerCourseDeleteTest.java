@@ -30,7 +30,7 @@ public class LecturerCourseDeleteTest extends TestHarness {
 		super.clickOnMenu("Lecturer", "My courses");
 		super.checkListingExists();
 		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 1, title);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -39,7 +39,7 @@ public class LecturerCourseDeleteTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex, 0, newTitle);
+		super.checkColumnHasValue(recordIndex, 1, newTitle);
 
 		super.signOut();
 	}
