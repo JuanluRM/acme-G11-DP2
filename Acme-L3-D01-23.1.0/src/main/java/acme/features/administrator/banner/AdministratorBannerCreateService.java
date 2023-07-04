@@ -35,7 +35,9 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 
 	@Override
 	public void load() {
-		final Banner object = new Banner();
+		Banner object;
+
+		object = new Banner();
 
 		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
 		super.getBuffer().setData(object);
@@ -88,15 +90,15 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 			super.state(endDateStatus, "end", "administrator.banner.error.end.beforeInstantiation");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("end")) {
+		if (!super.getBuffer().getErrors().hasErrors("end") && !super.getBuffer().getErrors().hasErrors("start")) {
 			boolean endDateStatus;
 
-			endDateStatus = MomentHelper.isAfter(object.getEnd(), object.getStart());
+			endDateStatus = MomentHelper.isBefore(object.getStart(), object.getEnd());
 
 			super.state(endDateStatus, "end", "administrator.banner.error.end.beforeStartDate");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("end")) {
+		if (!super.getBuffer().getErrors().hasErrors("end") && !super.getBuffer().getErrors().hasErrors("start")) {
 			boolean endDateStatus;
 
 			endDateStatus = MomentHelper.isLongEnough(object.getStart(), object.getEnd(), 7, ChronoUnit.DAYS);
