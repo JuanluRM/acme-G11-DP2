@@ -19,7 +19,7 @@
 	<acme:input-textbox code="administrator.bulletin.list.label.instantiationMoment" path="instantiationMoment" readonly="false"/>
 	<acme:input-textbox code="administrator.bulletin.list.label.title" path="title" readonly="false"/>
 	<acme:input-textbox code="administrator.bulletin.list.label.message" path="message" readonly="false"/>
-	<acme:input-checkbox code="administrator.bulletin.list.label.critical" path="critical" readonly="false"/>
+	<acme:input-checkbox code="administrator.bulletin.list.label.critical" path="critical" readonly="true"/>
 	<acme:input-url code="administrator.bulletin.list.label.link" path="link" readonly="false"/>
 	
 </acme:form>

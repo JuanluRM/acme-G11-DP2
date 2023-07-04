@@ -28,7 +28,7 @@
 <%-- 		<acme:input-checkbox code="auditor.auditrecord.label.confirm" path="confirm"/> --%>
 <%-- 	</jstl:if> --%>
 	
-	<acme:hidden-data path="draftMode"/>
+	<acme:hidden-data path="draftMode" readonly="true"/>
 	
 
 	<jstl:choose>	 

@@ -9,7 +9,7 @@
 	<acme:input-textbox code="auditor.audit.form.label.strongPoints" path="strongPoints"/>
 	<acme:input-textbox code="auditor.audit.form.label.weakPoints" path="weakPoints"/>
 	<acme:input-select code="auditor.audit.form.label.course" path="course" choices ="${courses}"/>
-	<acme:input-checkbox code="auditor.audit.form.label.draftMode" path="draftMode"/>
+	<acme:input-checkbox code="auditor.audit.form.label.draftMode" path="draftMode" readonly="true"/>
 
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">

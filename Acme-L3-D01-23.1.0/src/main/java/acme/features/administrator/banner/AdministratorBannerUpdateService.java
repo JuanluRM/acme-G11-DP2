@@ -2,6 +2,7 @@
 package acme.features.administrator.banner;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -57,18 +58,80 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 	public void validate(final Banner object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("start"))
-			super.state(MomentHelper.isAfterOrEqual(object.getStart(), object.getInstantiationMoment()), "start", "administrator.banner.error.start.beforeInstantiation");
+		//ERRORS WITH START DATE
 
-		if (!super.getBuffer().getErrors().hasErrors("end"))
-			super.state(MomentHelper.isAfterOrEqual(object.getEnd(), object.getStart()), "end", "administrator.banner.error.end.beforeStartDate");
+		if (!super.getBuffer().getErrors().hasErrors("start")) {
+			boolean startDateStatus;
 
-		super.state(MomentHelper.isLongEnough(object.getStart(), object.getEnd(), 7, ChronoUnit.DAYS), "*", "administrator.banner.error.end.notLongEnough");
+			startDateStatus = MomentHelper.isAfter(object.getStart(), object.getInstantiationMoment());
+
+			super.state(startDateStatus, "start", "administrator.banner.error.start.beforeInstantiation");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("start")) {
+			boolean startDateStatus;
+			Date inferiorLimitDate;
+			Date upperLimitDate;
+
+			inferiorLimitDate = new Date(946681200000l); // HINT This is Jan 1 2000 at 00:00
+			upperLimitDate = new Date(4133977140000l); // HINT This is Dec 31 2100 at 23:59
+
+			startDateStatus = MomentHelper.isAfterOrEqual(object.getStart(), inferiorLimitDate);
+			startDateStatus &= MomentHelper.isBeforeOrEqual(object.getStart(), upperLimitDate);
+
+			super.state(startDateStatus, "start", "administrator.banner.error.outOfBounds");
+		}
+
+		//ERRORS WITH END DATE
+
+		if (!super.getBuffer().getErrors().hasErrors("end")) {
+			boolean endDateStatus;
+
+			endDateStatus = MomentHelper.isAfter(object.getEnd(), object.getInstantiationMoment());
+
+			super.state(endDateStatus, "end", "administrator.banner.error.end.beforeInstantiation");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("end")) {
+			boolean endDateStatus;
+
+			endDateStatus = MomentHelper.isAfter(object.getEnd(), object.getStart());
+
+			super.state(endDateStatus, "end", "administrator.banner.error.end.beforeStartDate");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("end")) {
+			boolean endDateStatus;
+
+			endDateStatus = MomentHelper.isLongEnough(object.getStart(), object.getEnd(), 7, ChronoUnit.DAYS);
+
+			super.state(endDateStatus, "end", "administrator.banner.error.end.notLongEnough");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("end")) {
+			boolean endDateStatus;
+			Date inferiorLimitDate;
+			Date upperLimitDate;
+
+			inferiorLimitDate = new Date(946681200000l); // HINT This is Jan 1 2000 at 00:00
+			upperLimitDate = new Date(4133977140000l); // HINT This is Dec 31 2100 at 23:59
+
+			endDateStatus = MomentHelper.isAfterOrEqual(object.getEnd(), inferiorLimitDate);
+			endDateStatus &= MomentHelper.isBeforeOrEqual(object.getEnd(), upperLimitDate);
+
+			super.state(endDateStatus, "end", "administrator.banner.error.outOfBounds");
+		}
+
 	}
 
 	@Override
 	public void perform(final Banner object) {
 		assert object != null;
+
+		Date currentMoment;
+
+		currentMoment = MomentHelper.getCurrentMoment();
+		object.setInstantiationMoment(currentMoment);
 
 		this.repository.save(object);
 	}

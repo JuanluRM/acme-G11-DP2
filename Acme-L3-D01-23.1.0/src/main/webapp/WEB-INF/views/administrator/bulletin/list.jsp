@@ -19,6 +19,5 @@
 	<acme:list-column code="administrator.bulletin.list.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:list-column code="administrator.bulletin.list.label.title" path="title"/>
 	<acme:list-column code="administrator.bulletin.list.label.message" path="message"/>
-	<acme:list-column code="administrator.bulletin.list.label.critical" path="critical"/>
 	<acme:list-column code="administrator.bulletin.list.label.link" path="link"/>
 </acme:list>

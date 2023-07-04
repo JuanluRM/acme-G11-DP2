@@ -10,5 +10,5 @@
 	<acme:input-textbox code="any.audit.form.label.weakPoints" path="weakPoints"/>
 	<acme:input-select code="any.audit.form.label.auditor" path="auditor" choices ="${auditors}"/>
 	<acme:input-select code="any.audit.form.label.course" path="course" choices ="${courses}"/>
-	<acme:input-checkbox code="any.audit.form.label.draftMode" path="draftMode"/>
+	<acme:input-checkbox code="any.audit.form.label.draftMode" path="draftMode" readonly="true"/>
 </acme:form>
