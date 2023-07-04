@@ -1,5 +1,5 @@
 
-package acme.features.administrator;
+package acme.features.administrator.offer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AdministratorOfferShowService extends AbstractService<Administrator, Offer> {
+public class AdministratorOfferCreateService extends AbstractService<Administrator, Offer> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
@@ -21,11 +22,7 @@ public class AdministratorOfferShowService extends AbstractService<Administrator
 
 	@Override
 	public void check() {
-		boolean status;
-
-		status = super.getRequest().hasData("id", int.class);
-
-		super.getResponse().setChecked(status);
+		super.getResponse().setChecked(true);
 	}
 
 	@Override
@@ -40,12 +37,29 @@ public class AdministratorOfferShowService extends AbstractService<Administrator
 	@Override
 	public void load() {
 		Offer object;
-		int id;
 
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOfferById(id);
-
+		object = new Offer();
+		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
 		super.getBuffer().setData(object);
+	}
+
+	@Override
+	public void bind(final Offer object) {
+		assert object != null;
+
+		super.bind(object, "instantiationMoment", "heading", "summary", "availabilityPeriod", "price", "link");
+	}
+
+	@Override
+	public void validate(final Offer object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final Offer object) {
+		assert object != null;
+
+		this.repository.save(object);
 	}
 
 	@Override

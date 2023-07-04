@@ -1,5 +1,5 @@
 
-package acme.features.administrator;
+package acme.features.administrator.offer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,22 +7,25 @@ import org.springframework.stereotype.Service;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
-import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AdministratorOfferCreateService extends AbstractService<Administrator, Offer> {
+public class AdministratorOfferUpdateService extends AbstractService<Administrator, Offer> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	protected AdministratorOfferRepository repository;
 
-	// AbstractService interface ----------------------------------------------
+	// AbstractService<Employer, Company> -------------------------------------
 
 
 	@Override
 	public void check() {
-		super.getResponse().setChecked(true);
+		boolean status;
+
+		status = super.getRequest().hasData("id", int.class);
+
+		super.getResponse().setChecked(status);
 	}
 
 	@Override
@@ -37,9 +40,11 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 	@Override
 	public void load() {
 		Offer object;
+		int id;
 
-		object = new Offer();
-		object.setInstantiationMoment(MomentHelper.getCurrentMoment());
+		id = super.getRequest().getData("id", int.class);
+		object = this.repository.findOneOfferById(id);
+
 		super.getBuffer().setData(object);
 	}
 
@@ -72,4 +77,5 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 
 		super.getResponse().setData(tuple);
 	}
+
 }
