@@ -8,8 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.bulletin.list.label.instantiationMoment = Momento de creacion:
-administrator.bulletin.list.label.title = Titulo:
-administrator.bulletin.list.label.message = Mensaje:
+administrator.bulletin.list.label.instantiationMoment = Momento de creacion
+administrator.bulletin.list.label.title = Titulo
+administrator.bulletin.list.label.message = Mensaje
 administrator.bulletin.list.label.critical = Critico?
 administrator.bulletin.list.label.link = Enlace
+administrator.bulletin.form.label.confirmation = Confirmación
+
+administrator.bulletin.form.button.create = Crear

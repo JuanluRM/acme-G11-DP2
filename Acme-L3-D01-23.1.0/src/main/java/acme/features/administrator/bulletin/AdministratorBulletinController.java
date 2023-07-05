@@ -27,16 +27,13 @@ public class AdministratorBulletinController extends AbstractController<Administ
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorBulletinListService	listService;
+	protected AdministratorBulletinListService		listService;
 
-	//	@Autowired
-	//	protected AdministratorCompanyListRecentService		listRecentService;
-	//
 	@Autowired
-	protected AdministratorBulletinShowService	showService;
-	//
-	//	@Autowired
-	//	protected AdministratorAnnouncementCreateService	createService;
+	protected AdministratorBulletinShowService		showService;
+
+	@Autowired
+	protected AdministratorBulletinCreateService	createService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -45,6 +42,7 @@ public class AdministratorBulletinController extends AbstractController<Administ
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("create", this.createService);
 	}
 
 }

@@ -16,10 +16,17 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="administrator.bulletin.list.label.instantiationMoment" path="instantiationMoment"/>
+	<acme:input-textbox code="administrator.bulletin.list.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
 	<acme:input-textbox code="administrator.bulletin.list.label.title" path="title"/>
 	<acme:input-textbox code="administrator.bulletin.list.label.message" path="message"/>
 	<acme:input-checkbox code="administrator.bulletin.list.label.critical" path="critical"/>
 	<acme:input-url code="administrator.bulletin.list.label.link" path="link"/>
+	
+	<jstl:choose> 
+		<jstl:when test="${_command == 'create'}">
+			<acme:input-checkbox code="administrator.bulletin.form.label.confirmation" path="confirmation"/>
+			<acme:submit code="administrator.bulletin.form.button.create" action="/administrator/bulletin/create" />
+		</jstl:when>
+	</jstl:choose>
 	
 </acme:form>

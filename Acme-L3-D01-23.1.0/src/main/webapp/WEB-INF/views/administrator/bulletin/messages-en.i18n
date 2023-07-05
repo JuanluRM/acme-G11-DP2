@@ -13,3 +13,6 @@ administrator.bulletin.list.label.title = Title:
 administrator.bulletin.list.label.message = Message:
 administrator.bulletin.list.label.critical = Critical?
 administrator.bulletin.list.label.link = Link
+administrator.bulletin.form.label.confirmation = Confirmation
+
+administrator.bulletin.form.button.create = Create
