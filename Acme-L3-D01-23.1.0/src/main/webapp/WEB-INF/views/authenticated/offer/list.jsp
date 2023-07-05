@@ -19,7 +19,8 @@
 	<acme:list-column code="authenticated.offer.list.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:list-column code="authenticated.offer.list.label.heading" path="heading"/>
 	<acme:list-column code="authenticated.offer.list.label.summary" path="summary"/>
-	<acme:list-column code="authenticated.offer.list.label.availabilityPeriod" path="availabilityPeriod"/>
+	<acme:list-column code="authenticated.offer.list.label.start" path="start"/>
+	<acme:list-column code="authenticated.offer.list.label.end" path="end"/>
 	<acme:list-column code="authenticated.offer.list.label.price" path="price"/>
 	<acme:list-column code="authenticated.offer.list.label.link" path="link"/>
 

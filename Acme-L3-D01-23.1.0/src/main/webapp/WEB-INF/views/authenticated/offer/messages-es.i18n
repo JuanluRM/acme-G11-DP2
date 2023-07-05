@@ -8,9 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.offer.list.label.instantiationMoment = Momento de Instanciacion:
-authenticated.offer.list.label.heading = Cabecera:
-authenticated.offer.list.label.summary = Resumen:
-authenticated.offer.list.label.availabilityPeriod = Periodo de disponibilidad:
-authenticated.offer.list.label.price = Precio:
-authenticated.offer.list.label.link = Link:
+authenticated.offer.list.label.instantiationMoment = Momento de Instanciacion
+authenticated.offer.list.label.heading = Cabecera
+authenticated.offer.list.label.summary = Resumen
+authenticated.offer.list.label.start = Fecha de inicio
+authenticated.offer.list.label.end = Fecha de fin
+authenticated.offer.list.label.price = Precio
+authenticated.offer.list.label.link = Link

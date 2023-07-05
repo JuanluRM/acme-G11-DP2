@@ -8,22 +8,33 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.offer.list.label.instantiationMoment = Momento de Instanciacion:
-administrator.offer.list.label.heading = Cabecera:
-administrator.offer.list.label.summary = Resumen:
-administrator.offer.list.label.availabilityPeriod = Periodo de disponibilidad:
-administrator.offer.list.label.price = Precio:
-administrator.offer.list.label.link = Link:
+administrator.offer.list.label.instantiationMoment = Momento de Instanciacion
+administrator.offer.list.label.heading = Cabecera
+administrator.offer.list.label.summary = Resumen
+administrator.offer.list.label.start = Fecha de inicio
+administrator.offer.list.label.end = Fecha de fin
+administrator.offer.list.label.price = Precio
+administrator.offer.list.label.link = Link
 
-administrator.offer.form.label.instantiationMoment = Momento de Instanciacion:
-administrator.offer.form.label.heading = Cabecera:
-administrator.offer.form.label.summary = Resumen:
-administrator.offer.form.label.availabilityPeriod = Periodo de disponibilidad:
-administrator.offer.form.label.price = Precio:
-administrator.offer.form.label.link = Link:
+administrator.offer.form.label.instantiationMoment = Momento de Instanciacion
+administrator.offer.form.label.heading = Cabecera
+administrator.offer.form.label.summary = Resumen
+administrator.offer.form.label.start = Start Date
+administrator.offer.form.label.end = End Date
+administrator.offer.form.label.price = Precio
+administrator.offer.form.label.link = Link
 
 administrator.offer.form.button.create = Crear
 administrator.offer.form.button.update = Actualizar
 administrator.offer.form.button.delete = Borrar
 
 administrator.offer.list.button.create = Crear
+
+administrator.offer.error.start.beforeInstantiation = La fecha de inicio no puede ser anterior a la fecha de creación de la oferta
+administrator.offer.error.start.oneDayAtLeast = La fecha de inicio debe ser 1 dia despues d ela creacion de la oferta
+administrator.offer.error.end.beforeInstantiation =  La fecha de fin no puede ser anterior a la fecha de creación del banner
+administrator.offer.error.end.beforeStartDate = La fecha de fin no puede ser anterior o igual a la fecha de inicio
+administrator.offer.error.end.notLongEnough = El periodo entre la fecha de inicio y la de fin debe ser de al menos 7 días
+administrator.offer.error.outOfBounds = La fecha introducida esta fuera de rango (años 2000-2100)
+administrator.offer.error.price.negative = El precio no puede ser negativo
+administrator.offer.error.price.currencyNotAllowed = La moneda no es válida (EUR, USD, GBP)

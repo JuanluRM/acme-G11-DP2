@@ -19,7 +19,8 @@
 	<acme:input-moment code="administrator.offer.form.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:input-textbox code="administrator.offer.form.label.heading" path="heading"/>
 	<acme:input-textbox code="administrator.offer.form.label.summary" path="summary"/>
-	<acme:input-moment code="administrator.offer.form.label.availabilityPeriod" path="availabilityPeriod"/>
+	<acme:input-moment code="administrator.offer.form.label.start" path="start"/>
+	<acme:input-moment code="administrator.offer.form.label.end" path="end"/>
 	<acme:input-money code="administrator.offer.form.label.price" path="price"/>
 	<acme:input-url code="administrator.offer.form.label.link" path="link"/>
 <jstl:choose>

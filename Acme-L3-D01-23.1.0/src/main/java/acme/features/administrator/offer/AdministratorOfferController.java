@@ -18,19 +18,13 @@ public class AdministratorOfferController extends AbstractController<Administrat
 	@Autowired
 	protected AdministratorOfferListService		listService;
 
-	//	@Autowired
-	//	protected AdministratorCompanyListRecentService		listRecentService;
-	//
 	@Autowired
 	protected AdministratorOfferShowService		showService;
-	//
-	//	@Autowired
-	//	protected AdministratorAnnouncementCreateService	createService;
 
 	// Constructors -----------------------------------------------------------
 
 	@Autowired
-	protected AdministratorOfferCreateService		createService;
+	protected AdministratorOfferCreateService	createService;
 
 	@Autowired
 	protected AdministratorOfferUpdateService	updateService;

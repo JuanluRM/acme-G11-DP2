@@ -8,22 +8,33 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.offer.list.label.instantiationMoment = Instantiation moment:
-administrator.offer.list.label.heading = Heading:
-administrator.offer.list.label.summary = Summary:
-administrator.offer.list.label.availabilityPeriod = Availability Period:
-administrator.offer.list.label.price = Price:
-administrator.offer.list.label.link = Link:
+administrator.offer.list.label.instantiationMoment = Instantiation moment
+administrator.offer.list.label.heading = Heading
+administrator.offer.list.label.summary = Summary
+administrator.offer.list.label.start = Start Date
+administrator.offer.list.label.end = End Date
+administrator.offer.list.label.price = Price
+administrator.offer.list.label.link = Link
 
-administrator.offer.form.label.instantiationMoment = Instantiation moment:
-administrator.offer.form.label.heading = Heading:
-administrator.offer.form.label.summary = Summary:
-administrator.offer.form.label.availabilityPeriod = Availability Period:
-administrator.offer.form.label.price = Price:
-administrator.offer.form.label.link = Link:
+administrator.offer.form.label.instantiationMoment = Instantiation moment
+administrator.offer.form.label.heading = Heading
+administrator.offer.form.label.summary = Summary
+administrator.offer.form.label.start = Start Date
+administrator.offer.form.label.end = End Date
+administrator.offer.form.label.price = Price
+administrator.offer.form.label.link = Link
 
 administrator.offer.form.button.create = Create
 administrator.offer.form.button.update = Update
 administrator.offer.form.button.delete = Delete
 
 administrator.offer.list.button.create = Create
+
+administrator.offer.error.start.beforeInstantiation = Start date cannot be earlier than instantiation date of the offer
+administrator.offer.error.start.oneDayAtLeast = Start date must be 1 day after the instantiation of the offer
+administrator.offer.error.end.beforeInstantiation = End date cannot be earlier than instantiation date of the offer
+administrator.offer.error.end.beforeStartDate = Finish date cannot be earlier or equal than start date
+administrator.offer.error.end.notLongEnough = The period between start and finish date must last 7 days at least
+administrator.offer.error.outOfBounds = The date is out of bounds(years 2000-2100)
+administrator.offer.error.price.negative = The price cannot be negative
+administrator.offer.error.price.currencyNotAllowed = The currency is not accepted (EUR, USD, GBP)

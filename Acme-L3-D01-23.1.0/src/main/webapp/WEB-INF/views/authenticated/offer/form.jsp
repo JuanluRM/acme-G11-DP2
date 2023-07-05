@@ -19,7 +19,8 @@
 	<acme:input-textbox code="authenticated.offer.list.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:input-textbox code="authenticated.offer.list.label.heading" path="heading"/>
 	<acme:input-textbox code="authenticated.offer.list.label.summary" path="summary"/>
-	<acme:input-textbox code="authenticated.offer.list.label.availabilityPeriod" path="availabilityPeriod"/>
+	<acme:input-textbox code="authenticated.offer.list.label.start" path="start"/>
+	<acme:input-textbox code="authenticated.offer.list.label.end" path="end"/>
 	<acme:input-textbox code="authenticated.offer.list.label.price" path="price"/>
 	<acme:input-url code="authenticated.offer.list.label.link" path="link"/>
 
