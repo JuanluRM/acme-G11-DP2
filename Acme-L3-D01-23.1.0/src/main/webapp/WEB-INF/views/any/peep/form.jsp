@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-moment code="any.peep.form.label.instantiationMoment" path="instantiationMoment"/>
+	<acme:input-moment code="any.peep.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
 	<acme:input-textbox code="any.peep.form.label.title" path="title"/>
 	<acme:input-textbox code="any.peep.form.label.nick" path="nick"/>
 	<acme:input-textarea code="any.peep.form.label.message" path="message"/>

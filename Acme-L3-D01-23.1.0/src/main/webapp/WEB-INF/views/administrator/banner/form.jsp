@@ -9,6 +9,7 @@
 	<jstl:if test="${_command != 'create'}">
 		<acme:input-moment code="administrator.banner.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
 	</jstl:if>
+	<acme:input-moment code="administrator.banner.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
 	<acme:input-moment code="administrator.banner.label.start" path="start"/>
 	<acme:input-moment code="administrator.banner.label.end" path="end"/>	
 	<acme:input-url code="administrator.banner.label.picture" path="picture"/>
