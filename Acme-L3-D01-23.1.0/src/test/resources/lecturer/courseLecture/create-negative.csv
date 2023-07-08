@@ -1,2 +1,4 @@
 courseRecordIndex,lecture
 1,
+#Solo hay 1 caso de test ya que solo debe probarse al no introducir ninguna de las opciones
+#No se puede probar con valores erroneos ya que produce un error de "valor no encontrado" dentro de las opciones
